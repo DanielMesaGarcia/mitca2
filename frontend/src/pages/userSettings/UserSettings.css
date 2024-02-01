@@ -1,0 +1,13 @@
+.account-settings-container {
+    width: 80vw;
+    margin: 20vh auto;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Agrega estilos adicionales según tus preferencias */
+  

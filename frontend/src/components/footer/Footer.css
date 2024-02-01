@@ -1,0 +1,13 @@
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px; /* Ajusta el margen según sea necesario */
+  }
+  
+  .footer-logo {
+    width: 10vw; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Ajusta la altura según sea necesario */
+     /* Opcional: Redondea las esquinas de la imagen */
+  }
+  

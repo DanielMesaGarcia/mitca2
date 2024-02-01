@@ -1,0 +1,97 @@
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  background-color: #f2f2f2;
+  padding: 0 5vw;
+  position: relative;
+}
+
+.menu-icon {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  transition: background-color 0.5s;
+  pointer-events: none;
+}
+
+.menu-overlay.show {
+  background-color: rgba(255, 255, 255, 0.9);
+  pointer-events: all;
+}
+
+.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  background-color: transparent;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #fff; /* Set a background color for the list */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.menu ul li {
+  padding: 15px 20px; /* Add padding for better spacing */
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.menu ul li:last-child {
+  border-bottom: none;
+}
+
+.logout-button, .demo-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-button {
+  background-color: #ff6666;
+  color: white;
+}
+
+.demo-button {
+  background-color: #66b3ff;
+  color: white;
+}
+
+.logout-button:hover, .demo-button:hover {
+  background-color: white;
+  color: red; /* Change the hover color */
+  border: 1px solid red;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "jsreport-server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "jsreport": "jsreport"
+  },
+  "jsreport": {
+    "entryPoint": "server.js"
+  },
+  "dependencies": {
+    "jsreport": "^4.2.0",
+    "jsreport-core": "^2.10.1",
+    "nodemailer": "^6.9.8"
+  }
+}

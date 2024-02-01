@@ -1,0 +1,96 @@
+/* Home.css */
+
+
+.button-thin {
+  width: 25vw;
+  justify-content: center;
+}
+
+.race-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh;
+}
+
+.card-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 16px;
+}
+
+.cardP {
+  width: 35vw;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+
+
+.ant-list {
+  width: 80vw;
+}
+
+@media (max-width: 768px) {
+  .ant-list {
+    justify-content: flex-start;
+    /* Cambia a flex-start para alinear las tarjetas en la parte superior */
+  }
+
+  .ant-card {
+    width: 100%;
+    /* O el ancho que prefieras para ocupar el 100% del contenedor */
+    margin: 2vh 0;
+    /* Ajusta el margen para evitar que las tarjetas se superpongan */
+  }
+}
+
+@media (min-width: 768px) {
+
+  .racePicture {
+    width: 30vw;
+    border-radius: 5px;
+  }
+
+  .card-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 16px;
+  }
+}
+
+.racePicture {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  /* Opcional: Bordes redondeados solo arriba */
+}
+
+.ant-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.ant-card-meta-title {
+  font-size: 3vw;
+  text-align: center;
+}
+
+.ant-card-cover img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

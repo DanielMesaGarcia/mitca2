@@ -1,0 +1,69 @@
+/* Home.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2vw;
+  }
+  
+  .custom-card {
+    flex: 1 1 30%;
+    margin: 1vw;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .card-content {
+    text-align: center;
+  }
+  #eee{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+  
+  .card-image {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .divider {
+    border: 0.5px solid #ddd;
+    width: 80%;
+    margin: 2vh auto;
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .custom-card {
+      flex: 1 1 30%;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .custom-card {
+      flex: 1 1 45%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .custom-card {
+      flex: 1 1 70%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .custom-card {
+      flex: 1 1 80%;
+    }
+  }
+  

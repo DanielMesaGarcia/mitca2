@@ -1,0 +1,14 @@
+{
+    "shortid": "erkLzi",
+    "name": "Trabajo",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1704830477602
+    },
+    "modificationDate": {
+        "$$date": 1705004356626
+    },
+    "_id": "xFXFMgczPGI6S9Qx",
+    "$entitySet": "folders"
+}
