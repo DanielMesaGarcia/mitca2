@@ -1,9 +1,12 @@
+// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const cors = require('cors');
-var path = require('path');
+const http = require('http');
+const WebSocket = require('ws'); // Importa el módulo ws
+const path = require('path');
 require('dotenv').config();
 
 // Importa tus modelos
@@ -20,6 +23,9 @@ const demoRouter = require('./routes/DemoRouter');
 const subscriptionRouter = require('./routes/SubscriptionRouter');
 
 const app = express();
+const server = http.createServer(app);
+const wss = new WebSocket.Server({ server }); // Crea una instancia de WebSocket
+
 const PORT = process.env.PORT || 3001;
 const DATABASE_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/mitca';
 
@@ -29,7 +35,6 @@ mongoose.connect(DATABASE_URL, {
   useUnifiedTopology: true,
   user: process.env.DB_USER || '',
   pass: process.env.DB_PASSWORD || '',
-
 });
 
 // Middleware
@@ -69,6 +74,9 @@ db.once('open', async () => {
   }
 });
 
+// Implementa la lógica de chat en otro archivo (chatSocket.js)
+require('./chatSocket')(wss);
+
 // Manejo de errores
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -76,7 +84,7 @@ app.use((err, req, res, next) => {
 });
 
 // Inicia el servidor
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`El servidor está ejecutándose en el puerto ${PORT}`);
 });
 
