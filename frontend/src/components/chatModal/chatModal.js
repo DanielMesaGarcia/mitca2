@@ -43,9 +43,11 @@ const Chat = () => {
       const messageData = {
         sender: 'Usuario Actual', // Reemplaza con la información del usuario actual
         message: message.trim(),
+        type: 'sent', // Indica que es un mensaje enviado
       };
 
       socket.send(JSON.stringify(messageData));
+      setMessages((prevMessages) => [...prevMessages, messageData]);
       setMessage('');
     }
   };
@@ -72,11 +74,6 @@ const Chat = () => {
             style={{ position: 'absolute', top: 10, right: 10, zIndex: 2 }}
           />
 
-          <Input
-            placeholder="Escribe tu mensaje"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
           <List
             itemLayout="horizontal"
             dataSource={messages}
@@ -89,6 +86,12 @@ const Chat = () => {
                 />
               </List.Item>
             )}
+          />
+
+          <Input
+            placeholder="Escribe tu mensaje"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
           <Button type="primary" onClick={handleSendMessage}>
             Enviar Mensaje

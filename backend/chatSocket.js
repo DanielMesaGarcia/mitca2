@@ -1,27 +1,36 @@
 // chatSocket.js
+const WebSocket = require('ws'); // Asegúrate de importar WebSocket correctamente
 const chatSocket = (wss) => {
-    wss.on('connection', (ws) => {
-      console.log('Usuario conectado');
-  
-      // Manejar mensajes del cliente
-      ws.on('message', (message) => {
-        // Aquí puedes guardar el mensaje en la base de datos o realizar cualquier otra lógica
-        console.log('Nuevo mensaje recibido:', message);
-  
+  const clients = new Set();
+
+  wss.on('connection', (ws) => {
+    console.log('Usuario conectado');
+
+    // Agregar nuevo cliente a la lista
+    clients.add(ws);
+
+    ws.on('message', (message) => {
+      try {
+        const messageData = JSON.parse(message);
+        console.log('Nuevo mensaje recibido:', messageData);
+
         // Enviar el mensaje a todos los clientes conectados
-        wss.clients.forEach((client) => {
+        clients.forEach((client) => {
           if (client !== ws && client.readyState === WebSocket.OPEN) {
-            client.send(message);
+            client.send(JSON.stringify(messageData));
           }
         });
-      });
-  
-      // Manejar eventos de desconexión
-      ws.on('close', () => {
-        console.log('Usuario desconectado');
-      });
+      } catch (error) {
+        console.error('Error al procesar el mensaje:', error);
+      }
     });
-  };
-  
-  module.exports = chatSocket;
-  
+
+    ws.on('close', () => {
+      console.log('Usuario desconectado');
+      // Eliminar cliente de la lista al cerrar la conexión
+      clients.delete(ws);
+    });
+  });
+};
+
+module.exports = chatSocket;
