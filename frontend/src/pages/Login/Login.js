@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button } from 'antd';
 import './Login.css';
-import { Link, useNavigate  } from 'react-router-dom';
-import UserService from '../../services/logInService'; // Adjust the path according to your file structure
+import { Link, useNavigate } from 'react-router-dom';
+import UserService from '../../services/logInService';
 import Footer from '../../components/footer/Footer';
+import UsersServices from '../../services/userService';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,15 +15,16 @@ const Login = () => {
     try {
       const response = await UserService.login({ _id: email, password });
       // Handle the response as per your requirements
-    
+      const users = await UsersServices.getUsers();
       // Save the token to the local storage
       localStorage.setItem('token', response.token);
       localStorage.setItem('role', response.role);
+      localStorage.setItem('users', JSON.stringify(users));
       // Redirect to the home page
-      if(localStorage.getItem('role') === 'admin'){
+      if (localStorage.getItem('role') === 'admin') {
         navigate('/homeAdmin');
-      }else{
-      navigate('/home');
+      } else {
+        navigate('/home');
       }
     } catch (error) {
       // Handle the error
@@ -34,10 +36,14 @@ const Login = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
+      const usersString = localStorage.getItem('users');
+      if (usersString) {
+        const users = JSON.parse(usersString);
+      }
       navigate('/home');
     }
   }, [navigate]);
-  
+
 
   return (
     <div className="login-container">
