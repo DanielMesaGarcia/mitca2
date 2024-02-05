@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const cors = require('cors');
 var path = require('path');
-const HTTPS = require("https");
 require('dotenv').config();
 
 // Importa tus modelos
@@ -21,47 +20,8 @@ const demoRouter = require('./routes/DemoRouter');
 const subscriptionRouter = require('./routes/SubscriptionRouter');
 
 const app = express();
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 3001;
 const DATABASE_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/mitca';
-const USING_HTTPS = process.env.USING_HTTPS == "true" ? true : false;
-const HOST = process.env.HOST || "localhost";
-
-//HTTPS
-var HTTP = express();
-
-if (USING_HTTPS && PORT != 443) {
-  HTTP.get("*", (req, res) =>
-    res.redirect("https://" + process.env.HOST + ":" + process.env.PORT)
-  );
-
-  HTTP.listen(PORT);
-}
-
-const APP_PATH = path.join(__dirname, "..", "localhost/3000");
-
-app.use(express.static(APP_PATH));
-
-app.get("*", (_, res) => res.sendFile(path.join(APP_PATH, "localhost/3000")));
-
-let SERVER = null;
-
-if (USING_HTTPS) {
-  const CERTS = () => {
-    try {
-      return {
-        key: fs.readFileSync(path.join(__dirname, ".cert/cert.key")),
-        cert: fs.readFileSync(path.join(__dirname, ".cert/cert.crt")),
-      };
-    } catch (err) {
-      console.log("No certificates found: " + err);
-    }
-  };
-  SERVER = HTTPS.createServer(CERTS(), app);
-}
-
-(USING_HTTPS ? SERVER : app).listen(PORT, () =>
-  console.log("App is running on port: " + PORT)
-);
 
 // Conecta a MongoDB
 mongoose.connect(DATABASE_URL, {
