@@ -4,7 +4,7 @@ const HTTPS = require("https");
 const fs = require("fs");
 const path = require("path");
 
-const USING_HTTPS = process.env.USING_HTTPS == "true" ? true : false;
+const USING_HTTPS = process.env.USING_HTTPS === "true" ? true : false;
 const HOST = process.env.HOST || "localhost";
 const PORT = process.env.PORT || 443;
 
@@ -14,7 +14,6 @@ if (USING_HTTPS && PORT != 443) {
   HTTP.get("*", (req, res) =>
     res.redirect("https://" + process.env.HOST + ":" + process.env.PORT)
   );
-
   HTTP.listen(PORT);
 }
 

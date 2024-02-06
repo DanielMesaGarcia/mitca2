@@ -115,7 +115,7 @@ const HomeAdmin = () => {
                 <Card title={race._id} className='cardP'>
                   <img
                     className='racePicture'
-                    src={`http://localhost:3001/images/${race.filename}`}
+                    src={`https://localhost:3001/images/${race.filename}`}
                     alt={race.filename}
                   />
                 </Card>
