@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Button, Input, List, Avatar } from 'antd';
 import { MessageOutlined, CloseOutlined } from '@ant-design/icons';
 import './chatModal.css';
+import UserService from '../../services/userService';
 
 const { Content } = Layout;
 
@@ -41,7 +42,7 @@ const Chat = () => {
   const handleSendMessage = () => {
     if (socket && message.trim() !== '') {
       const messageData = {
-        sender: 'Usuario Actual', // Reemplaza con la información del usuario actual
+        sender: localStorage.getItem('name'), // Reemplaza con la información del usuario actual
         message: message.trim(),
         type: 'sent', // Indica que es un mensaje enviado
       };
