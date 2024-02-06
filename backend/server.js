@@ -21,6 +21,7 @@ const userRouter = require('./routes/UserRouter');
 const routeRouter = require('./routes/RouteRouter');
 const demoRouter = require('./routes/DemoRouter');
 const subscriptionRouter = require('./routes/SubscriptionRouter');
+const MessageRouter = require('./routes/MessageRouter');
 
 const app = express();
 const server = http.createServer(app);
@@ -52,6 +53,8 @@ app.use('/users', userRouter);
 app.use('/routes', routeRouter);
 app.use('/demo', demoRouter);
 app.use('/subscriptions', subscriptionRouter);
+app.use('/messages', MessageRouter);
+
 
 // Lógica de inicialización
 const db = mongoose.connection;

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Button, Input, List, Avatar } from 'antd';
 import { MessageOutlined, CloseOutlined } from '@ant-design/icons';
 import './chatModal.css';
-import UserService from '../../services/userService';
+import messageService from '../../services/messageService';
 
 const { Content } = Layout;
 
@@ -12,15 +12,26 @@ const Chat = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [socket, setSocket] = useState(null);
+  const [allMessagesLoaded, setAllMessagesLoaded] = useState(false); 
 
   useEffect(() => {
     const newSocket = new WebSocket('ws://localhost:3001'); // Reemplaza con la URL de tu servidor
     setSocket(newSocket);
-
+  
+    // Envía mensajes pendientes cuando la conexión WebSocket esté disponible
+    if (newSocket) {
+      const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
+      pendingMessages.forEach((message) => {
+        newSocket.send(JSON.stringify(message));
+      });
+      localStorage.removeItem('pendingMessages'); // Elimina los mensajes pendientes después de enviarlos
+    }
+  
     return () => {
       newSocket.close();
     };
   }, []);
+  
 
   useEffect(() => {
     if (socket) {
@@ -31,6 +42,21 @@ const Chat = () => {
     }
   }, [socket]);
 
+  useEffect(() => {
+    const fetchMessages = async () => {
+      try {
+        const fetchedMessages = await messageService.getAllMessages();
+        setMessages(fetchedMessages);
+        setAllMessagesLoaded(true);
+      } catch (error) {
+        console.error('Error fetching messages:', error);
+      }
+    };
+
+    fetchMessages();
+  }, []); 
+
+
   const handleExpand = () => {
     setExpanded(!expanded);
   };
@@ -39,19 +65,34 @@ const Chat = () => {
     setExpanded(false);
   };
 
-  const handleSendMessage = () => {
-    if (socket && message.trim() !== '') {
+  const handleSendMessage = async () => {
+    if (!socket) {
+      // Si no hay conexión WebSocket, guarda el mensaje en el localStorage
+      const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
+      const messageData = {
+        sender: localStorage.getItem('name'), // Reemplaza con la información del usuario actual
+        message: message.trim(),
+        type: 'pending', // Indica que es un mensaje pendiente
+      };
+      localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
+      setMessage('');
+      return;
+    }
+  
+    if (message.trim() !== '') {
       const messageData = {
         sender: localStorage.getItem('name'), // Reemplaza con la información del usuario actual
         message: message.trim(),
         type: 'sent', // Indica que es un mensaje enviado
       };
-
       socket.send(JSON.stringify(messageData));
+      await messageService.sendMessage(messageData);
+  
       setMessages((prevMessages) => [...prevMessages, messageData]);
       setMessage('');
     }
   };
+  
 
   return (
     <div>
