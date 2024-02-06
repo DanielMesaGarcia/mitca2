@@ -13,36 +13,45 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [socket, setSocket] = useState(null);
   const [allMessagesLoaded, setAllMessagesLoaded] = useState(false); 
+  const [running, setRunning] = useState(false);
+
 
   useEffect(() => {
-    const newSocket = new WebSocket('ws://localhost:3001'); // Reemplaza con la URL de tu servidor
-    setSocket(newSocket);
-  
-    // Envía mensajes pendientes cuando la conexión WebSocket esté disponible
-    if (newSocket) {
-      const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
-      pendingMessages.forEach((message) => {
-        newSocket.send(JSON.stringify(message));
-      });
-      localStorage.removeItem('pendingMessages'); // Elimina los mensajes pendientes después de enviarlos
+    let newSocket;
+    try {
+      newSocket = new WebSocket('ws://localhost:3001');
+      newSocket.onopen = () => {
+        setRunning(true); // Si se abre la conexión con éxito, establece el estado a true
+      };
+      newSocket.onclose = () => {
+        setRunning(false); // Si se cierra la conexión, establece el estado a false
+      };
+      setSocket(newSocket);
+    } catch (error) {
+      console.error('Error creating WebSocket:', error);
+      setRunning(false); // Si hay un error al crear el socket, establece el estado a false
     }
-  
+    
     return () => {
-      newSocket.close();
+      if (newSocket) {
+        newSocket.close();
+      }
     };
   }, []);
   
+  
 
   useEffect(() => {
-    if (socket) {
+    if (running) {
       socket.addEventListener('message', (event) => {
         const messageData = JSON.parse(event.data);
         setMessages((prevMessages) => [...prevMessages, messageData]);
       });
     }
-  }, [socket]);
+  }, [running]);
 
   useEffect(() => {
+    if(running){
     const fetchMessages = async () => {
       try {
         const fetchedMessages = await messageService.getAllMessages();
@@ -54,7 +63,8 @@ const Chat = () => {
     };
 
     fetchMessages();
-  }, []); 
+  }
+  }, [running]); 
 
 
   const handleExpand = () => {
@@ -66,28 +76,30 @@ const Chat = () => {
   };
 
   const handleSendMessage = async () => {
-    if (!socket) {
-      // Si no hay conexión WebSocket, guarda el mensaje en el localStorage
+    if (!running) {
+      // Si no hay conexión con el backend, guardar el mensaje en localStorage
       const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
       const messageData = {
-        sender: localStorage.getItem('name'), // Reemplaza con la información del usuario actual
+        sender: localStorage.getItem('name'),
         message: message.trim(),
-        type: 'pending', // Indica que es un mensaje pendiente
+        type: 'pending',
       };
       localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
       setMessage('');
+      setMessages((prevMessages) => [...prevMessages, messageData]);
       return;
     }
   
     if (message.trim() !== '') {
       const messageData = {
-        sender: localStorage.getItem('name'), // Reemplaza con la información del usuario actual
+        sender: localStorage.getItem('name'),
         message: message.trim(),
-        type: 'sent', // Indica que es un mensaje enviado
+        type: 'sent',
       };
-      socket.send(JSON.stringify(messageData));
+      if (socket) {
+        socket.send(JSON.stringify(messageData));
+      }
       await messageService.sendMessage(messageData);
-  
       setMessages((prevMessages) => [...prevMessages, messageData]);
       setMessage('');
     }
