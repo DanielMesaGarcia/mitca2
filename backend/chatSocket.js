@@ -26,7 +26,6 @@ const chatSocket = (wss) => {
     });
 
     ws.on('close', () => {
-      console.log('Usuario desconectado');
       // Eliminar cliente de la lista al cerrar la conexión
       clients.delete(ws);
     });
