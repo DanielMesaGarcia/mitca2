@@ -18,21 +18,32 @@ const Chat = () => {
 
   useEffect(() => {
     let newSocket;
-    try {
-      newSocket = new WebSocket('ws://localhost:3001');
-      newSocket.onopen = () => {
-        setRunning(true); // Si se abre la conexión con éxito, establece el estado a true
-      };
-      newSocket.onclose = () => {
-        setRunning(false); // Si se cierra la conexión, establece el estado a false
-      };
-      setSocket(newSocket);
-    } catch (error) {
-      console.error('Error creating WebSocket:', error);
-      setRunning(false); // Si hay un error al crear el socket, establece el estado a false
-    }
-    
+  
+    const checkConnection = () => {
+      try {
+        newSocket = new WebSocket('ws://localhost:3001');
+        newSocket.onopen = () => {
+          setRunning(true);
+        };
+        newSocket.onclose = () => {
+          setRunning(false);
+          clearInterval(interval);
+        };
+        setSocket(newSocket);
+      } catch (error) {
+        console.error('Error creating WebSocket:', error);
+        setRunning(false);
+      }
+    };
+  
+    // Realizar la comprobación de la conexión cada 15 segundos
+    const interval = setInterval(() => {
+      checkConnection();
+    }, 15000);
+  
+    // Limpieza del intervalo al desmontar el componente
     return () => {
+      
       if (newSocket) {
         newSocket.close();
       }
@@ -104,6 +115,27 @@ const Chat = () => {
       setMessage('');
     }
   };
+
+  useEffect(() => {
+    if (running) {
+      const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
+      const sendPendingMessages = async () => {
+        for (const pendingMessage of pendingMessages) {
+          if (pendingMessage.type === 'pending') {
+            if (socket) {
+              socket.send(JSON.stringify(pendingMessage));
+            }
+            await messageService.sendMessage(pendingMessage);
+            setMessages((prevMessages) => [...prevMessages, pendingMessage]);
+          }
+        }
+        // Limpiar los mensajes pendientes en localStorage después de enviarlos
+        localStorage.setItem('pendingMessages', JSON.stringify([]));
+      };
+      sendPendingMessages();
+    }
+  }, [running]);
+  
   
 
   return (

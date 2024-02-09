@@ -4,7 +4,7 @@ const chatSocket = (wss) => {
   const clients = new Set();
 
   wss.on('connection', (ws) => {
-    console.log('Usuario conectado');
+    // console.log('Usuario conectado');
 
     // Agregar nuevo cliente a la lista
     clients.add(ws);
