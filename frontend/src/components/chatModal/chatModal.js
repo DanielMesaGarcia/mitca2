@@ -1,10 +1,10 @@
 // Chat.js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Layout, Button, Input, List, Avatar } from 'antd';
 import { MessageOutlined, CloseOutlined } from '@ant-design/icons';
 import './chatModal.css';
 import messageService from '../../services/messageService';
-import { SendOutlined } from '@ant-design/icons';
+import { SendOutlined, DeleteOutlined } from '@ant-design/icons';
 const { Content } = Layout;
 
 const Chat = () => {
@@ -134,8 +134,8 @@ const Chat = () => {
       if (socket) {
         socket.send(JSON.stringify(messageData));
       }
-      await messageService.sendMessage(messageData);
-      setMessages((prevMessages) => [...prevMessages, messageData]);
+      const newmsg= await messageService.sendMessage(messageData);
+      setMessages((prevMessages) => [...prevMessages, newmsg]);
       setMessage('');
     }
   };
@@ -149,8 +149,8 @@ const Chat = () => {
             if (socket) {
               socket.send(JSON.stringify(pendingMessage));
             }
-            await messageService.sendMessage(pendingMessage);
-            setMessages((prevMessages) => [...prevMessages, pendingMessage]);
+            const newmsg=await messageService.sendMessage(pendingMessage);
+            setMessages((prevMessages) => [...prevMessages, newmsg]);
           }
         }
         // Limpiar los mensajes pendientes en localStorage después de enviarlos
@@ -161,6 +161,30 @@ const Chat = () => {
   }, [running]);
 
 
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    // Función para hacer scroll al final de la lista
+    const scrollToBottom = () => {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    scrollToBottom(); // Llama a la función al iniciar para hacer scroll al final de la lista
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [messages]);
+
+
+  const borrarMensaje = async (id) => {
+    try {
+      const response = await messageService.deleteRace(id)
+      console.log(response)
+      const data = response;
+      setMessages(data);
+    } catch (error) {
+      console.error('Error deleting message:', error);
+    }
+  };
 
   return (
     <div>
@@ -189,9 +213,18 @@ const Chat = () => {
                   description={item.message}
                   style={{ width: '100%', wordWrap: 'break-word' }}
                 />
+                {/* Mostrar el icono de basura solo si el rol es admin */}
+                {(localStorage.getItem('role') === 'admin' || localStorage.getItem('name') === item.sender) && (
+                  <DeleteOutlined
+                    style={{ color: 'red', fontSize: 16, cursor: 'pointer', marginLeft: '10px' }}
+                    onClick={() => borrarMensaje(item._id)}
+                  />
+                )}
               </List.Item>
             )}
           />
+          {/* Referencia para el último elemento de la lista */}
+          <div ref={messagesEndRef} />
 
           <div style={{ display: 'flex', position: 'fixed', bottom: 0, backgroundColor:'white' }}>
             <Input

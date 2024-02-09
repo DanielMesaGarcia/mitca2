@@ -24,6 +24,15 @@ const messageService = {
       throw error;
     }
   },
+
+  deleteRace: async (id) => {
+    try {
+      const response = await axios.delete(`${API_URL}/messages/${id}`);
+      return response.data;
+    } catch (error) {
+      throw new Error(`Error al eliminar mensaje: ${error.message}`);
+    }
+  }
 };
 
 export default messageService;
