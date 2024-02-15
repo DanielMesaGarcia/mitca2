@@ -144,10 +144,12 @@ const Chat = () => {
         message: message.trim(),
         type: 'sent',
       };
+      const newmsg= await messageService.sendMessage(messageData);
+      messageData._id = newmsg._id;
       if (socket) {
         socket.send(JSON.stringify(messageData));
       }
-      const newmsg= await messageService.sendMessage(messageData);
+      
       setMessages((prevMessages) => [...prevMessages, newmsg]);
       setMessage('');
     }
