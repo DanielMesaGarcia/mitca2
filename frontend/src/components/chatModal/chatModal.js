@@ -18,7 +18,7 @@ const Chat = () => {
 
   useEffect(() => {
     let newSocket;
-  
+
     const setupWebSocket = () => {
       try {
         newSocket = new WebSocket('ws://localhost:3001');
@@ -34,9 +34,9 @@ const Chat = () => {
         setRunning(false);
       }
     };
-  
+
     setupWebSocket(); // Set up WebSocket connection when component mounts
-  
+
     // Clean up function when component unmounts or dependencies change
     return () => {
       if (newSocket) {
@@ -44,7 +44,7 @@ const Chat = () => {
       }
     };
   }, []); // Empty dependency array ensures this effect runs only once, when component mounts
-  
+
 
   useEffect(() => {
     const setupWebSocket = () => {
@@ -62,18 +62,18 @@ const Chat = () => {
         setRunning(false);
       }
     };
-  
+
     const interval = setInterval(() => {
       if (!socket || socket.readyState !== WebSocket.OPEN) {
         setupWebSocket();
       }
     }, 15000);
-  
+
     return () => {
       clearInterval(interval);
     };
   }, [socket]);
-  
+
 
 
   useEffect(() => {
@@ -82,21 +82,32 @@ const Chat = () => {
         const messageData = JSON.parse(event.data);
         if (messageData.type === 'delete') {
           // Si es un mensaje de eliminación, filtramos el mensaje correspondiente
-          console.log(messageData._id)
-          console.log(messages)
           setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== messageData.id));
-        } else {
+        } else if (messageData.type === 'update') {
+          // Si es un mensaje de actualización, buscamos el mensaje correspondiente y lo actualizamos
+        setMessages((prevMessages) => {
+          const updatedMessages = prevMessages.map(msg => {
+            if (msg._id === messageData.id) {
+              return messageData.updatedMessage; // Reemplazar el mensaje existente con el mensaje actualizado
+            } else {
+              return msg;
+            }
+          });
+          return updatedMessages;
+        });
+        }
+        else {
           // Si no es un mensaje de eliminación, lo añadimos a los mensajes existentes
-          if(messageData.sender !== localStorage.getItem("name")){
-          setMessages((prevMessages) => [...prevMessages, messageData]);
+          if (messageData.sender !== localStorage.getItem("name")) {
+            setMessages((prevMessages) => [...prevMessages, messageData]);
           }
         }
-  
+
       });
     }
   }, [running]);
 
-  
+
 
   useEffect(() => {
     if (running) {
@@ -144,12 +155,12 @@ const Chat = () => {
         message: message.trim(),
         type: 'sent',
       };
-      const newmsg= await messageService.sendMessage(messageData);
+      const newmsg = await messageService.sendMessage(messageData);
       messageData._id = newmsg._id;
       if (socket) {
         socket.send(JSON.stringify(messageData));
       }
-      
+
       setMessages((prevMessages) => [...prevMessages, newmsg]);
       setMessage('');
     }
@@ -164,7 +175,7 @@ const Chat = () => {
             if (socket) {
               socket.send(JSON.stringify(pendingMessage));
             }
-            const newmsg=await messageService.sendMessage(pendingMessage);
+            const newmsg = await messageService.sendMessage(pendingMessage);
             setMessages((prevMessages) => [...prevMessages, newmsg]);
           }
         }
@@ -197,7 +208,7 @@ const Chat = () => {
         id: id,
         type: 'delete',
       };
-  
+
       if (socket) {
         socket.send(JSON.stringify(deleteMessageData));
       }
@@ -208,8 +219,8 @@ const Chat = () => {
       console.error('Error deleting message:', error);
     }
   };
-  
-  
+
+
 
   return (
     <div>
@@ -224,12 +235,12 @@ const Chat = () => {
 
       <Layout className={`layout-chat${expanded ? ' expanded' : ''}`}>
         <Content className="layout-content" >
-          
+
 
           <List
             itemLayout="horizontal"
             dataSource={messages}
-            style={{ maxWidth: '100%', paddingBottom: '18%'}}
+            style={{ maxWidth: '100%', paddingBottom: '18%' }}
             renderItem={(item) => (
               <List.Item>
                 <List.Item.Meta
@@ -251,7 +262,7 @@ const Chat = () => {
           {/* Referencia para el último elemento de la lista */}
           <div ref={messagesEndRef} />
 
-          <div style={{ display: 'flex', position: 'fixed', bottom: 0, backgroundColor:'white' }}>
+          <div style={{ display: 'flex', position: 'fixed', bottom: 0, backgroundColor: 'white' }}>
             <Input
               placeholder="Escribe tu mensaje"
               value={message}
