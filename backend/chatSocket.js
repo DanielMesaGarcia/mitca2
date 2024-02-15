@@ -20,7 +20,15 @@ const chatSocket = (wss) => {
               client.send(JSON.stringify(messageData));
             }
           });
-        } else {
+        } else if (messageData.type === 'update') {
+          // Envía el mensaje de eliminación a todos los clientes excepto al cliente que envió el mensaje
+          clients.forEach((client) => {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+              client.send(JSON.stringify(messageData));
+            }
+          });
+        }
+        else {
           // Si no es un mensaje de eliminación, enviarlo a todos los clientes
           clients.forEach((client) => {
             if (client.readyState === WebSocket.OPEN) {
