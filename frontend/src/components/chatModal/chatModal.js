@@ -80,10 +80,23 @@ const Chat = () => {
     if (running) {
       socket.addEventListener('message', (event) => {
         const messageData = JSON.parse(event.data);
-        setMessages((prevMessages) => [...prevMessages, messageData]);
+        if (messageData.type === 'delete') {
+          // Si es un mensaje de eliminación, filtramos el mensaje correspondiente
+          console.log(messageData._id)
+          console.log(messages)
+          setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== messageData.id));
+        } else {
+          // Si no es un mensaje de eliminación, lo añadimos a los mensajes existentes
+          if(messageData.sender !== localStorage.getItem("name")){
+          setMessages((prevMessages) => [...prevMessages, messageData]);
+          }
+        }
+  
       });
     }
   }, [running]);
+
+  
 
   useEffect(() => {
     if (running) {
@@ -178,13 +191,23 @@ const Chat = () => {
   const borrarMensaje = async (id) => {
     try {
       const response = await messageService.deleteRace(id)
-      console.log(response)
+      const deleteMessageData = {
+        id: id,
+        type: 'delete',
+      };
+  
+      if (socket) {
+        socket.send(JSON.stringify(deleteMessageData));
+      }
       const data = response;
       setMessages(data);
+
     } catch (error) {
       console.error('Error deleting message:', error);
     }
   };
+  
+  
 
   return (
     <div>
