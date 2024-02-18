@@ -25,12 +25,21 @@ const messageService = {
     }
   },
 
-  deleteRace: async (id) => {
+  deleteMessage: async (id) => {
     try {
       const response = await axios.delete(`${API_URL}/messages/${id}`);
       return response.data;
     } catch (error) {
       throw new Error(`Error al eliminar mensaje: ${error.message}`);
+    }
+  },
+
+  updateMessage: async (id, newMessage) => {
+    try {
+      const response = await axios.put(`${API_URL}/messages/${id}`, { message: newMessage });
+      return response.data;
+    } catch (error) {
+      throw new Error(`Error al actualizar mensaje: ${error.message}`);
     }
   }
 };

@@ -36,10 +36,37 @@ const deleteMessages = async (req, res) => {
   }
 };
 
+const updateMessage = async (req, res) => {
+  try {
+    const message = await Message.findByIdAndUpdate(req.params._id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!message) {
+      return res.status(404).json({ success: false, error: 'Message not found' });
+    }
+    res.json({ success: true, message });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
 
+const getMessageById = async (req, res) => {
+  try {
+    const message = await Message.findById(req.params._id);
+    if (!message) {
+      return res.status(404).json({ success: false, error: 'Message not found' });
+    }
+    res.json({ success: true, message });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
 
 module.exports = {
   createMessage,
   getMessages,
   deleteMessages,
+  updateMessage,
+  getMessageById,
 };

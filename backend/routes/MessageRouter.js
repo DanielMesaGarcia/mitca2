@@ -9,7 +9,9 @@ MessageRouter.route('/')
     .get(messageController.getMessages);
 
 MessageRouter.route('/:_id')
-    .delete(messageController.deleteMessages);
+    .get(messageController.getMessageById)
+    .delete(messageController.deleteMessages)
+    .put(messageController.updateMessage);
 
 
 module.exports = MessageRouter;

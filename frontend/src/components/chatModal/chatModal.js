@@ -4,7 +4,7 @@ import { Layout, Button, Input, List, Avatar } from 'antd';
 import { MessageOutlined, CloseOutlined } from '@ant-design/icons';
 import './chatModal.css';
 import messageService from '../../services/messageService';
-import { SendOutlined, DeleteOutlined } from '@ant-design/icons';
+import { SendOutlined, DeleteOutlined, EditOutlined } from '@ant-design/icons';
 const { Content } = Layout;
 
 const Chat = () => {
@@ -14,7 +14,8 @@ const Chat = () => {
   const [socket, setSocket] = useState(null);
   const [allMessagesLoaded, setAllMessagesLoaded] = useState(false);
   const [running, setRunning] = useState(false);
-
+  const [editingMessage, setEditingMessage] = useState(null);
+  const [forceUpdate, setForceUpdate] = useState(false);
 
   useEffect(() => {
     let newSocket;
@@ -45,7 +46,6 @@ const Chat = () => {
     };
   }, []); // Empty dependency array ensures this effect runs only once, when component mounts
 
-
   useEffect(() => {
     const setupWebSocket = () => {
       try {
@@ -74,53 +74,47 @@ const Chat = () => {
     };
   }, [socket]);
 
-
-
   useEffect(() => {
     if (running) {
       socket.addEventListener('message', (event) => {
         const messageData = JSON.parse(event.data);
         if (messageData.type === 'delete') {
-          // Si es un mensaje de eliminación, filtramos el mensaje correspondiente
-          setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== messageData.id));
+          // Código de eliminación...
         } else if (messageData.type === 'update') {
-          // Si es un mensaje de actualización, buscamos el mensaje correspondiente y lo actualizamos
-        setMessages((prevMessages) => {
-          const updatedMessages = prevMessages.map(msg => {
-            if (msg._id === messageData.id) {
-              return messageData.updatedMessage; // Reemplazar el mensaje existente con el mensaje actualizado
-            } else {
-              return msg;
-            }
+          setMessages((prevMessages) => {
+            const updatedMessages = prevMessages.map((msg) => {
+              if (msg._id === messageData.id) {
+                return { ...msg, message: messageData.updatedMessage.message };
+              } else {
+                return msg;
+              }
+            });
+            return updatedMessages;
           });
-          return updatedMessages;
-        });
-        }
-        else {
+        } else {
           // Si no es un mensaje de eliminación, lo añadimos a los mensajes existentes
           if (messageData.sender !== localStorage.getItem("name")) {
             setMessages((prevMessages) => [...prevMessages, messageData]);
           }
         }
-
       });
     }
   }, [running]);
-
-
 
   useEffect(() => {
     if (running) {
       const fetchMessages = async () => {
         try {
+          setAllMessagesLoaded(false); // Set loading state to true
           const fetchedMessages = await messageService.getAllMessages();
-          setMessages(fetchedMessages);
-          setAllMessagesLoaded(true);
+          const simplifiedMessages = fetchedMessages.map(({ _id, sender, message }) => ({ _id, sender, message }));
+          setMessages(simplifiedMessages);
+          setAllMessagesLoaded(true); // Set loading state to false after successful fetch
         } catch (error) {
           console.error('Error fetching messages:', error);
+          setAllMessagesLoaded(true); // Set loading state to false even if there's an error
         }
       };
-
       fetchMessages();
     }
   }, [running]);
@@ -135,34 +129,44 @@ const Chat = () => {
   };
 
   const handleSendMessage = async () => {
-    if (!running) {
-      // Si no hay conexión con el backend, guardar el mensaje en localStorage
-      const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
-      const messageData = {
-        sender: localStorage.getItem('name'),
-        message: message.trim(),
-        type: 'pending',
-      };
-      localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
-      setMessage('');
-      setMessages((prevMessages) => [...prevMessages, messageData]);
-      return;
-    }
-
-    if (message.trim() !== '') {
-      const messageData = {
-        sender: localStorage.getItem('name'),
-        message: message.trim(),
-        type: 'sent',
-      };
-      const newmsg = await messageService.sendMessage(messageData);
-      messageData._id = newmsg._id;
-      if (socket) {
-        socket.send(JSON.stringify(messageData));
+    try {
+      if (!running) {
+        // Si no hay conexión con el backend, guardar el mensaje en localStorage
+        const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
+        const messageData = {
+          sender: localStorage.getItem('name'),
+          message: message.trim(),
+          type: 'pending',
+        };
+        localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
+        setMessage('');
+        setMessages((prevMessages) => [...prevMessages, messageData]);
+        return;
       }
-
-      setMessages((prevMessages) => [...prevMessages, newmsg]);
-      setMessage('');
+      if (message.trim() !== '') {
+        if (editingMessage) {
+          const updatedMessage = await messageService.updateMessage(editingMessage, message.trim());
+          setMessages((prevMessages) =>
+            prevMessages.map((msg) => (msg._id === editingMessage ? { ...msg, message: updatedMessage.message } : msg))
+          );
+          setEditingMessage(null);
+          setMessage('');
+        } else {
+          const messageData = {
+            sender: localStorage.getItem('name'),
+            message: message.trim(),
+            type: 'sent',
+          };
+          const newMessage = await messageService.sendMessage(messageData);
+        if (socket) {
+          socket.send(JSON.stringify(newMessage));
+        }
+        setMessages((prevMessages) => [...prevMessages, newMessage]);
+        setMessage('');
+        }
+      }
+    } catch (error) {
+      console.error('Error sending or updating message:', error);
     }
   };
 
@@ -170,17 +174,26 @@ const Chat = () => {
     if (running) {
       const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
       const sendPendingMessages = async () => {
-        for (const pendingMessage of pendingMessages) {
-          if (pendingMessage.type === 'pending') {
-            if (socket) {
-              socket.send(JSON.stringify(pendingMessage));
+        try {
+          for (const pendingMessage of pendingMessages) {
+            if (pendingMessage.type === 'pending') {
+              setAllMessagesLoaded(false); // Set loading state to true
+              if (socket) {
+                socket.send(JSON.stringify(pendingMessage));
+              }
+              const newmsg = await messageService.sendMessage(pendingMessage);
+              const simplifiedNewMessages = Array.isArray(newmsg) ? newmsg.map(({ _id, sender, message }) => ({ _id, sender, message })) : [];
+              setMessages((prevMessages) => [...prevMessages, ...simplifiedNewMessages]);
             }
-            const newmsg = await messageService.sendMessage(pendingMessage);
-            setMessages((prevMessages) => [...prevMessages, newmsg]);
           }
+        } catch (error) {
+          console.error('Error sending pending messages:', error);
+        } finally {
+          // Set loading state to false regardless of success or failure
+          setAllMessagesLoaded(true);
+          // Limpiar los mensajes pendientes en localStorage después de enviarlos
+          localStorage.setItem('pendingMessages', JSON.stringify([]));
         }
-        // Limpiar los mensajes pendientes en localStorage después de enviarlos
-        localStorage.setItem('pendingMessages', JSON.stringify([]));
       };
       sendPendingMessages();
     }
@@ -203,7 +216,7 @@ const Chat = () => {
 
   const borrarMensaje = async (id) => {
     try {
-      const response = await messageService.deleteRace(id)
+      const response = await messageService.deleteMessage(id)
       const deleteMessageData = {
         id: id,
         type: 'delete',
@@ -220,7 +233,10 @@ const Chat = () => {
     }
   };
 
-
+  const handleEditMessage = (id, editedMessage) => {
+    setEditingMessage(id);
+    setMessage(editedMessage);
+  };
 
   return (
     <div>
@@ -232,21 +248,19 @@ const Chat = () => {
         onClick={handleExpand}
         style={{ position: 'fixed', bottom: 20, right: expanded ? 340 : 20, zIndex: 1 }}
       />
-
       <Layout className={`layout-chat${expanded ? ' expanded' : ''}`}>
         <Content className="layout-content" >
-
-
           <List
             itemLayout="horizontal"
             dataSource={messages}
+            key={forceUpdate}  // Agrega esta línea para forzar la actualización del componente
             style={{ maxWidth: '100%', paddingBottom: '18%' }}
             renderItem={(item) => (
               <List.Item>
                 <List.Item.Meta
                   avatar={<Avatar icon={<MessageOutlined />} />}
                   title={item.sender}
-                  description={item.message}
+                  description={<span>{typeof item.message === 'object' ? item.message.message : item.message}</span>}
                   style={{ width: '100%', wordWrap: 'break-word' }}
                 />
                 {/* Mostrar el icono de basura solo si el rol es admin */}
@@ -254,6 +268,12 @@ const Chat = () => {
                   <DeleteOutlined
                     style={{ color: 'red', fontSize: 16, cursor: 'pointer', marginLeft: '10px' }}
                     onClick={() => borrarMensaje(item._id)}
+                  />
+                )}
+                {(localStorage.getItem('name') === item.sender) && (
+                  <EditOutlined
+                    style={{ color: 'green', fontSize: 16, cursor: 'pointer', marginLeft: '10px' }}
+                    onClick={() => handleEditMessage(item._id, item.message)}
                   />
                 )}
               </List.Item>
