@@ -78,17 +78,23 @@ const Chat = () => {
     if (running) {
       socket.addEventListener('message', (event) => {
         const messageData = JSON.parse(event.data);
+
         if (messageData.type === 'delete') {
-          // Código de eliminación...
+          setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== messageData.id));
         } else if (messageData.type === 'update') {
+          // Si es un mensaje de actualización, buscamos el mensaje correspondiente y lo actualizamos
           setMessages((prevMessages) => {
-            const updatedMessages = prevMessages.map((msg) => {
+            const updatedMessages = prevMessages.map(msg => {
               if (msg._id === messageData.id) {
-                return { ...msg, message: messageData.updatedMessage.message };
+                const newmsg={ ...msg, message: messageData.editedMessage };
+                console.log(newmsg)
+                return newmsg;
               } else {
                 return msg;
               }
             });
+            console.log("Mensajes actualizados:", updatedMessages);
+
             return updatedMessages;
           });
         } else {
@@ -145,6 +151,15 @@ const Chat = () => {
       }
       if (message.trim() !== '') {
         if (editingMessage) {
+          const updateMessageData = {
+            id: editingMessage,
+            editedMessage: message,
+            type: 'update',
+          };
+
+          if (socket) {
+            socket.send(JSON.stringify(updateMessageData));
+          }
           const updatedMessage = await messageService.updateMessage(editingMessage, message.trim());
           setMessages((prevMessages) =>
             prevMessages.map((msg) => (msg._id === editingMessage ? { ...msg, message: updatedMessage.message } : msg))
@@ -158,11 +173,11 @@ const Chat = () => {
             type: 'sent',
           };
           const newMessage = await messageService.sendMessage(messageData);
-        if (socket) {
-          socket.send(JSON.stringify(newMessage));
-        }
-        setMessages((prevMessages) => [...prevMessages, newMessage]);
-        setMessage('');
+          if (socket) {
+            socket.send(JSON.stringify(newMessage));
+          }
+          setMessages((prevMessages) => [...prevMessages, newMessage]);
+          setMessage('');
         }
       }
     } catch (error) {
@@ -177,7 +192,7 @@ const Chat = () => {
         try {
           for (const pendingMessage of pendingMessages) {
             if (pendingMessage.type === 'pending') {
-              setAllMessagesLoaded(false); 
+              setAllMessagesLoaded(false);
               if (socket) {
                 socket.send(JSON.stringify(pendingMessage));
               }
@@ -251,7 +266,7 @@ const Chat = () => {
           <List
             itemLayout="horizontal"
             dataSource={messages}
-            key={forceUpdate}  
+            key={forceUpdate}
             style={{ maxWidth: '100%', paddingBottom: '18%' }}
             renderItem={(item) => (
               <List.Item>
