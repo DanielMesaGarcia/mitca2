@@ -177,7 +177,7 @@ const Chat = () => {
         try {
           for (const pendingMessage of pendingMessages) {
             if (pendingMessage.type === 'pending') {
-              setAllMessagesLoaded(false); // Set loading state to true
+              setAllMessagesLoaded(false); 
               if (socket) {
                 socket.send(JSON.stringify(pendingMessage));
               }
@@ -189,9 +189,7 @@ const Chat = () => {
         } catch (error) {
           console.error('Error sending pending messages:', error);
         } finally {
-          // Set loading state to false regardless of success or failure
           setAllMessagesLoaded(true);
-          // Limpiar los mensajes pendientes en localStorage después de enviarlos
           localStorage.setItem('pendingMessages', JSON.stringify([]));
         }
       };
@@ -253,7 +251,7 @@ const Chat = () => {
           <List
             itemLayout="horizontal"
             dataSource={messages}
-            key={forceUpdate}  // Agrega esta línea para forzar la actualización del componente
+            key={forceUpdate}  
             style={{ maxWidth: '100%', paddingBottom: '18%' }}
             renderItem={(item) => (
               <List.Item>
