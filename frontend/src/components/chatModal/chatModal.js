@@ -162,8 +162,11 @@ const Chat = () => {
           }
           const updatedMessage = await messageService.updateMessage(editingMessage, message.trim());
           setMessages((prevMessages) =>
-            prevMessages.map((msg) => (msg._id === editingMessage ? { ...msg, message: updatedMessage.message } : msg))
-          );
+  prevMessages.map((msg) =>
+    msg._id === editingMessage ? { ...msg, message: updatedMessage.message.message } : msg
+  )
+);
+
           setEditingMessage(null);
           setMessage('');
         } else {
