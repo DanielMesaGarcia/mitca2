@@ -19,7 +19,7 @@ if (USING_HTTPS && PORT != 443) {
 }
 
 const APP = Express();
-const APP_PATH = path.join(__dirname, "..", "build");
+const APP_PATH = path.join(__dirname, "..", "build/");
 
 APP.use(Express.static(APP_PATH));
 

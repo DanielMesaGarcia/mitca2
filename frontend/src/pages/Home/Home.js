@@ -48,7 +48,7 @@ const Home = () => {
               <Card title={race._id} className='cardP'>
                 <img
                   className='racePicture'
-                  src={`https://localhost:3001/images/${race.filename}`}
+                  src={`http://localhost:3001/images/${race.filename}`}
                   alt={race.filename}
                   style={{ width: '100%', height: 'auto' }}
                 />
