@@ -68,7 +68,7 @@ const deleteRunner = async (id) => {
 
 const addRunnerToRace = async (runnerId, id) => {
   try {
-    const response = await axios.patch(`http://localhost:3001/races/${id}`, {
+    const response = await axios.patch(`https://localhost:3001/races/${id}`, {
       $push: { runners: runnerId }
     });
     return response.data;
@@ -79,7 +79,7 @@ const addRunnerToRace = async (runnerId, id) => {
 
 const transferRunners = async (runnerBuffer,starter, id) => {
   try {
-    const response = await axios.patch(`http://localhost:3001/races`, { runnerBuffer,starter, id });
+    const response = await axios.patch(`https://localhost:3001/races`, { runnerBuffer,starter, id });
     return response.data;
   } catch (error) {
     throw new Error(`Error al agregar corredor a la carrera: ${error.message}`);

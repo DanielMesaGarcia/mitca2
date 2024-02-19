@@ -4,9 +4,14 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const cors = require('cors');
+
+const HTTPS = require("https");
+const fs = require("fs");
+
 const http = require('http');
 const WebSocket = require('ws'); // Importa el módulo ws
 const path = require('path');
+
 require('dotenv').config();
 
 // Importa tus modelos
@@ -86,9 +91,29 @@ app.use((err, req, res, next) => {
   res.status(500).send('¡Algo salió mal!');
 });
 
-// Inicia el servidor
-server.listen(PORT, () => {
-  console.log(`El servidor está ejecutándose en el puerto ${PORT}`);
-});
+
+
+const USING_HTTPS = process.env.USING_HTTPS === "true" ? true : false;
+const APP = app;
+
+let SERVER = null;
+
+if (USING_HTTPS) {
+  const CERTS = () => {
+    try {
+      return {
+        key: fs.readFileSync(path.join(__dirname, ".cert/cert.key")),
+        cert: fs.readFileSync(path.join(__dirname, ".cert/cert.crt")),
+      };
+    } catch (err) {
+      console.log("No certificates found: " + err);
+    }
+  };
+  SERVER = HTTPS.createServer(CERTS(), APP);
+}
+
+(USING_HTTPS ? SERVER : APP).listen(PORT, () =>
+  console.log("App is running on port: " + PORT)
+);
 
 module.exports = app;

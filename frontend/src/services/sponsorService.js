@@ -71,7 +71,7 @@ const deleteSponsorCRUD = async (id) => {
 
 const addSponsorToRace = async (sponsorId, id) => {
   try {
-    const response = await axios.patch(`http://localhost:3001/races/${id}`, {
+    const response = await axios.patch(`https://localhost:3001/races/${id}`, {
       $push: { sponsors: sponsorId }
     });
     return response.data;

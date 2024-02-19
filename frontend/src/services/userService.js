@@ -68,7 +68,7 @@ const deleteUser = async (id) => {
 
 const addUserToRace = async (userId, id) => {
   try {
-    const response = await axios.patch(`http://localhost:3001/races/${id}`, {
+    const response = await axios.patch(`https://localhost:3001/races/${id}`, {
       $push: { users: userId }
     });
     return response.data;
