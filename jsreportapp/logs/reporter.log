@@ -6533,3 +6533,6 @@ JSON.parse (<anonymous>)
 2024-02-15T17:01:00.364Z - info: 2 worker threads initialized in 83ms
 2024-02-15T17:01:00.364Z - info: Starting temp files cleanup with 180000ms threshold
 2024-02-15T17:01:00.365Z - info: reporter initialized
+2024-02-19T15:33:21.045Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 18.17.1)
+2024-02-19T15:33:21.047Z - info: Searching for available extensions in C:\Users\Daniel Mesa\Desktop\mitca\jsreportapp\
+2024-02-19T15:33:21.051Z - info: Extensions location cache doesn't contain entry yet, crawling

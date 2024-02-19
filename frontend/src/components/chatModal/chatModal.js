@@ -137,16 +137,39 @@ const Chat = () => {
   const handleSendMessage = async () => {
     try {
       if (!running) {
-        // Si no hay conexión con el backend, guardar el mensaje en localStorage
-        const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
-        const messageData = {
-          sender: localStorage.getItem('name'),
-          message: message.trim(),
-          type: 'pending',
-        };
-        localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
-        setMessage('');
-        setMessages((prevMessages) => [...prevMessages, messageData]);
+        if (editingMessage) {
+          const updateMessageData = {
+            id: editingMessage,
+            editedMessage: message,
+            type: 'update',
+          };
+          let messagesArray = JSON.parse(localStorage.getItem('updateMessages')) || [];
+
+          // Agregar el nuevo objeto al array
+          messagesArray.push(updateMessageData);
+
+          // Guardar el array actualizado en el localStorage
+          localStorage.setItem('updateMessages', JSON.stringify(messagesArray));
+          setMessages((prevMessages) =>
+            prevMessages.map((msg) =>
+              msg._id === editingMessage ? { ...msg, message: message } : msg
+            )
+          );
+          console.log(messages)
+          setEditingMessage(null);
+          setMessage('');
+        } else {
+          // Si no hay conexión con el backend, guardar el mensaje en localStorage
+          const pendingMessages = JSON.parse(localStorage.getItem('pendingMessages')) || [];
+          const messageData = {
+            sender: localStorage.getItem('name'),
+            message: message.trim(),
+            type: 'pending',
+          };
+          localStorage.setItem('pendingMessages', JSON.stringify([...pendingMessages, messageData]));
+          setMessage('');
+          setMessages((prevMessages) => [...prevMessages, messageData]);
+        }
         return;
       }
       if (message.trim() !== '') {
@@ -156,17 +179,14 @@ const Chat = () => {
             editedMessage: message,
             type: 'update',
           };
-
-          if (socket) {
-            socket.send(JSON.stringify(updateMessageData));
-          }
+          socket.send(JSON.stringify(updateMessageData));
           const updatedMessage = await messageService.updateMessage(editingMessage, message.trim());
+
           setMessages((prevMessages) =>
             prevMessages.map((msg) =>
               msg._id === editingMessage ? { ...msg, message: updatedMessage.message.message } : msg
             )
           );
-
           setEditingMessage(null);
           setMessage('');
         } else {
@@ -217,11 +237,11 @@ const Chat = () => {
         try {
           for (let pendingDelete of pendingDeletes) {
             if (socket) {
-              pendingDelete = {type: "delete", id: pendingDelete.toString() };
-                socket.send(JSON.stringify(pendingDelete));
-              }
-              const newmsg = await messageService.deleteMessage(pendingDelete.id);
-              setMessages(newmsg);
+              pendingDelete = { type: "delete", id: pendingDelete.toString() };
+              socket.send(JSON.stringify(pendingDelete));
+            }
+            const newmsg = await messageService.deleteMessage(pendingDelete.id);
+            setMessages(newmsg);
           }
         } catch (error) {
           console.error('Error sending pending messages:', error);
@@ -231,8 +251,33 @@ const Chat = () => {
         }
       };
 
+      const pendingUpdates = JSON.parse(localStorage.getItem('updateMessages')) || [];
+      const sendUpdateMessages = async () => {
+        try {
+          for (let pendingUpdate of pendingUpdates) {
+            if (socket) {
+              socket.send(JSON.stringify(pendingUpdate));
+            }
+            const newmsg = await messageService.updateMessage(pendingUpdate.id, pendingUpdate.editedMessage.trim());
+            setMessages((prevMessages) =>
+            prevMessages.map((msg) =>
+              msg._id === pendingUpdate.id ? { ...msg, message: newmsg.message } : msg
+            )
+            
+          );
+          }
+          
+        } catch (error) {
+          console.error('Error sending pending updates:', error);
+        } finally {
+          setAllMessagesLoaded(true);
+          localStorage.setItem('updateMessages', JSON.stringify([])); 
+        }
+      };
+      sendUpdateMessages();
       sendDeleteMessages();
       sendPendingMessages();
+      console.log("CACACACACACAs")
     }
   }, [running]);
 
@@ -253,21 +298,21 @@ const Chat = () => {
 
   const borrarMensaje = async (id) => {
     try {
-      if(!socket){
+      if (!socket) {
         let mensajesEliminados = localStorage.getItem('mensajesEliminados') ? JSON.parse(localStorage.getItem('mensajesEliminados')) : [];
-mensajesEliminados.push(id);
-localStorage.setItem('mensajesEliminados', JSON.stringify(mensajesEliminados));
+        mensajesEliminados.push(id);
+        localStorage.setItem('mensajesEliminados', JSON.stringify(mensajesEliminados));
 
         setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== id));
-      }else{
+      } else {
         const response = await messageService.deleteMessage(id)
         const deleteMessageData = {
           id: id,
           type: 'delete',
         };
-  
+
         socket.send(JSON.stringify(deleteMessageData));
-        
+
         const data = response;
         setMessages(data);
       }
