@@ -86,7 +86,7 @@ const Chat = () => {
           setMessages((prevMessages) => {
             const updatedMessages = prevMessages.map(msg => {
               if (msg._id === messageData.id) {
-                const newmsg={ ...msg, message: messageData.editedMessage };
+                const newmsg = { ...msg, message: messageData.editedMessage };
                 console.log(newmsg)
                 return newmsg;
               } else {
@@ -162,10 +162,10 @@ const Chat = () => {
           }
           const updatedMessage = await messageService.updateMessage(editingMessage, message.trim());
           setMessages((prevMessages) =>
-  prevMessages.map((msg) =>
-    msg._id === editingMessage ? { ...msg, message: updatedMessage.message.message } : msg
-  )
-);
+            prevMessages.map((msg) =>
+              msg._id === editingMessage ? { ...msg, message: updatedMessage.message.message } : msg
+            )
+          );
 
           setEditingMessage(null);
           setMessage('');
@@ -211,6 +211,27 @@ const Chat = () => {
           localStorage.setItem('pendingMessages', JSON.stringify([]));
         }
       };
+
+      const pendingDeletes = JSON.parse(localStorage.getItem('mensajesEliminados')) || [];
+      const sendDeleteMessages = async () => {
+        try {
+          for (let pendingDelete of pendingDeletes) {
+            if (socket) {
+              pendingDelete = {type: "delete", id: pendingDelete.toString() };
+                socket.send(JSON.stringify(pendingDelete));
+              }
+              const newmsg = await messageService.deleteMessage(pendingDelete.id);
+              setMessages(newmsg);
+          }
+        } catch (error) {
+          console.error('Error sending pending messages:', error);
+        } finally {
+          setAllMessagesLoaded(true);
+          localStorage.setItem('mensajesEliminados', JSON.stringify([]));
+        }
+      };
+
+      sendDeleteMessages();
       sendPendingMessages();
     }
   }, [running]);
@@ -232,19 +253,26 @@ const Chat = () => {
 
   const borrarMensaje = async (id) => {
     try {
-      const response = await messageService.deleteMessage(id)
-      const deleteMessageData = {
-        id: id,
-        type: 'delete',
-      };
+      if(!socket){
+        let mensajesEliminados = localStorage.getItem('mensajesEliminados') ? JSON.parse(localStorage.getItem('mensajesEliminados')) : [];
+mensajesEliminados.push(id);
+localStorage.setItem('mensajesEliminados', JSON.stringify(mensajesEliminados));
 
-      if (socket) {
+        setMessages((prevMessages) => prevMessages.filter(msg => msg._id !== id));
+      }else{
+        const response = await messageService.deleteMessage(id)
+        const deleteMessageData = {
+          id: id,
+          type: 'delete',
+        };
+  
         socket.send(JSON.stringify(deleteMessageData));
+        
+        const data = response;
+        setMessages(data);
       }
-      const data = response;
-      setMessages(data);
-
     } catch (error) {
+      setSocket(false);
       console.error('Error deleting message:', error);
     }
   };
