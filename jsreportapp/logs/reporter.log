@@ -6480,68 +6480,59 @@ JSON.parse (<anonymous>)
 2024-01-20T13:02:44.710Z - info: Rendering (child) request finished in 1852 ms rootId=mmlu4ams1ofrt4k, id=n2np9i4noc6p32n
 2024-01-20T13:02:44.711Z - info: pdf-utils pdf processing was finished rootId=mmlu4ams1ofrt4k, id=mmlu4ams1ofrt4k
 2024-01-20T13:02:44.712Z - info: Rendering request 2 finished in 1881 ms rootId=mmlu4ams1ofrt4k, id=mmlu4ams1ofrt4k
-2024-02-05T15:22:03.718Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 20.11.0)
-2024-02-05T15:22:03.721Z - info: Searching for available extensions in /Users/josemiguelbravomendez/Documents/segundo/Proyecto 2 fase/Mitca/mitca2/jsreportapp/
-2024-02-05T15:22:03.722Z - info: Extensions location cache not found, crawling directories
-2024-02-05T15:22:04.167Z - info: Found 35 extension(s)
-2024-02-05T15:22:04.207Z - info: Using extension base@4.0.0
-2024-02-05T15:22:04.210Z - info: Using extension child-templates@4.0.0
-2024-02-05T15:22:04.213Z - info: Using extension cli@4.0.2
-2024-02-05T15:22:04.215Z - info: Using extension components@4.0.0
-2024-02-05T15:22:04.215Z - info: Using extension data@4.0.0
-2024-02-05T15:22:04.216Z - info: Using extension express@4.0.1
-2024-02-05T15:22:04.337Z - info: Using extension freeze@4.0.0
-2024-02-05T15:22:04.338Z - info: Using extension fs-store@4.0.1
-2024-02-05T15:22:04.941Z - info: Using extension handlebars@4.0.1
-2024-02-05T15:22:04.942Z - info: Using extension import-export@4.0.2
-2024-02-05T15:22:04.949Z - info: Using extension jsrender@4.0.0
-2024-02-05T15:22:04.949Z - info: Using extension licensing@4.0.1
-2024-02-05T15:22:04.962Z - info: Using extension localization@4.0.1
-2024-02-05T15:22:04.963Z - info: Using extension npm@4.0.0
-2024-02-05T15:22:04.964Z - info: Using extension pdf-utils@4.0.2
-2024-02-05T15:22:04.965Z - info: Using extension reports@4.0.0
-2024-02-05T15:22:04.967Z - info: Using extension tags@4.0.1
-2024-02-05T15:22:04.968Z - info: Using extension text@4.0.0
-2024-02-05T15:22:04.968Z - info: Using extension version-control@4.0.0
-2024-02-05T15:22:04.974Z - info: Using extension assets@4.0.2
-2024-02-05T15:22:04.979Z - info: Using extension authorization@4.0.0
-2024-02-05T15:22:04.981Z - info: Using extension browser-client@4.0.0
-2024-02-05T15:22:04.982Z - info: Using extension chrome-pdf@4.0.0
-2024-02-05T15:22:04.984Z - info: Using extension docx@4.1.1
-2024-02-05T15:22:04.985Z - info: Using extension html-to-xlsx@4.0.1
-2024-02-05T15:22:05.133Z - info: html-to-xlsx detected chrome as available html engine
-2024-02-05T15:22:05.133Z - info: Using extension pptx@4.1.0
-2024-02-05T15:22:05.134Z - info: Using extension scheduling@4.0.0
-2024-02-05T15:22:05.150Z - info: Using extension scripts@4.0.0
-2024-02-05T15:22:05.151Z - info: Using extension static-pdf@4.0.0
-2024-02-05T15:22:05.151Z - info: Using extension studio@4.0.2
-2024-02-05T15:22:05.202Z - info: Using extension xlsx@4.0.2
-2024-02-05T15:22:05.203Z - info: Using extension public-templates@4.0.0
-2024-02-05T15:22:05.203Z - info: Using extension sample-template@4.0.0
-2024-02-05T15:22:05.204Z - info: Using extension studio-theme-dark@4.0.0
-2024-02-05T15:22:05.205Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
-2024-02-05T15:22:05.205Z - info: Using general timeout for rendering (reportTimeout: 60000)
-2024-02-05T15:22:05.205Z - info: Using fs provider for template store.
-2024-02-05T15:22:05.207Z - info: fs store is persisting using fs for /Users/josemiguelbravomendez/Documents/segundo/Proyecto 2 fase/Mitca/mitca2/jsreportapp/data
-2024-02-05T15:22:05.210Z - info: fs store is loading data
-2024-02-05T15:22:05.228Z - info: fs store is initialized successfully
-2024-02-05T15:22:05.235Z - info: Creating default express app.
-2024-02-05T15:22:05.251Z - info: jsreport server successfully started on http port: 5488
-2024-02-05T15:22:05.251Z - info: Verifying license key free
-2024-02-05T15:22:05.252Z - info: Using free license
-2024-02-05T15:22:05.253Z - info: Initializing worker threads
-2024-02-05T15:22:05.340Z - info: 2 worker threads initialized in 87ms
-2024-02-05T15:22:05.340Z - info: Starting temp files cleanup with 180000ms threshold
-2024-02-05T15:22:05.341Z - info: reporter initialized
-2024-02-05T15:22:08.996Z - info: Render request 1 queued for execution and waiting for available worker rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:22:09.030Z - info: Starting rendering request 1 rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:22:09.030Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:22:13.648Z - info: pdf-utils is starting pdf processing rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:22:13.650Z - info: Starting rendering (child) request rootId=rfsubt0he53b321, id=g3f6p1kdb0hwhsk
-2024-02-05T15:22:13.650Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=rfsubt0he53b321, id=g3f6p1kdb0hwhsk
-2024-02-05T15:22:13.834Z - info: Rendering (child) request finished in 4807 ms rootId=rfsubt0he53b321, id=g3f6p1kdb0hwhsk
-2024-02-05T15:22:13.834Z - info: pdf-utils pdf processing was finished rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:22:13.834Z - info: Rendering request 1 finished in 4852 ms rootId=rfsubt0he53b321, id=rfsubt0he53b321
-2024-02-05T15:57:35.660Z - info: fs store is loading data
-2024-02-05T16:12:05.373Z - info: fs store is loading data
-2024-02-05T16:19:57.897Z - info: fs store is loading data
+2024-02-15T17:00:59.346Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 20.11.0)
+2024-02-15T17:00:59.348Z - info: Searching for available extensions in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-15T17:00:59.349Z - info: Extensions location cache not found, crawling directories
+2024-02-15T17:00:59.748Z - info: Found 35 extension(s)
+2024-02-15T17:00:59.795Z - info: Using extension base@4.0.0
+2024-02-15T17:00:59.798Z - info: Using extension child-templates@4.0.0
+2024-02-15T17:00:59.800Z - info: Using extension cli@4.0.2
+2024-02-15T17:00:59.802Z - info: Using extension components@4.0.0
+2024-02-15T17:00:59.802Z - info: Using extension data@4.0.0
+2024-02-15T17:00:59.803Z - info: Using extension express@4.0.1
+2024-02-15T17:00:59.917Z - info: Using extension freeze@4.0.0
+2024-02-15T17:00:59.918Z - info: Using extension fs-store@4.0.1
+2024-02-15T17:00:59.985Z - info: Using extension handlebars@4.0.1
+2024-02-15T17:00:59.986Z - info: Using extension import-export@4.0.2
+2024-02-15T17:00:59.990Z - info: Using extension jsrender@4.0.0
+2024-02-15T17:00:59.990Z - info: Using extension licensing@4.0.1
+2024-02-15T17:01:00.000Z - info: Using extension localization@4.0.1
+2024-02-15T17:01:00.000Z - info: Using extension npm@4.0.0
+2024-02-15T17:01:00.002Z - info: Using extension pdf-utils@4.0.2
+2024-02-15T17:01:00.003Z - info: Using extension reports@4.0.0
+2024-02-15T17:01:00.004Z - info: Using extension tags@4.0.1
+2024-02-15T17:01:00.005Z - info: Using extension text@4.0.0
+2024-02-15T17:01:00.005Z - info: Using extension version-control@4.0.0
+2024-02-15T17:01:00.011Z - info: Using extension assets@4.0.2
+2024-02-15T17:01:00.016Z - info: Using extension authorization@4.0.0
+2024-02-15T17:01:00.018Z - info: Using extension browser-client@4.0.0
+2024-02-15T17:01:00.019Z - info: Using extension chrome-pdf@4.0.0
+2024-02-15T17:01:00.021Z - info: Using extension docx@4.1.1
+2024-02-15T17:01:00.022Z - info: Using extension html-to-xlsx@4.0.1
+2024-02-15T17:01:00.165Z - info: html-to-xlsx detected chrome as available html engine
+2024-02-15T17:01:00.165Z - info: Using extension pptx@4.1.0
+2024-02-15T17:01:00.166Z - info: Using extension scheduling@4.0.0
+2024-02-15T17:01:00.180Z - info: Using extension scripts@4.0.0
+2024-02-15T17:01:00.180Z - info: Using extension static-pdf@4.0.0
+2024-02-15T17:01:00.181Z - info: Using extension studio@4.0.2
+2024-02-15T17:01:00.232Z - info: Using extension xlsx@4.0.2
+2024-02-15T17:01:00.233Z - info: Using extension public-templates@4.0.0
+2024-02-15T17:01:00.234Z - info: Using extension sample-template@4.0.0
+2024-02-15T17:01:00.235Z - info: Using extension studio-theme-dark@4.0.0
+2024-02-15T17:01:00.235Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2024-02-15T17:01:00.235Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-02-15T17:01:00.235Z - info: Using fs provider for template store.
+2024-02-15T17:01:00.238Z - info: fs store is persisting using fs for /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/data
+2024-02-15T17:01:00.240Z - info: fs store is loading data
+2024-02-15T17:01:00.258Z - info: fs store is initialized successfully
+2024-02-15T17:01:00.265Z - info: Creating default express app.
+2024-02-15T17:01:00.279Z - info: jsreport server successfully started on http port: 5488
+2024-02-15T17:01:00.280Z - info: Verifying license key free
+2024-02-15T17:01:00.280Z - info: Using free license
+2024-02-15T17:01:00.281Z - info: Initializing worker threads
+2024-02-15T17:01:00.364Z - info: 2 worker threads initialized in 83ms
+2024-02-15T17:01:00.364Z - info: Starting temp files cleanup with 180000ms threshold
+2024-02-15T17:01:00.365Z - info: reporter initialized
+2024-02-19T15:33:21.045Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 18.17.1)
+2024-02-19T15:33:21.047Z - info: Searching for available extensions in C:\Users\Daniel Mesa\Desktop\mitca\jsreportapp\
+2024-02-19T15:33:21.051Z - info: Extensions location cache doesn't contain entry yet, crawling

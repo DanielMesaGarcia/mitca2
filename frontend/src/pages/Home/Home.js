@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/header/Header';
 import RaceListService from '../../services/raceListService';
 import Footer from '../../components/footer/Footer';
+import Chat from '../../components/chatModal/chatModal';
 const Home = () => {
   const [races, setRaces] = useState([]);
   const navigate = useNavigate();
@@ -59,6 +60,7 @@ const Home = () => {
         />
       </div>
       </div>
+      <Chat></Chat>
       <Footer></Footer>
     </div>
   );

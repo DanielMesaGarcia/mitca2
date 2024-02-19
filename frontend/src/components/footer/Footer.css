@@ -1,7 +1,7 @@
 .footer-container {
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     margin: 10px; /* Ajusta el margen según sea necesario */
   }
   

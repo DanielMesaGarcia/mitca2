@@ -19,7 +19,11 @@ const Login = () => {
       // Save the token to the local storage
       localStorage.setItem('token', response.token);
       localStorage.setItem('role', response.role);
+
       localStorage.setItem('users', JSON.stringify(users));
+
+      localStorage.setItem('name', response.name);
+
       // Redirect to the home page
       if (localStorage.getItem('role') === 'admin') {
         navigate('/homeAdmin');

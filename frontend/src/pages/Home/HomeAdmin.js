@@ -7,6 +7,7 @@ import RaceListService from '../../services/raceListService';
 import { UploadOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import Footer from '../../components/footer/Footer';
+import Chat from '../../components/chatModal/chatModal';
 
 const HomeAdmin = () => {
   const [races, setRaces] = useState([]);
@@ -200,6 +201,7 @@ const HomeAdmin = () => {
 
         </Modal>
       </div>
+      <Chat></Chat>
       <Footer></Footer>
     </div>
   );
