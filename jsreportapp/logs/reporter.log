@@ -6533,3 +6533,1381 @@ JSON.parse (<anonymous>)
 2024-02-15T17:01:00.364Z - info: 2 worker threads initialized in 83ms
 2024-02-15T17:01:00.364Z - info: Starting temp files cleanup with 180000ms threshold
 2024-02-15T17:01:00.365Z - info: reporter initialized
+2024-02-19T15:39:42.476Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 20.11.0)
+2024-02-19T15:39:42.477Z - info: Searching for available extensions in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-19T15:39:42.478Z - info: Extensions location cache not found, crawling directories
+2024-02-19T15:39:42.829Z - info: Found 35 extension(s)
+2024-02-19T15:39:42.865Z - info: Using extension base@4.0.0
+2024-02-19T15:39:42.867Z - info: Using extension child-templates@4.0.0
+2024-02-19T15:39:42.870Z - info: Using extension cli@4.0.2
+2024-02-19T15:39:42.871Z - info: Using extension components@4.0.0
+2024-02-19T15:39:42.872Z - info: Using extension data@4.0.0
+2024-02-19T15:39:42.872Z - info: Using extension express@4.0.1
+2024-02-19T15:39:42.976Z - info: Using extension freeze@4.0.0
+2024-02-19T15:39:42.977Z - info: Using extension fs-store@4.0.1
+2024-02-19T15:39:43.046Z - info: Using extension handlebars@4.0.1
+2024-02-19T15:39:43.047Z - info: Using extension import-export@4.0.2
+2024-02-19T15:39:43.051Z - info: Using extension jsrender@4.0.0
+2024-02-19T15:39:43.051Z - info: Using extension licensing@4.0.1
+2024-02-19T15:39:43.052Z - info: Using extension localization@4.0.1
+2024-02-19T15:39:43.053Z - info: Using extension npm@4.0.0
+2024-02-19T15:39:43.054Z - info: Using extension pdf-utils@4.0.2
+2024-02-19T15:39:43.055Z - info: Using extension reports@4.0.0
+2024-02-19T15:39:43.057Z - info: Using extension tags@4.0.1
+2024-02-19T15:39:43.057Z - info: Using extension text@4.0.0
+2024-02-19T15:39:43.058Z - info: Using extension version-control@4.0.0
+2024-02-19T15:39:43.063Z - info: Using extension assets@4.0.2
+2024-02-19T15:39:43.068Z - info: Using extension authorization@4.0.0
+2024-02-19T15:39:43.070Z - info: Using extension browser-client@4.0.0
+2024-02-19T15:39:43.071Z - info: Using extension chrome-pdf@4.0.0
+2024-02-19T15:39:43.072Z - info: Using extension docx@4.1.1
+2024-02-19T15:39:43.073Z - info: Using extension html-to-xlsx@4.0.1
+2024-02-19T15:39:43.208Z - info: html-to-xlsx detected chrome as available html engine
+2024-02-19T15:39:43.208Z - info: Using extension pptx@4.1.0
+2024-02-19T15:39:43.209Z - info: Using extension scheduling@4.0.0
+2024-02-19T15:39:43.224Z - info: Using extension scripts@4.0.0
+2024-02-19T15:39:43.225Z - info: Using extension static-pdf@4.0.0
+2024-02-19T15:39:43.225Z - info: Using extension studio@4.0.2
+2024-02-19T15:39:43.256Z - info: Using extension xlsx@4.0.2
+2024-02-19T15:39:43.257Z - info: Using extension public-templates@4.0.0
+2024-02-19T15:39:43.257Z - info: Using extension sample-template@4.0.0
+2024-02-19T15:39:43.258Z - info: Using extension studio-theme-dark@4.0.0
+2024-02-19T15:39:43.258Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2024-02-19T15:39:43.259Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-02-19T15:39:43.259Z - info: Using fs provider for template store.
+2024-02-19T15:39:43.261Z - info: fs store is persisting using fs for /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/data
+2024-02-19T15:39:43.263Z - info: fs store is loading data
+2024-02-19T15:39:43.304Z - info: fs store is initialized successfully
+2024-02-19T15:39:43.311Z - info: Creating default express app.
+2024-02-19T15:39:43.322Z - info: jsreport server successfully started on http port: 5488
+2024-02-19T15:39:43.322Z - info: Verifying license key free
+2024-02-19T15:39:43.323Z - info: Using free license
+2024-02-19T15:39:43.325Z - info: Initializing worker threads
+2024-02-19T15:39:43.408Z - info: 2 worker threads initialized in 83ms
+2024-02-19T15:39:43.408Z - info: Starting temp files cleanup with 180000ms threshold
+2024-02-19T15:39:43.409Z - info: reporter initialized
+2024-02-19T15:39:51.195Z - info: Render request 1 queued for execution and waiting for available worker rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:39:51.218Z - info: Starting rendering request 1 rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:39:51.218Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:39:55.943Z - info: pdf-utils is starting pdf processing rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:39:55.945Z - info: Starting rendering (child) request rootId=60gzwm4ate3rk48, id=b8ouw36w907rvxh
+2024-02-19T15:39:55.945Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: false } rootId=60gzwm4ate3rk48, id=b8ouw36w907rvxh
+2024-02-19T15:39:56.122Z - info: Rendering (child) request finished in 4883 ms rootId=60gzwm4ate3rk48, id=b8ouw36w907rvxh
+2024-02-19T15:39:56.123Z - info: pdf-utils pdf processing was finished rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:39:56.123Z - info: Rendering request 1 finished in 4931 ms rootId=60gzwm4ate3rk48, id=60gzwm4ate3rk48
+2024-02-19T15:44:17.019Z - info: Verifying license key free
+2024-02-19T15:44:17.862Z - info: Starting one month enterprise trial
+2024-02-19T15:49:21.308Z - info: Render request 2 queued for execution and waiting for available worker rootId=2zn9cag7i08yzbj, id=2zn9cag7i08yzbj
+2024-02-19T15:49:21.337Z - info: Starting rendering request 2 rootId=2zn9cag7i08yzbj, id=2zn9cag7i08yzbj
+2024-02-19T15:49:21.337Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=2zn9cag7i08yzbj, id=2zn9cag7i08yzbj
+2024-02-19T15:49:21.545Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=2zn9cag7i08yzbj, id=2zn9cag7i08yzbj
+2024-02-19T15:49:33.986Z - info: Render request 3 queued for execution and waiting for available worker rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:34.005Z - info: Starting rendering request 3 rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:34.005Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:36.115Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/f8aa187b-d1d8-4804-9019-142623119ef8-chrome-pdf.html:45:29) rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:36.376Z - info: pdf-utils is starting pdf processing rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:36.379Z - info: Starting rendering (child) request rootId=rjqt4dzft2y9syb, id=mhu2ck8ddx8x7ec
+2024-02-19T15:49:36.380Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=rjqt4dzft2y9syb, id=mhu2ck8ddx8x7ec
+2024-02-19T15:49:36.521Z - info: Rendering (child) request finished in 2507 ms rootId=rjqt4dzft2y9syb, id=mhu2ck8ddx8x7ec
+2024-02-19T15:49:36.521Z - info: pdf-utils pdf processing was finished rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:36.521Z - info: Rendering request 3 finished in 2536 ms rootId=rjqt4dzft2y9syb, id=rjqt4dzft2y9syb
+2024-02-19T15:49:45.721Z - info: Render request 4 queued for execution and waiting for available worker rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:45.742Z - info: Starting rendering request 4 rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:45.742Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:46.315Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/7a3b7b2f-fb26-4833-829e-4987d9610319-chrome-pdf.html:45:29) rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:46.315Z - info: pdf-utils is starting pdf processing rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:46.315Z - info: Starting rendering (child) request rootId=ik8qhvb7ztbemjx, id=5vszp30djcqorf0
+2024-02-19T15:49:46.315Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ik8qhvb7ztbemjx, id=5vszp30djcqorf0
+2024-02-19T15:49:46.442Z - info: Rendering (child) request finished in 697 ms rootId=ik8qhvb7ztbemjx, id=5vszp30djcqorf0
+2024-02-19T15:49:46.442Z - info: pdf-utils pdf processing was finished rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:49:46.442Z - info: Rendering request 4 finished in 722 ms rootId=ik8qhvb7ztbemjx, id=ik8qhvb7ztbemjx
+2024-02-19T15:50:05.371Z - info: Render request 5 queued for execution and waiting for available worker rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.391Z - info: Starting rendering request 5 rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.392Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.568Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/8a2cbb1f-dff4-4618-b81b-95a6020f2f8d-chrome-pdf.html:45:29) rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.568Z - info: pdf-utils is starting pdf processing rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.568Z - info: Starting rendering (child) request rootId=16kunec3kw0avpl, id=arf3pssk0b7mi55
+2024-02-19T15:50:05.568Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=16kunec3kw0avpl, id=arf3pssk0b7mi55
+2024-02-19T15:50:05.682Z - info: Rendering (child) request finished in 293 ms rootId=16kunec3kw0avpl, id=arf3pssk0b7mi55
+2024-02-19T15:50:05.683Z - info: pdf-utils pdf processing was finished rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:05.683Z - info: Rendering request 5 finished in 312 ms rootId=16kunec3kw0avpl, id=16kunec3kw0avpl
+2024-02-19T15:50:14.092Z - info: Render request 6 queued for execution and waiting for available worker rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.104Z - info: Starting rendering request 6 rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.105Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.268Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/b5eec44f-9ea4-42c9-ae5d-e44e5df8153e-chrome-pdf.html:45:29) rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.269Z - info: pdf-utils is starting pdf processing rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.269Z - info: Starting rendering (child) request rootId=27qg29toeq403cx, id=05zaoscn1c7xgrd
+2024-02-19T15:50:14.269Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=27qg29toeq403cx, id=05zaoscn1c7xgrd
+2024-02-19T15:50:14.395Z - info: Rendering (child) request finished in 286 ms rootId=27qg29toeq403cx, id=05zaoscn1c7xgrd
+2024-02-19T15:50:14.397Z - info: pdf-utils pdf processing was finished rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:14.397Z - info: Rendering request 6 finished in 304 ms rootId=27qg29toeq403cx, id=27qg29toeq403cx
+2024-02-19T15:50:15.547Z - info: Render request 7 queued for execution and waiting for available worker rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.565Z - info: Starting rendering request 7 rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.566Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.687Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/7d53d17b-a704-481e-a75d-0150844e9054-chrome-pdf.html:45:29) rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.688Z - info: pdf-utils is starting pdf processing rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.694Z - info: Starting rendering (child) request rootId=ga4ob1wzwbud4q9, id=fiydh6r5kcn11hs
+2024-02-19T15:50:15.694Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ga4ob1wzwbud4q9, id=fiydh6r5kcn11hs
+2024-02-19T15:50:15.832Z - info: Rendering (child) request finished in 270 ms rootId=ga4ob1wzwbud4q9, id=fiydh6r5kcn11hs
+2024-02-19T15:50:15.833Z - info: pdf-utils pdf processing was finished rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:15.833Z - info: Rendering request 7 finished in 285 ms rootId=ga4ob1wzwbud4q9, id=ga4ob1wzwbud4q9
+2024-02-19T15:50:35.050Z - info: Render request 8 queued for execution and waiting for available worker rootId=5vc9angamq7heri, id=5vc9angamq7heri
+2024-02-19T15:50:35.066Z - info: Starting rendering request 8 rootId=5vc9angamq7heri, id=5vc9angamq7heri
+2024-02-19T15:50:35.066Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=5vc9angamq7heri, id=5vc9angamq7heri
+2024-02-19T15:50:35.158Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5vc9angamq7heri, id=5vc9angamq7heri
+2024-02-19T15:51:02.525Z - info: Render request 9 queued for execution and waiting for available worker rootId=dnaq81s9ny6kpfn, id=dnaq81s9ny6kpfn
+2024-02-19T15:51:02.551Z - info: Starting rendering request 9 rootId=dnaq81s9ny6kpfn, id=dnaq81s9ny6kpfn
+2024-02-19T15:51:02.551Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=dnaq81s9ny6kpfn, id=dnaq81s9ny6kpfn
+2024-02-19T15:51:02.745Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=dnaq81s9ny6kpfn, id=dnaq81s9ny6kpfn
+2024-02-19T15:51:59.439Z - info: Render request 10 queued for execution and waiting for available worker rootId=w6qn38eqea1sae2, id=w6qn38eqea1sae2
+2024-02-19T15:51:59.462Z - info: Starting rendering request 10 rootId=w6qn38eqea1sae2, id=w6qn38eqea1sae2
+2024-02-19T15:51:59.462Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=w6qn38eqea1sae2, id=w6qn38eqea1sae2
+2024-02-19T15:51:59.650Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=w6qn38eqea1sae2, id=w6qn38eqea1sae2
+2024-02-19T15:52:08.993Z - info: Render request 11 queued for execution and waiting for available worker rootId=cox7y7c86ia58l7, id=cox7y7c86ia58l7
+2024-02-19T15:52:09.014Z - info: Starting rendering request 11 rootId=cox7y7c86ia58l7, id=cox7y7c86ia58l7
+2024-02-19T15:52:09.015Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=cox7y7c86ia58l7, id=cox7y7c86ia58l7
+2024-02-19T15:52:09.369Z - warn: Error when processing render request 11
+(because) error when evaluating engine handlebars for template /samples/Messages/orders-main
+(because) "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+Error: "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+    at module.exports (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/createError.js:10:13)
+    at WorkerReporter.createError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/reporter.js:49:12)
+    at getEnhancedHelperError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:364:54)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:370:15)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:347:27)
+    at Object.wrapper (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at 1 (eval at compile (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-handlebars/lib/handlebarsEngine.js:35:30), <anonymous>:12:132)
+    at prog (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:268:12)
+    at execIteration (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:51:19)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:61:13)
+wrapped by:
+Error: Error when evaluating engine handlebars for template /samples/Messages/orders-main
+(because) "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+    at module.exports (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/createError.js:10:13)
+    at WorkerReporter.createError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/reporter.js:49:12)
+    at executeEngine (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:310:33)
+    at async engine.engine (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:115:14)
+    at async invokeRender (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/render.js:61:23)
+    at async WorkerReporter._render (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/render.js:142:7)
+    at async /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/reporter.js:224:19
+    at async processAndResponse (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/advanced-workers/lib/workerHandler.js:41:17) rootId=cox7y7c86ia58l7, id=cox7y7c86ia58l7
+2024-02-19T15:52:09.370Z - warn: Rendering request 11 finished with error in 378 ms rootId=cox7y7c86ia58l7, id=cox7y7c86ia58l7
+2024-02-19T15:52:22.388Z - info: Render request 12 queued for execution and waiting for available worker rootId=icu82rotlca74si, id=icu82rotlca74si
+2024-02-19T15:52:22.405Z - info: Starting rendering request 12 rootId=icu82rotlca74si, id=icu82rotlca74si
+2024-02-19T15:52:22.405Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=icu82rotlca74si, id=icu82rotlca74si
+2024-02-19T15:52:22.432Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=icu82rotlca74si, id=icu82rotlca74si
+2024-02-19T15:52:45.892Z - info: Render request 13 queued for execution and waiting for available worker rootId=ldwuywrrlcx59cx, id=ldwuywrrlcx59cx
+2024-02-19T15:52:45.919Z - info: Starting rendering request 13 rootId=ldwuywrrlcx59cx, id=ldwuywrrlcx59cx
+2024-02-19T15:52:45.919Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ldwuywrrlcx59cx, id=ldwuywrrlcx59cx
+2024-02-19T15:52:46.126Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ldwuywrrlcx59cx, id=ldwuywrrlcx59cx
+2024-02-19T15:53:08.341Z - info: Render request 14 queued for execution and waiting for available worker rootId=rydmhvws91ag1ml, id=rydmhvws91ag1ml
+2024-02-19T15:53:08.363Z - info: Starting rendering request 14 rootId=rydmhvws91ag1ml, id=rydmhvws91ag1ml
+2024-02-19T15:53:08.364Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=rydmhvws91ag1ml, id=rydmhvws91ag1ml
+2024-02-19T15:53:08.531Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=rydmhvws91ag1ml, id=rydmhvws91ag1ml
+2024-02-19T15:53:11.368Z - info: Render request 15 queued for execution and waiting for available worker rootId=vtm4d1sj1xwnrxr, id=vtm4d1sj1xwnrxr
+2024-02-19T15:53:11.395Z - info: Starting rendering request 15 rootId=vtm4d1sj1xwnrxr, id=vtm4d1sj1xwnrxr
+2024-02-19T15:53:11.395Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=vtm4d1sj1xwnrxr, id=vtm4d1sj1xwnrxr
+2024-02-19T15:53:11.503Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=vtm4d1sj1xwnrxr, id=vtm4d1sj1xwnrxr
+2024-02-19T15:53:15.552Z - info: Render request 16 queued for execution and waiting for available worker rootId=n1inhkxgk38trt9, id=n1inhkxgk38trt9
+2024-02-19T15:53:15.594Z - info: Starting rendering request 16 rootId=n1inhkxgk38trt9, id=n1inhkxgk38trt9
+2024-02-19T15:53:15.594Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=n1inhkxgk38trt9, id=n1inhkxgk38trt9
+2024-02-19T15:53:15.696Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=n1inhkxgk38trt9, id=n1inhkxgk38trt9
+2024-02-19T15:54:00.454Z - info: Render request 17 queued for execution and waiting for available worker rootId=5h09zeyn974sa72, id=5h09zeyn974sa72
+2024-02-19T15:54:00.484Z - info: Starting rendering request 17 rootId=5h09zeyn974sa72, id=5h09zeyn974sa72
+2024-02-19T15:54:00.485Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=5h09zeyn974sa72, id=5h09zeyn974sa72
+2024-02-19T15:54:00.670Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5h09zeyn974sa72, id=5h09zeyn974sa72
+2024-02-19T15:54:08.529Z - info: Render request 18 queued for execution and waiting for available worker rootId=4w0dvxo36c9n031, id=4w0dvxo36c9n031
+2024-02-19T15:54:08.551Z - info: Starting rendering request 18 rootId=4w0dvxo36c9n031, id=4w0dvxo36c9n031
+2024-02-19T15:54:08.552Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=4w0dvxo36c9n031, id=4w0dvxo36c9n031
+2024-02-19T15:54:08.660Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=4w0dvxo36c9n031, id=4w0dvxo36c9n031
+2024-02-19T15:54:20.569Z - info: Render request 19 queued for execution and waiting for available worker rootId=lo3wczaes3bfqm3, id=lo3wczaes3bfqm3
+2024-02-19T15:54:20.597Z - info: Starting rendering request 19 rootId=lo3wczaes3bfqm3, id=lo3wczaes3bfqm3
+2024-02-19T15:54:20.597Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=lo3wczaes3bfqm3, id=lo3wczaes3bfqm3
+2024-02-19T15:54:20.757Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=lo3wczaes3bfqm3, id=lo3wczaes3bfqm3
+2024-02-19T15:54:59.520Z - info: Render request 20 queued for execution and waiting for available worker rootId=t49czlnli85vznz, id=t49czlnli85vznz
+2024-02-19T15:54:59.572Z - info: Starting rendering request 20 rootId=t49czlnli85vznz, id=t49czlnli85vznz
+2024-02-19T15:54:59.572Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=t49czlnli85vznz, id=t49czlnli85vznz
+2024-02-19T15:55:01.672Z - info: Rendering request 20 finished in 2153 ms rootId=t49czlnli85vznz, id=t49czlnli85vznz
+2024-02-19T15:55:08.874Z - info: Render request 21 queued for execution and waiting for available worker rootId=buf0ifc373x39a2, id=buf0ifc373x39a2
+2024-02-19T15:55:08.891Z - info: Starting rendering request 21 rootId=buf0ifc373x39a2, id=buf0ifc373x39a2
+2024-02-19T15:55:08.891Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=buf0ifc373x39a2, id=buf0ifc373x39a2
+2024-02-19T15:55:09.844Z - info: Rendering request 21 finished in 970 ms rootId=buf0ifc373x39a2, id=buf0ifc373x39a2
+2024-02-19T15:55:34.324Z - info: Render request 22 queued for execution and waiting for available worker rootId=sj2z00iaye81cgw, id=sj2z00iaye81cgw
+2024-02-19T15:55:34.334Z - info: Starting rendering request 22 rootId=sj2z00iaye81cgw, id=sj2z00iaye81cgw
+2024-02-19T15:55:34.334Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=sj2z00iaye81cgw, id=sj2z00iaye81cgw
+2024-02-19T15:55:34.470Z - info: Rendering request 22 finished in 146 ms rootId=sj2z00iaye81cgw, id=sj2z00iaye81cgw
+2024-02-19T15:55:44.439Z - info: Render request 23 queued for execution and waiting for available worker rootId=unkw4htkiqx8sw6, id=unkw4htkiqx8sw6
+2024-02-19T15:55:44.463Z - info: Starting rendering request 23 rootId=unkw4htkiqx8sw6, id=unkw4htkiqx8sw6
+2024-02-19T15:55:44.463Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=unkw4htkiqx8sw6, id=unkw4htkiqx8sw6
+2024-02-19T15:55:44.550Z - info: Rendering request 23 finished in 111 ms rootId=unkw4htkiqx8sw6, id=unkw4htkiqx8sw6
+2024-02-19T15:56:14.454Z - info: Verifying license key free
+2024-02-19T15:56:15.155Z - info: Using enterprise trial license
+2024-02-19T15:56:27.150Z - info: Render request 24 queued for execution and waiting for available worker rootId=xz8qbyht23ivgcr, id=xz8qbyht23ivgcr
+2024-02-19T15:56:27.170Z - info: Starting rendering request 24 rootId=xz8qbyht23ivgcr, id=xz8qbyht23ivgcr
+2024-02-19T15:56:27.170Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xz8qbyht23ivgcr, id=xz8qbyht23ivgcr
+2024-02-19T15:56:27.246Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=xz8qbyht23ivgcr, id=xz8qbyht23ivgcr
+2024-02-19T15:56:49.609Z - info: Render request 25 queued for execution and waiting for available worker rootId=58yrym6qrqhzqmg, id=58yrym6qrqhzqmg
+2024-02-19T15:56:49.634Z - info: Starting rendering request 25 rootId=58yrym6qrqhzqmg, id=58yrym6qrqhzqmg
+2024-02-19T15:56:49.637Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=58yrym6qrqhzqmg, id=58yrym6qrqhzqmg
+2024-02-19T15:56:49.809Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=58yrym6qrqhzqmg, id=58yrym6qrqhzqmg
+2024-02-19T15:56:59.927Z - info: Render request 26 queued for execution and waiting for available worker rootId=8v8a4529vr94zbi, id=8v8a4529vr94zbi
+2024-02-19T15:56:59.950Z - info: Starting rendering request 26 rootId=8v8a4529vr94zbi, id=8v8a4529vr94zbi
+2024-02-19T15:56:59.950Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=8v8a4529vr94zbi, id=8v8a4529vr94zbi
+2024-02-19T15:57:00.099Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=8v8a4529vr94zbi, id=8v8a4529vr94zbi
+2024-02-19T15:57:47.266Z - info: Render request 27 queued for execution and waiting for available worker rootId=npxkpr4w625lwgl, id=npxkpr4w625lwgl
+2024-02-19T15:57:47.295Z - info: Starting rendering request 27 rootId=npxkpr4w625lwgl, id=npxkpr4w625lwgl
+2024-02-19T15:57:47.295Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=npxkpr4w625lwgl, id=npxkpr4w625lwgl
+2024-02-19T15:57:47.503Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=npxkpr4w625lwgl, id=npxkpr4w625lwgl
+2024-02-19T15:59:52.028Z - info: Render request 28 queued for execution and waiting for available worker rootId=7hsecgizyuve3i8, id=7hsecgizyuve3i8
+2024-02-19T15:59:52.051Z - info: Starting rendering request 28 rootId=7hsecgizyuve3i8, id=7hsecgizyuve3i8
+2024-02-19T15:59:52.052Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=7hsecgizyuve3i8, id=7hsecgizyuve3i8
+2024-02-19T15:59:52.237Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:37:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=7hsecgizyuve3i8, id=7hsecgizyuve3i8
+2024-02-19T16:00:04.942Z - info: Verifying license key free
+2024-02-19T16:00:05.564Z - info: Using enterprise trial license
+2024-02-19T16:00:12.263Z - info: Render request 29 queued for execution and waiting for available worker rootId=2z73y63kf6jfs3f, id=2z73y63kf6jfs3f
+2024-02-19T16:00:12.286Z - info: Starting rendering request 29 rootId=2z73y63kf6jfs3f, id=2z73y63kf6jfs3f
+2024-02-19T16:00:12.286Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=2z73y63kf6jfs3f, id=2z73y63kf6jfs3f
+2024-02-19T16:00:12.443Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:37:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=2z73y63kf6jfs3f, id=2z73y63kf6jfs3f
+2024-02-19T16:01:15.146Z - info: Render request 30 queued for execution and waiting for available worker rootId=wlkp7zehwv11fnr, id=wlkp7zehwv11fnr
+2024-02-19T16:01:15.170Z - info: Starting rendering request 30 rootId=wlkp7zehwv11fnr, id=wlkp7zehwv11fnr
+2024-02-19T16:01:15.170Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wlkp7zehwv11fnr, id=wlkp7zehwv11fnr
+2024-02-19T16:01:15.352Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:37:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=wlkp7zehwv11fnr, id=wlkp7zehwv11fnr
+2024-02-19T16:01:20.344Z - info: Render request 31 queued for execution and waiting for available worker rootId=arf37uez7doiwwm, id=arf37uez7doiwwm
+2024-02-19T16:01:20.371Z - info: Starting rendering request 31 rootId=arf37uez7doiwwm, id=arf37uez7doiwwm
+2024-02-19T16:01:20.371Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=arf37uez7doiwwm, id=arf37uez7doiwwm
+2024-02-19T16:01:20.509Z - warn: Error when processing render request 31
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       messages: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=arf37uez7doiwwm, id=arf37uez7doiwwm
+2024-02-19T16:01:20.509Z - warn: Rendering request 31 finished with error in 168 ms rootId=arf37uez7doiwwm, id=arf37uez7doiwwm
+2024-02-19T16:01:48.646Z - info: Render request 32 queued for execution and waiting for available worker rootId=qo86ka1870r34cw, id=qo86ka1870r34cw
+2024-02-19T16:01:48.659Z - info: Starting rendering request 32 rootId=qo86ka1870r34cw, id=qo86ka1870r34cw
+2024-02-19T16:01:48.660Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=qo86ka1870r34cw, id=qo86ka1870r34cw
+2024-02-19T16:01:48.743Z - warn: Error when processing render request 32
+(because) error when evaluating custom script /samples/Messages/orders-script
+Invalid data structure
+
+(sandbox.js line 25:11)
+
+  23 |   } else {
+  24 |     console.error('Invalid data structure:', data);
+> 25 |     throw new Error('Invalid data structure');  // Propagar un error para que jsreport maneje el error correctamente
+     |           ^
+  26 |   }
+  27 | }
+  28 |
+
+(sandbox.js line 32:31)
+
+  30 |   fetchData()
+  31 |     .then(data => {
+> 32 |       const transformedData = transformData(data);
+     |                               ^
+  33 |
+  34 |       req.data = {
+  35 |         orders: transformedData
+
+
+Error: Invalid data structure
+    at transformData (sandbox.js:25:11)
+    at sandbox.js:32:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=qo86ka1870r34cw, id=qo86ka1870r34cw
+2024-02-19T16:01:48.743Z - warn: Rendering request 32 finished with error in 99 ms rootId=qo86ka1870r34cw, id=qo86ka1870r34cw
+2024-02-19T16:01:49.456Z - info: Render request 33 queued for execution and waiting for available worker rootId=snqgq2nvxsuqt3v, id=snqgq2nvxsuqt3v
+2024-02-19T16:01:49.468Z - info: Starting rendering request 33 rootId=snqgq2nvxsuqt3v, id=snqgq2nvxsuqt3v
+2024-02-19T16:01:49.469Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=snqgq2nvxsuqt3v, id=snqgq2nvxsuqt3v
+2024-02-19T16:01:49.501Z - warn: Error when processing render request 33
+(because) error when evaluating custom script /samples/Messages/orders-script
+Invalid data structure
+
+(sandbox.js line 25:11)
+
+  23 |   } else {
+  24 |     console.error('Invalid data structure:', data);
+> 25 |     throw new Error('Invalid data structure');  // Propagar un error para que jsreport maneje el error correctamente
+     |           ^
+  26 |   }
+  27 | }
+  28 |
+
+(sandbox.js line 32:31)
+
+  30 |   fetchData()
+  31 |     .then(data => {
+> 32 |       const transformedData = transformData(data);
+     |                               ^
+  33 |
+  34 |       req.data = {
+  35 |         orders: transformedData
+
+
+Error: Invalid data structure
+    at transformData (sandbox.js:25:11)
+    at sandbox.js:32:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=snqgq2nvxsuqt3v, id=snqgq2nvxsuqt3v
+2024-02-19T16:01:49.501Z - warn: Rendering request 33 finished with error in 46 ms rootId=snqgq2nvxsuqt3v, id=snqgq2nvxsuqt3v
+2024-02-19T16:01:50.159Z - info: Render request 34 queued for execution and waiting for available worker rootId=2wswtlkeue61fnx, id=2wswtlkeue61fnx
+2024-02-19T16:01:50.187Z - info: Starting rendering request 34 rootId=2wswtlkeue61fnx, id=2wswtlkeue61fnx
+2024-02-19T16:01:50.187Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=2wswtlkeue61fnx, id=2wswtlkeue61fnx
+2024-02-19T16:01:50.198Z - warn: Error when processing render request 34
+(because) error when evaluating custom script /samples/Messages/orders-script
+Invalid data structure
+
+(sandbox.js line 25:11)
+
+  23 |   } else {
+  24 |     console.error('Invalid data structure:', data);
+> 25 |     throw new Error('Invalid data structure');  // Propagar un error para que jsreport maneje el error correctamente
+     |           ^
+  26 |   }
+  27 | }
+  28 |
+
+(sandbox.js line 32:31)
+
+  30 |   fetchData()
+  31 |     .then(data => {
+> 32 |       const transformedData = transformData(data);
+     |                               ^
+  33 |
+  34 |       req.data = {
+  35 |         orders: transformedData
+
+
+Error: Invalid data structure
+    at transformData (sandbox.js:25:11)
+    at sandbox.js:32:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=2wswtlkeue61fnx, id=2wswtlkeue61fnx
+2024-02-19T16:01:50.198Z - warn: Rendering request 34 finished with error in 40 ms rootId=2wswtlkeue61fnx, id=2wswtlkeue61fnx
+2024-02-19T16:02:06.657Z - info: Render request 35 queued for execution and waiting for available worker rootId=y4slk3hqwvi7rnv, id=y4slk3hqwvi7rnv
+2024-02-19T16:02:06.669Z - info: Starting rendering request 35 rootId=y4slk3hqwvi7rnv, id=y4slk3hqwvi7rnv
+2024-02-19T16:02:06.670Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=y4slk3hqwvi7rnv, id=y4slk3hqwvi7rnv
+2024-02-19T16:02:06.687Z - warn: Error when processing render request 35
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       messages: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=y4slk3hqwvi7rnv, id=y4slk3hqwvi7rnv
+2024-02-19T16:02:06.687Z - warn: Rendering request 35 finished with error in 30 ms rootId=y4slk3hqwvi7rnv, id=y4slk3hqwvi7rnv
+2024-02-19T16:02:14.872Z - info: Render request 36 queued for execution and waiting for available worker rootId=h8ddnyy3vu8o9xs, id=h8ddnyy3vu8o9xs
+2024-02-19T16:02:14.904Z - info: Starting rendering request 36 rootId=h8ddnyy3vu8o9xs, id=h8ddnyy3vu8o9xs
+2024-02-19T16:02:14.904Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=h8ddnyy3vu8o9xs, id=h8ddnyy3vu8o9xs
+2024-02-19T16:02:14.929Z - warn: Error when processing render request 36
+(because) error when evaluating engine handlebars for template /samples/Messages/orders-main
+(because) "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+Error: "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+    at module.exports (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/createError.js:10:13)
+    at WorkerReporter.createError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/reporter.js:49:12)
+    at getEnhancedHelperError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:364:54)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:370:15)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:347:27)
+    at Object.wrapper (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at 1 (eval at compile (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-handlebars/lib/handlebarsEngine.js:35:30), <anonymous>:12:132)
+    at prog (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:268:12)
+    at execIteration (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:51:19)
+    at Object.<anonymous> (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js:61:13)
+wrapped by:
+Error: Error when evaluating engine handlebars for template /samples/Messages/orders-main
+(because) "pdfCreatePagesGroup" helper call failed
+(because) "pdfCreatePagesGroup" was called with undefined parameter. One parameter was expected.
+    at module.exports (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/createError.js:10:13)
+    at WorkerReporter.createError (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/shared/reporter.js:49:12)
+    at executeEngine (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:310:33)
+    at async engine.engine (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/executeEngine.js:115:14)
+    at async invokeRender (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/render.js:61:23)
+    at async WorkerReporter._render (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/render/render.js:142:7)
+    at async /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/reporter.js:224:19
+    at async processAndResponse (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/advanced-workers/lib/workerHandler.js:41:17) rootId=h8ddnyy3vu8o9xs, id=h8ddnyy3vu8o9xs
+2024-02-19T16:02:14.930Z - warn: Rendering request 36 finished with error in 58 ms rootId=h8ddnyy3vu8o9xs, id=h8ddnyy3vu8o9xs
+2024-02-19T16:02:18.089Z - info: Render request 37 queued for execution and waiting for available worker rootId=8lil2gsiuwhx52w, id=8lil2gsiuwhx52w
+2024-02-19T16:02:18.118Z - info: Starting rendering request 37 rootId=8lil2gsiuwhx52w, id=8lil2gsiuwhx52w
+2024-02-19T16:02:18.118Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=8lil2gsiuwhx52w, id=8lil2gsiuwhx52w
+2024-02-19T16:02:18.140Z - warn: Error when processing render request 37
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       messages: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=8lil2gsiuwhx52w, id=8lil2gsiuwhx52w
+2024-02-19T16:02:18.141Z - warn: Rendering request 37 finished with error in 52 ms rootId=8lil2gsiuwhx52w, id=8lil2gsiuwhx52w
+2024-02-19T16:02:22.334Z - info: Render request 38 queued for execution and waiting for available worker rootId=viyfrt0yo1kqxsl, id=viyfrt0yo1kqxsl
+2024-02-19T16:02:22.346Z - info: Starting rendering request 38 rootId=viyfrt0yo1kqxsl, id=viyfrt0yo1kqxsl
+2024-02-19T16:02:22.346Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=viyfrt0yo1kqxsl, id=viyfrt0yo1kqxsl
+2024-02-19T16:02:22.371Z - warn: Error when processing render request 38
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(messages => {
+     |                    ^
+  16 |     return {
+  17 |       messages: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=viyfrt0yo1kqxsl, id=viyfrt0yo1kqxsl
+2024-02-19T16:02:22.371Z - warn: Rendering request 38 finished with error in 39 ms rootId=viyfrt0yo1kqxsl, id=viyfrt0yo1kqxsl
+2024-02-19T16:02:28.458Z - info: Render request 39 queued for execution and waiting for available worker rootId=xy5ajn7ud6pv8b1, id=xy5ajn7ud6pv8b1
+2024-02-19T16:02:28.484Z - info: Starting rendering request 39 rootId=xy5ajn7ud6pv8b1, id=xy5ajn7ud6pv8b1
+2024-02-19T16:02:28.484Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xy5ajn7ud6pv8b1, id=xy5ajn7ud6pv8b1
+2024-02-19T16:02:28.497Z - warn: Error when processing render request 39
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(messages => {
+     |                    ^
+  16 |     return {
+  17 |       message: messages._id,
+  18 |       rows: messages.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=xy5ajn7ud6pv8b1, id=xy5ajn7ud6pv8b1
+2024-02-19T16:02:28.498Z - warn: Rendering request 39 finished with error in 42 ms rootId=xy5ajn7ud6pv8b1, id=xy5ajn7ud6pv8b1
+2024-02-19T16:03:09.042Z - info: Render request 40 queued for execution and waiting for available worker rootId=21nc4a3v2eprxjm, id=21nc4a3v2eprxjm
+2024-02-19T16:03:09.069Z - info: Starting rendering request 40 rootId=21nc4a3v2eprxjm, id=21nc4a3v2eprxjm
+2024-02-19T16:03:09.069Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=21nc4a3v2eprxjm, id=21nc4a3v2eprxjm
+2024-02-19T16:03:09.146Z - warn: Error when processing render request 40
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(messages => {
+     |                    ^
+  16 |     return {
+  17 |       country: messages._id,
+  18 |       rows: messages.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=21nc4a3v2eprxjm, id=21nc4a3v2eprxjm
+2024-02-19T16:03:09.146Z - warn: Rendering request 40 finished with error in 105 ms rootId=21nc4a3v2eprxjm, id=21nc4a3v2eprxjm
+2024-02-19T16:03:20.608Z - info: Render request 41 queued for execution and waiting for available worker rootId=03ohksp3p159jur, id=03ohksp3p159jur
+2024-02-19T16:03:20.621Z - info: Starting rendering request 41 rootId=03ohksp3p159jur, id=03ohksp3p159jur
+2024-02-19T16:03:20.621Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=03ohksp3p159jur, id=03ohksp3p159jur
+2024-02-19T16:03:20.652Z - warn: Error when processing render request 41
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       country: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=03ohksp3p159jur, id=03ohksp3p159jur
+2024-02-19T16:03:20.652Z - warn: Rendering request 41 finished with error in 44 ms rootId=03ohksp3p159jur, id=03ohksp3p159jur
+2024-02-19T16:04:12.741Z - info: Render request 42 queued for execution and waiting for available worker rootId=tqjkktu8hr6jzwl, id=tqjkktu8hr6jzwl
+2024-02-19T16:04:12.759Z - info: Starting rendering request 42 rootId=tqjkktu8hr6jzwl, id=tqjkktu8hr6jzwl
+2024-02-19T16:04:12.760Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=tqjkktu8hr6jzwl, id=tqjkktu8hr6jzwl
+2024-02-19T16:04:12.801Z - warn: Error when processing render request 42
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       rows: message.sender
+  18 |     };
+
+(sandbox.js line 25:31)
+
+  23 |   fetchData()
+  24 |     .then(data => {
+> 25 |       const transformedData = transformData(data);
+     |                               ^
+  26 |
+  27 |       req.data = {
+  28 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:25:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=tqjkktu8hr6jzwl, id=tqjkktu8hr6jzwl
+2024-02-19T16:04:12.801Z - warn: Rendering request 42 finished with error in 61 ms rootId=tqjkktu8hr6jzwl, id=tqjkktu8hr6jzwl
+2024-02-19T16:04:16.970Z - info: Render request 43 queued for execution and waiting for available worker rootId=5vxvk3l1rpphful, id=5vxvk3l1rpphful
+2024-02-19T16:04:16.986Z - info: Starting rendering request 43 rootId=5vxvk3l1rpphful, id=5vxvk3l1rpphful
+2024-02-19T16:04:16.986Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=5vxvk3l1rpphful, id=5vxvk3l1rpphful
+2024-02-19T16:04:17.001Z - warn: Error when processing render request 43
+(because) error when evaluating custom script /samples/Messages/orders-script
+Cannot read properties of undefined (reading 'map')
+
+(sandbox.js line 15:20)
+
+  13 |
+  14 | function transformData(data) {
+> 15 |   return data.data.map(message => {
+     |                    ^
+  16 |     return {
+  17 |       country: message._id,
+  18 |       rows: message.sender
+
+(sandbox.js line 26:31)
+
+  24 |   fetchData()
+  25 |     .then(data => {
+> 26 |       const transformedData = transformData(data);
+     |                               ^
+  27 |
+  28 |       req.data = {
+  29 |         orders: transformedData
+
+
+TypeError: Cannot read properties of undefined (reading 'map')
+    at transformData (sandbox.js:15:20)
+    at sandbox.js:26:31
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5vxvk3l1rpphful, id=5vxvk3l1rpphful
+2024-02-19T16:04:17.001Z - warn: Rendering request 43 finished with error in 32 ms rootId=5vxvk3l1rpphful, id=5vxvk3l1rpphful
+2024-02-19T16:05:20.888Z - info: Render request 44 queued for execution and waiting for available worker rootId=orgkl93jp7k0pr1, id=orgkl93jp7k0pr1
+2024-02-19T16:05:20.916Z - info: Starting rendering request 44 rootId=orgkl93jp7k0pr1, id=orgkl93jp7k0pr1
+2024-02-19T16:05:20.916Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=orgkl93jp7k0pr1, id=orgkl93jp7k0pr1
+2024-02-19T16:05:20.938Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=orgkl93jp7k0pr1, id=orgkl93jp7k0pr1
+2024-02-19T16:06:02.670Z - info: Render request 45 queued for execution and waiting for available worker rootId=crmpg4fklxeeqmi, id=crmpg4fklxeeqmi
+2024-02-19T16:06:02.696Z - info: Starting rendering request 45 rootId=crmpg4fklxeeqmi, id=crmpg4fklxeeqmi
+2024-02-19T16:06:02.697Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=crmpg4fklxeeqmi, id=crmpg4fklxeeqmi
+2024-02-19T16:06:02.870Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=crmpg4fklxeeqmi, id=crmpg4fklxeeqmi
+2024-02-19T16:08:12.653Z - info: Render request 46 queued for execution and waiting for available worker rootId=epyki79038w6ror, id=epyki79038w6ror
+2024-02-19T16:08:12.678Z - info: Starting rendering request 46 rootId=epyki79038w6ror, id=epyki79038w6ror
+2024-02-19T16:08:12.679Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=epyki79038w6ror, id=epyki79038w6ror
+2024-02-19T16:08:12.861Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=epyki79038w6ror, id=epyki79038w6ror
+2024-02-19T16:08:59.305Z - info: Render request 47 queued for execution and waiting for available worker rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:08:59.324Z - info: Starting rendering request 47 rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:08:59.325Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:09:01.789Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/982bc23c-54a4-45ee-a494-c45759b156a3-chrome-pdf.html:45:29) rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:09:02.029Z - info: pdf-utils is starting pdf processing rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:09:02.031Z - info: Starting rendering (child) request rootId=dpf88cg8z932evn, id=gkp0m2rp1033uti
+2024-02-19T16:09:02.031Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=dpf88cg8z932evn, id=gkp0m2rp1033uti
+2024-02-19T16:09:02.178Z - info: Rendering (child) request finished in 2835 ms rootId=dpf88cg8z932evn, id=gkp0m2rp1033uti
+2024-02-19T16:09:02.178Z - info: pdf-utils pdf processing was finished rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:09:02.178Z - info: Rendering request 47 finished in 2873 ms rootId=dpf88cg8z932evn, id=dpf88cg8z932evn
+2024-02-19T16:09:06.806Z - info: Render request 48 queued for execution and waiting for available worker rootId=cf11h9gp4y3ea5p, id=cf11h9gp4y3ea5p
+2024-02-19T16:09:06.832Z - info: Starting rendering request 48 rootId=cf11h9gp4y3ea5p, id=cf11h9gp4y3ea5p
+2024-02-19T16:09:06.833Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=cf11h9gp4y3ea5p, id=cf11h9gp4y3ea5p
+2024-02-19T16:09:06.878Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=cf11h9gp4y3ea5p, id=cf11h9gp4y3ea5p
+2024-02-19T16:09:08.670Z - info: Render request 49 queued for execution and waiting for available worker rootId=kfxkewp7flu19lt, id=kfxkewp7flu19lt
+2024-02-19T16:09:08.718Z - info: Starting rendering request 49 rootId=kfxkewp7flu19lt, id=kfxkewp7flu19lt
+2024-02-19T16:09:08.718Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=kfxkewp7flu19lt, id=kfxkewp7flu19lt
+2024-02-19T16:09:08.862Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=kfxkewp7flu19lt, id=kfxkewp7flu19lt
+2024-02-19T16:09:20.088Z - info: Render request 50 queued for execution and waiting for available worker rootId=ifikpl79igrzjgp, id=ifikpl79igrzjgp
+2024-02-19T16:09:20.108Z - info: Starting rendering request 50 rootId=ifikpl79igrzjgp, id=ifikpl79igrzjgp
+2024-02-19T16:09:20.108Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ifikpl79igrzjgp, id=ifikpl79igrzjgp
+2024-02-19T16:09:20.248Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ifikpl79igrzjgp, id=ifikpl79igrzjgp
+2024-02-19T16:10:53.316Z - info: Render request 51 queued for execution and waiting for available worker rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:53.343Z - info: Starting rendering request 51 rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:53.343Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:54.851Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/bf0d346e-a90c-44ab-aca7-67bfdadab780-chrome-pdf.html:45:29) rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:54.851Z - info: pdf-utils is starting pdf processing rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:54.854Z - info: Starting rendering (child) request rootId=swtuwz9tq99p9k8, id=02yuvcpcrawe8fj
+2024-02-19T16:10:54.855Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=swtuwz9tq99p9k8, id=02yuvcpcrawe8fj
+2024-02-19T16:10:55.000Z - info: Rendering (child) request finished in 1647 ms rootId=swtuwz9tq99p9k8, id=02yuvcpcrawe8fj
+2024-02-19T16:10:55.000Z - info: pdf-utils pdf processing was finished rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:55.001Z - info: Rendering request 51 finished in 1684 ms rootId=swtuwz9tq99p9k8, id=swtuwz9tq99p9k8
+2024-02-19T16:10:57.488Z - info: Render request 52 queued for execution and waiting for available worker rootId=pxgztk4lryirkhe, id=pxgztk4lryirkhe
+2024-02-19T16:10:57.505Z - info: Starting rendering request 52 rootId=pxgztk4lryirkhe, id=pxgztk4lryirkhe
+2024-02-19T16:10:57.505Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=pxgztk4lryirkhe, id=pxgztk4lryirkhe
+2024-02-19T16:10:57.546Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=pxgztk4lryirkhe, id=pxgztk4lryirkhe
+2024-02-19T16:13:16.347Z - info: Render request 53 queued for execution and waiting for available worker rootId=5iec75ltz944bh0, id=5iec75ltz944bh0
+2024-02-19T16:13:16.369Z - info: Starting rendering request 53 rootId=5iec75ltz944bh0, id=5iec75ltz944bh0
+2024-02-19T16:13:16.370Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=5iec75ltz944bh0, id=5iec75ltz944bh0
+2024-02-19T16:13:16.548Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5iec75ltz944bh0, id=5iec75ltz944bh0
+2024-02-19T16:14:05.008Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 20.11.0)
+2024-02-19T16:14:05.009Z - info: Searching for available extensions in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-19T16:14:05.011Z - info: Extensions location cache contains up to date information, skipping crawling in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-19T16:14:05.019Z - info: Found 35 extension(s)
+2024-02-19T16:14:05.058Z - info: Using extension base@4.0.0
+2024-02-19T16:14:05.061Z - info: Using extension child-templates@4.0.0
+2024-02-19T16:14:05.064Z - info: Using extension cli@4.0.2
+2024-02-19T16:14:05.065Z - info: Using extension components@4.0.0
+2024-02-19T16:14:05.065Z - info: Using extension data@4.0.0
+2024-02-19T16:14:05.066Z - info: Using extension express@4.0.1
+2024-02-19T16:14:05.183Z - info: Using extension freeze@4.0.0
+2024-02-19T16:14:05.184Z - info: Using extension fs-store@4.0.1
+2024-02-19T16:14:05.225Z - info: Using extension handlebars@4.0.1
+2024-02-19T16:14:05.226Z - info: Using extension import-export@4.0.2
+2024-02-19T16:14:05.231Z - info: Using extension jsrender@4.0.0
+2024-02-19T16:14:05.231Z - info: Using extension licensing@4.0.1
+2024-02-19T16:14:05.233Z - info: Using extension localization@4.0.1
+2024-02-19T16:14:05.233Z - info: Using extension npm@4.0.0
+2024-02-19T16:14:05.234Z - info: Using extension pdf-utils@4.0.2
+2024-02-19T16:14:05.235Z - info: Using extension reports@4.0.0
+2024-02-19T16:14:05.236Z - info: Using extension tags@4.0.1
+2024-02-19T16:14:05.237Z - info: Using extension text@4.0.0
+2024-02-19T16:14:05.237Z - info: Using extension version-control@4.0.0
+2024-02-19T16:14:05.244Z - info: Using extension assets@4.0.2
+2024-02-19T16:14:05.250Z - info: Using extension authorization@4.0.0
+2024-02-19T16:14:05.252Z - info: Using extension browser-client@4.0.0
+2024-02-19T16:14:05.253Z - info: Using extension chrome-pdf@4.0.0
+2024-02-19T16:14:05.254Z - info: Using extension docx@4.1.1
+2024-02-19T16:14:05.255Z - info: Using extension html-to-xlsx@4.0.1
+2024-02-19T16:14:05.407Z - info: html-to-xlsx detected chrome as available html engine
+2024-02-19T16:14:05.407Z - info: Using extension pptx@4.1.0
+2024-02-19T16:14:05.408Z - info: Using extension scheduling@4.0.0
+2024-02-19T16:14:05.424Z - info: Using extension scripts@4.0.0
+2024-02-19T16:14:05.425Z - info: Using extension static-pdf@4.0.0
+2024-02-19T16:14:05.425Z - info: Using extension studio@4.0.2
+2024-02-19T16:14:05.457Z - info: Using extension xlsx@4.0.2
+2024-02-19T16:14:05.458Z - info: Using extension public-templates@4.0.0
+2024-02-19T16:14:05.458Z - info: Using extension sample-template@4.0.0
+2024-02-19T16:14:05.459Z - info: Using extension studio-theme-dark@4.0.0
+2024-02-19T16:14:05.459Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2024-02-19T16:14:05.459Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-02-19T16:14:05.459Z - info: Using fs provider for template store.
+2024-02-19T16:14:05.462Z - info: fs store is persisting using fs for /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/data
+2024-02-19T16:14:05.466Z - info: fs store is loading data
+2024-02-19T16:14:05.493Z - info: fs store is initialized successfully
+2024-02-19T16:14:05.508Z - info: Creating default express app.
+2024-02-19T16:14:05.524Z - info: jsreport server successfully started on http port: 5488
+2024-02-19T16:14:05.525Z - info: Verifying license key free
+2024-02-19T16:14:06.274Z - info: Using enterprise trial license
+2024-02-19T16:14:06.281Z - info: Initializing worker threads
+2024-02-19T16:14:06.385Z - info: 2 worker threads initialized in 104ms
+2024-02-19T16:14:06.386Z - info: Starting temp files cleanup with 180000ms threshold
+2024-02-19T16:14:06.386Z - info: reporter initialized
+2024-02-19T16:14:10.518Z - info: Render request 1 queued for execution and waiting for available worker rootId=7vwr9q009gy2lpa, id=7vwr9q009gy2lpa
+2024-02-19T16:14:10.536Z - info: Starting rendering request 1 rootId=7vwr9q009gy2lpa, id=7vwr9q009gy2lpa
+2024-02-19T16:14:10.536Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=7vwr9q009gy2lpa, id=7vwr9q009gy2lpa
+2024-02-19T16:14:10.723Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=7vwr9q009gy2lpa, id=7vwr9q009gy2lpa
+2024-02-19T16:14:56.729Z - info: Render request 2 queued for execution and waiting for available worker rootId=do685ngt3sj9dj4, id=do685ngt3sj9dj4
+2024-02-19T16:14:56.751Z - info: Starting rendering request 2 rootId=do685ngt3sj9dj4, id=do685ngt3sj9dj4
+2024-02-19T16:14:56.751Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=do685ngt3sj9dj4, id=do685ngt3sj9dj4
+2024-02-19T16:14:56.927Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=do685ngt3sj9dj4, id=do685ngt3sj9dj4
+2024-02-19T16:18:01.212Z - info: Initializing jsreport (version: 4.2.0, configuration file: jsreport.config.json, nodejs: 20.11.0)
+2024-02-19T16:18:01.213Z - info: Searching for available extensions in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-19T16:18:01.215Z - info: Extensions location cache contains up to date information, skipping crawling in /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/
+2024-02-19T16:18:01.224Z - info: Found 35 extension(s)
+2024-02-19T16:18:01.265Z - info: Using extension base@4.0.0
+2024-02-19T16:18:01.267Z - info: Using extension child-templates@4.0.0
+2024-02-19T16:18:01.270Z - info: Using extension cli@4.0.2
+2024-02-19T16:18:01.271Z - info: Using extension components@4.0.0
+2024-02-19T16:18:01.271Z - info: Using extension data@4.0.0
+2024-02-19T16:18:01.272Z - info: Using extension express@4.0.1
+2024-02-19T16:18:01.389Z - info: Using extension freeze@4.0.0
+2024-02-19T16:18:01.389Z - info: Using extension fs-store@4.0.1
+2024-02-19T16:18:01.433Z - info: Using extension handlebars@4.0.1
+2024-02-19T16:18:01.434Z - info: Using extension import-export@4.0.2
+2024-02-19T16:18:01.438Z - info: Using extension jsrender@4.0.0
+2024-02-19T16:18:01.438Z - info: Using extension licensing@4.0.1
+2024-02-19T16:18:01.439Z - info: Using extension localization@4.0.1
+2024-02-19T16:18:01.440Z - info: Using extension npm@4.0.0
+2024-02-19T16:18:01.441Z - info: Using extension pdf-utils@4.0.2
+2024-02-19T16:18:01.442Z - info: Using extension reports@4.0.0
+2024-02-19T16:18:01.443Z - info: Using extension tags@4.0.1
+2024-02-19T16:18:01.444Z - info: Using extension text@4.0.0
+2024-02-19T16:18:01.445Z - info: Using extension version-control@4.0.0
+2024-02-19T16:18:01.451Z - info: Using extension assets@4.0.2
+2024-02-19T16:18:01.456Z - info: Using extension authorization@4.0.0
+2024-02-19T16:18:01.458Z - info: Using extension browser-client@4.0.0
+2024-02-19T16:18:01.459Z - info: Using extension chrome-pdf@4.0.0
+2024-02-19T16:18:01.460Z - info: Using extension docx@4.1.1
+2024-02-19T16:18:01.461Z - info: Using extension html-to-xlsx@4.0.1
+2024-02-19T16:18:01.610Z - info: html-to-xlsx detected chrome as available html engine
+2024-02-19T16:18:01.610Z - info: Using extension pptx@4.1.0
+2024-02-19T16:18:01.613Z - info: Using extension scheduling@4.0.0
+2024-02-19T16:18:01.628Z - info: Using extension scripts@4.0.0
+2024-02-19T16:18:01.628Z - info: Using extension static-pdf@4.0.0
+2024-02-19T16:18:01.629Z - info: Using extension studio@4.0.2
+2024-02-19T16:18:01.661Z - info: Using extension xlsx@4.0.2
+2024-02-19T16:18:01.662Z - info: Using extension public-templates@4.0.0
+2024-02-19T16:18:01.662Z - info: Using extension sample-template@4.0.0
+2024-02-19T16:18:01.663Z - info: Using extension studio-theme-dark@4.0.0
+2024-02-19T16:18:01.664Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2024-02-19T16:18:01.664Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2024-02-19T16:18:01.664Z - info: Using fs provider for template store.
+2024-02-19T16:18:01.666Z - info: fs store is persisting using fs for /Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/data
+2024-02-19T16:18:01.671Z - info: fs store is loading data
+2024-02-19T16:18:01.694Z - info: fs store is initialized successfully
+2024-02-19T16:18:01.701Z - info: Creating default express app.
+2024-02-19T16:18:01.712Z - info: jsreport server successfully started on http port: 5488
+2024-02-19T16:18:01.713Z - info: Verifying license key free
+2024-02-19T16:18:02.461Z - info: Using enterprise trial license
+2024-02-19T16:18:02.466Z - info: Initializing worker threads
+2024-02-19T16:18:02.572Z - info: 2 worker threads initialized in 106ms
+2024-02-19T16:18:02.572Z - info: Starting temp files cleanup with 180000ms threshold
+2024-02-19T16:18:02.572Z - info: reporter initialized
+2024-02-19T16:18:05.678Z - info: Render request 1 queued for execution and waiting for available worker rootId=hjscoi1r9zb8k7l, id=hjscoi1r9zb8k7l
+2024-02-19T16:18:05.714Z - info: Starting rendering request 1 rootId=hjscoi1r9zb8k7l, id=hjscoi1r9zb8k7l
+2024-02-19T16:18:05.714Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=hjscoi1r9zb8k7l, id=hjscoi1r9zb8k7l
+2024-02-19T16:18:05.855Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=hjscoi1r9zb8k7l, id=hjscoi1r9zb8k7l
+2024-02-19T16:18:16.930Z - info: Render request 2 queued for execution and waiting for available worker rootId=gtepr2l7kbw9vru, id=gtepr2l7kbw9vru
+2024-02-19T16:18:16.954Z - info: Starting rendering request 2 rootId=gtepr2l7kbw9vru, id=gtepr2l7kbw9vru
+2024-02-19T16:18:16.954Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=gtepr2l7kbw9vru, id=gtepr2l7kbw9vru
+2024-02-19T16:18:17.109Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=gtepr2l7kbw9vru, id=gtepr2l7kbw9vru
+2024-02-19T16:18:35.055Z - info: Render request 3 queued for execution and waiting for available worker rootId=ufly8w1zufqv5of, id=ufly8w1zufqv5of
+2024-02-19T16:18:35.077Z - info: Starting rendering request 3 rootId=ufly8w1zufqv5of, id=ufly8w1zufqv5of
+2024-02-19T16:18:35.077Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ufly8w1zufqv5of, id=ufly8w1zufqv5of
+2024-02-19T16:18:35.239Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ufly8w1zufqv5of, id=ufly8w1zufqv5of
+2024-02-19T16:18:37.503Z - info: Render request 4 queued for execution and waiting for available worker rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:37.548Z - info: Starting rendering request 4 rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:37.548Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:39.064Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/b608225a-45ad-420a-9519-5db0eaf60190-chrome-pdf.html:45:29) rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:39.065Z - info: pdf-utils is starting pdf processing rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:39.067Z - info: Starting rendering (child) request rootId=t5r3k0vdl477lgj, id=rvyrlglclgroox5
+2024-02-19T16:18:39.067Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=t5r3k0vdl477lgj, id=rvyrlglclgroox5
+2024-02-19T16:18:39.250Z - info: Rendering (child) request finished in 1709 ms rootId=t5r3k0vdl477lgj, id=rvyrlglclgroox5
+2024-02-19T16:18:39.250Z - info: pdf-utils pdf processing was finished rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:18:39.250Z - info: Rendering request 4 finished in 1747 ms rootId=t5r3k0vdl477lgj, id=t5r3k0vdl477lgj
+2024-02-19T16:19:27.409Z - info: Render request 5 queued for execution and waiting for available worker rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:19:27.433Z - info: Starting rendering request 5 rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:19:27.433Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:19:29.261Z - info: pdf-utils is starting pdf processing rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:19:29.264Z - info: Starting rendering (child) request rootId=yt5d1axx2iyzzmc, id=8wa1cwjdnv2ru6p
+2024-02-19T16:19:29.264Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=yt5d1axx2iyzzmc, id=8wa1cwjdnv2ru6p
+2024-02-19T16:19:29.414Z - info: Rendering (child) request finished in 1956 ms rootId=yt5d1axx2iyzzmc, id=8wa1cwjdnv2ru6p
+2024-02-19T16:19:29.414Z - info: pdf-utils pdf processing was finished rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:19:29.415Z - info: Rendering request 5 finished in 2008 ms rootId=yt5d1axx2iyzzmc, id=yt5d1axx2iyzzmc
+2024-02-19T16:22:09.629Z - info: Render request 6 queued for execution and waiting for available worker rootId=avp4typflij19rd, id=avp4typflij19rd
+2024-02-19T16:22:09.647Z - info: Starting rendering request 6 rootId=avp4typflij19rd, id=avp4typflij19rd
+2024-02-19T16:22:09.648Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=avp4typflij19rd, id=avp4typflij19rd
+2024-02-19T16:22:09.706Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:38:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=avp4typflij19rd, id=avp4typflij19rd
+2024-02-19T16:22:13.737Z - info: Render request 7 queued for execution and waiting for available worker rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:22:13.760Z - info: Starting rendering request 7 rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:22:13.760Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:22:15.419Z - info: pdf-utils is starting pdf processing rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:22:15.424Z - info: Starting rendering (child) request rootId=pzhmzojhlyd43mr, id=ozdz9h2gfv1f3vi
+2024-02-19T16:22:15.424Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=pzhmzojhlyd43mr, id=ozdz9h2gfv1f3vi
+2024-02-19T16:22:15.578Z - info: Rendering (child) request finished in 1790 ms rootId=pzhmzojhlyd43mr, id=ozdz9h2gfv1f3vi
+2024-02-19T16:22:15.579Z - info: pdf-utils pdf processing was finished rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:22:15.579Z - info: Rendering request 7 finished in 1842 ms rootId=pzhmzojhlyd43mr, id=pzhmzojhlyd43mr
+2024-02-19T16:23:31.729Z - info: Render request 8 queued for execution and waiting for available worker rootId=xfyyx3mie34wza7, id=xfyyx3mie34wza7
+2024-02-19T16:23:31.751Z - info: Starting rendering request 8 rootId=xfyyx3mie34wza7, id=xfyyx3mie34wza7
+2024-02-19T16:23:31.751Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xfyyx3mie34wza7, id=xfyyx3mie34wza7
+2024-02-19T16:23:31.809Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=xfyyx3mie34wza7, id=xfyyx3mie34wza7
+2024-02-19T16:23:37.186Z - info: Render request 9 queued for execution and waiting for available worker rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:37.212Z - info: Starting rendering request 9 rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:37.212Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:38.853Z - info: pdf-utils is starting pdf processing rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:38.855Z - info: Starting rendering (child) request rootId=molgd95w0t1xe46, id=dtjxmod6ef8cny9
+2024-02-19T16:23:38.855Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=molgd95w0t1xe46, id=dtjxmod6ef8cny9
+2024-02-19T16:23:38.994Z - info: Rendering (child) request finished in 1767 ms rootId=molgd95w0t1xe46, id=dtjxmod6ef8cny9
+2024-02-19T16:23:38.995Z - info: pdf-utils pdf processing was finished rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:38.995Z - info: Rendering request 9 finished in 1809 ms rootId=molgd95w0t1xe46, id=molgd95w0t1xe46
+2024-02-19T16:23:44.191Z - info: Render request 10 queued for execution and waiting for available worker rootId=5lqd2wkmudnk5r4, id=5lqd2wkmudnk5r4
+2024-02-19T16:23:44.209Z - info: Starting rendering request 10 rootId=5lqd2wkmudnk5r4, id=5lqd2wkmudnk5r4
+2024-02-19T16:23:44.209Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=5lqd2wkmudnk5r4, id=5lqd2wkmudnk5r4
+2024-02-19T16:23:44.243Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5lqd2wkmudnk5r4, id=5lqd2wkmudnk5r4
+2024-02-19T16:26:02.344Z - info: Render request 11 queued for execution and waiting for available worker rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:26:02.366Z - info: Starting rendering request 11 rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:26:02.367Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:26:04.024Z - info: pdf-utils is starting pdf processing rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:26:04.027Z - info: Starting rendering (child) request rootId=etw83rpuqdpi0gu, id=nmukhvl2y5d3all
+2024-02-19T16:26:04.027Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=etw83rpuqdpi0gu, id=nmukhvl2y5d3all
+2024-02-19T16:26:04.172Z - info: Rendering (child) request finished in 1784 ms rootId=etw83rpuqdpi0gu, id=nmukhvl2y5d3all
+2024-02-19T16:26:04.172Z - info: pdf-utils pdf processing was finished rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:26:04.172Z - info: Rendering request 11 finished in 1830 ms rootId=etw83rpuqdpi0gu, id=etw83rpuqdpi0gu
+2024-02-19T16:27:44.990Z - info: Render request 12 queued for execution and waiting for available worker rootId=p4at4hyn874qtka, id=p4at4hyn874qtka
+2024-02-19T16:27:45.006Z - info: Starting rendering request 12 rootId=p4at4hyn874qtka, id=p4at4hyn874qtka
+2024-02-19T16:27:45.007Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=p4at4hyn874qtka, id=p4at4hyn874qtka
+2024-02-19T16:27:45.024Z - warn: Error when processing render request 12
+(because) error when evaluating custom script /samples/Trabajo/orders-script
+Unexpected token ')'
+sandbox.js:56
+;return {topLevelFunctions: {}, fnToExecute: ejampdmtra_executionFn_expose} })()
+                                                                             ^
+
+SyntaxError: Unexpected token ')'
+    at new Script (node:vm:99:7)
+    at doCompileScript (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/sandbox/createSandbox.js:154:10)
+    at run (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/sandbox/createSandbox.js:135:74)
+    at WorkerReporter.runInSandbox [as _runInSandbox] (/Users/josemiguelbravomendez/Documents/segundo/Proyecto2fase/Mitca/mitca2/jsreportapp/node_modules/@jsreport/jsreport-core/lib/worker/sandbox/runInSandbox.js:195:20) rootId=p4at4hyn874qtka, id=p4at4hyn874qtka
+2024-02-19T16:27:45.024Z - warn: Rendering request 12 finished with error in 35 ms rootId=p4at4hyn874qtka, id=p4at4hyn874qtka
+2024-02-19T16:27:57.919Z - info: Render request 13 queued for execution and waiting for available worker rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:27:57.943Z - info: Starting rendering request 13 rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:27:57.943Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:27:58.172Z - info: pdf-utils is starting pdf processing rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:27:58.172Z - info: Starting rendering (child) request rootId=fhf2fd7wcnv08qb, id=lld3bou4iupmznl
+2024-02-19T16:27:58.172Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=fhf2fd7wcnv08qb, id=lld3bou4iupmznl
+2024-02-19T16:27:58.313Z - info: Rendering (child) request finished in 355 ms rootId=fhf2fd7wcnv08qb, id=lld3bou4iupmznl
+2024-02-19T16:27:58.313Z - info: pdf-utils pdf processing was finished rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:27:58.313Z - info: Rendering request 13 finished in 394 ms rootId=fhf2fd7wcnv08qb, id=fhf2fd7wcnv08qb
+2024-02-19T16:28:05.699Z - info: Render request 14 queued for execution and waiting for available worker rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.714Z - info: Starting rendering request 14 rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.714Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.848Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/f98975ac-f0bd-4304-98cb-16c82e6c376e-chrome-pdf.html:15:28) rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.848Z - info: pdf-utils is starting pdf processing rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.848Z - info: Starting rendering (child) request rootId=qljbm36fti6bpww, id=k2qu31dqfu5y3ca
+2024-02-19T16:28:05.848Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=qljbm36fti6bpww, id=k2qu31dqfu5y3ca
+2024-02-19T16:28:05.960Z - info: Rendering (child) request finished in 246 ms rootId=qljbm36fti6bpww, id=k2qu31dqfu5y3ca
+2024-02-19T16:28:05.960Z - info: pdf-utils pdf processing was finished rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:05.960Z - info: Rendering request 14 finished in 261 ms rootId=qljbm36fti6bpww, id=qljbm36fti6bpww
+2024-02-19T16:28:10.850Z - info: Render request 15 queued for execution and waiting for available worker rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:10.863Z - info: Starting rendering request 15 rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:10.863Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:11.057Z - info: pdf-utils is starting pdf processing rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:11.057Z - info: Starting rendering (child) request rootId=ibafhesg96oyjec, id=l8992nm4ep2mvg9
+2024-02-19T16:28:11.057Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ibafhesg96oyjec, id=l8992nm4ep2mvg9
+2024-02-19T16:28:11.187Z - info: Rendering (child) request finished in 307 ms rootId=ibafhesg96oyjec, id=l8992nm4ep2mvg9
+2024-02-19T16:28:11.187Z - info: pdf-utils pdf processing was finished rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:11.187Z - info: Rendering request 15 finished in 338 ms rootId=ibafhesg96oyjec, id=ibafhesg96oyjec
+2024-02-19T16:28:50.087Z - info: Render request 16 queued for execution and waiting for available worker rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:28:50.095Z - info: Starting rendering request 16 rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:28:50.095Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:28:50.319Z - info: pdf-utils is starting pdf processing rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:28:50.322Z - info: Starting rendering (child) request rootId=uy0jj9cqyvqviox, id=nrggntxf62kh9kw
+2024-02-19T16:28:50.322Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=uy0jj9cqyvqviox, id=nrggntxf62kh9kw
+2024-02-19T16:28:50.445Z - info: Rendering (child) request finished in 327 ms rootId=uy0jj9cqyvqviox, id=nrggntxf62kh9kw
+2024-02-19T16:28:50.446Z - info: pdf-utils pdf processing was finished rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:28:50.446Z - info: Rendering request 16 finished in 358 ms rootId=uy0jj9cqyvqviox, id=uy0jj9cqyvqviox
+2024-02-19T16:29:26.484Z - info: Render request 17 queued for execution and waiting for available worker rootId=fuwuvdf35mrm9wv, id=fuwuvdf35mrm9wv
+2024-02-19T16:29:26.514Z - info: Starting rendering request 17 rootId=fuwuvdf35mrm9wv, id=fuwuvdf35mrm9wv
+2024-02-19T16:29:26.514Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=fuwuvdf35mrm9wv, id=fuwuvdf35mrm9wv
+2024-02-19T16:29:26.582Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=fuwuvdf35mrm9wv, id=fuwuvdf35mrm9wv
+2024-02-19T16:30:53.275Z - info: Render request 18 queued for execution and waiting for available worker rootId=ab9s5waj475zngz, id=ab9s5waj475zngz
+2024-02-19T16:30:53.299Z - info: Starting rendering request 18 rootId=ab9s5waj475zngz, id=ab9s5waj475zngz
+2024-02-19T16:30:53.299Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ab9s5waj475zngz, id=ab9s5waj475zngz
+2024-02-19T16:30:53.536Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ab9s5waj475zngz, id=ab9s5waj475zngz
+2024-02-19T16:31:01.255Z - info: Render request 19 queued for execution and waiting for available worker rootId=k2688d09x6zzkx2, id=k2688d09x6zzkx2
+2024-02-19T16:31:01.303Z - info: Starting rendering request 19 rootId=k2688d09x6zzkx2, id=k2688d09x6zzkx2
+2024-02-19T16:31:01.303Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=k2688d09x6zzkx2, id=k2688d09x6zzkx2
+2024-02-19T16:31:01.451Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=k2688d09x6zzkx2, id=k2688d09x6zzkx2
+2024-02-19T16:31:25.792Z - info: Render request 20 queued for execution and waiting for available worker rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:25.815Z - info: Starting rendering request 20 rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:25.815Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:27.482Z - info: pdf-utils is starting pdf processing rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:27.484Z - info: Starting rendering (child) request rootId=m93o5uab73w41o6, id=08jml7l0a7gh6kg
+2024-02-19T16:31:27.484Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=m93o5uab73w41o6, id=08jml7l0a7gh6kg
+2024-02-19T16:31:27.628Z - info: Rendering (child) request finished in 1792 ms rootId=m93o5uab73w41o6, id=08jml7l0a7gh6kg
+2024-02-19T16:31:27.628Z - info: pdf-utils pdf processing was finished rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:27.628Z - info: Rendering request 20 finished in 1837 ms rootId=m93o5uab73w41o6, id=m93o5uab73w41o6
+2024-02-19T16:31:39.113Z - info: Render request 21 queued for execution and waiting for available worker rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:39.125Z - info: Starting rendering request 21 rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:39.125Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:39.355Z - info: pdf-utils is starting pdf processing rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:39.355Z - info: Starting rendering (child) request rootId=hug2ud5etm7gex6, id=uvteefzd635o1gx
+2024-02-19T16:31:39.355Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=hug2ud5etm7gex6, id=uvteefzd635o1gx
+2024-02-19T16:31:39.488Z - info: Rendering (child) request finished in 343 ms rootId=hug2ud5etm7gex6, id=uvteefzd635o1gx
+2024-02-19T16:31:39.488Z - info: pdf-utils pdf processing was finished rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:39.488Z - info: Rendering request 21 finished in 375 ms rootId=hug2ud5etm7gex6, id=hug2ud5etm7gex6
+2024-02-19T16:31:56.270Z - info: Render request 22 queued for execution and waiting for available worker rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:31:56.294Z - info: Starting rendering request 22 rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:31:56.295Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:31:56.409Z - info: pdf-utils is starting pdf processing rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:31:56.410Z - info: Starting rendering (child) request rootId=wv0l4hanc54dyvk, id=a072orskvwirnnz
+2024-02-19T16:31:56.410Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=wv0l4hanc54dyvk, id=a072orskvwirnnz
+2024-02-19T16:31:56.508Z - info: Rendering (child) request finished in 223 ms rootId=wv0l4hanc54dyvk, id=a072orskvwirnnz
+2024-02-19T16:31:56.508Z - info: pdf-utils pdf processing was finished rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:31:56.509Z - info: Rendering request 22 finished in 238 ms rootId=wv0l4hanc54dyvk, id=wv0l4hanc54dyvk
+2024-02-19T16:32:02.023Z - info: Render request 23 queued for execution and waiting for available worker rootId=ce0gj4925mqaz0s, id=ce0gj4925mqaz0s
+2024-02-19T16:32:02.034Z - info: Starting rendering request 23 rootId=ce0gj4925mqaz0s, id=ce0gj4925mqaz0s
+2024-02-19T16:32:02.035Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ce0gj4925mqaz0s, id=ce0gj4925mqaz0s
+2024-02-19T16:32:02.083Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ce0gj4925mqaz0s, id=ce0gj4925mqaz0s
+2024-02-19T16:32:20.089Z - info: Render request 24 queued for execution and waiting for available worker rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:32:20.112Z - info: Starting rendering request 24 rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:32:20.113Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:32:21.708Z - info: pdf-utils is starting pdf processing rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:32:21.709Z - info: Starting rendering (child) request rootId=1nvxwznyjkwmcsj, id=czsad6yokjid6n1
+2024-02-19T16:32:21.709Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=1nvxwznyjkwmcsj, id=czsad6yokjid6n1
+2024-02-19T16:32:21.821Z - info: Rendering (child) request finished in 1710 ms rootId=1nvxwznyjkwmcsj, id=czsad6yokjid6n1
+2024-02-19T16:32:21.821Z - info: pdf-utils pdf processing was finished rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:32:21.822Z - info: Rendering request 24 finished in 1732 ms rootId=1nvxwznyjkwmcsj, id=1nvxwznyjkwmcsj
+2024-02-19T16:34:41.481Z - info: Render request 25 queued for execution and waiting for available worker rootId=0py094qupmjumex, id=0py094qupmjumex
+2024-02-19T16:34:41.506Z - info: Starting rendering request 25 rootId=0py094qupmjumex, id=0py094qupmjumex
+2024-02-19T16:34:41.507Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=0py094qupmjumex, id=0py094qupmjumex
+2024-02-19T16:34:41.559Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:57:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=0py094qupmjumex, id=0py094qupmjumex
+2024-02-19T16:34:48.534Z - info: Render request 26 queued for execution and waiting for available worker rootId=59em4eaqrwo9qn7, id=59em4eaqrwo9qn7
+2024-02-19T16:34:48.554Z - info: Starting rendering request 26 rootId=59em4eaqrwo9qn7, id=59em4eaqrwo9qn7
+2024-02-19T16:34:48.554Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=59em4eaqrwo9qn7, id=59em4eaqrwo9qn7
+2024-02-19T16:34:48.699Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:51:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=59em4eaqrwo9qn7, id=59em4eaqrwo9qn7
+2024-02-19T16:34:53.960Z - info: Render request 27 queued for execution and waiting for available worker rootId=3fq4xnnxdvpbhtk, id=3fq4xnnxdvpbhtk
+2024-02-19T16:34:53.981Z - info: Starting rendering request 27 rootId=3fq4xnnxdvpbhtk, id=3fq4xnnxdvpbhtk
+2024-02-19T16:34:53.981Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=3fq4xnnxdvpbhtk, id=3fq4xnnxdvpbhtk
+2024-02-19T16:34:54.188Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=3fq4xnnxdvpbhtk, id=3fq4xnnxdvpbhtk
+2024-02-19T16:37:01.523Z - info: Render request 28 queued for execution and waiting for available worker rootId=m7ibzxf3ilztazm, id=m7ibzxf3ilztazm
+2024-02-19T16:37:01.546Z - info: Starting rendering request 28 rootId=m7ibzxf3ilztazm, id=m7ibzxf3ilztazm
+2024-02-19T16:37:01.547Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=m7ibzxf3ilztazm, id=m7ibzxf3ilztazm
+2024-02-19T16:37:01.735Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:52:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=m7ibzxf3ilztazm, id=m7ibzxf3ilztazm
+2024-02-19T16:37:21.303Z - info: Render request 29 queued for execution and waiting for available worker rootId=p913rdlj5gbabnv, id=p913rdlj5gbabnv
+2024-02-19T16:37:21.317Z - info: Starting rendering request 29 rootId=p913rdlj5gbabnv, id=p913rdlj5gbabnv
+2024-02-19T16:37:21.317Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=p913rdlj5gbabnv, id=p913rdlj5gbabnv
+2024-02-19T16:37:21.496Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:52:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=p913rdlj5gbabnv, id=p913rdlj5gbabnv
+2024-02-19T16:37:29.754Z - info: Render request 30 queued for execution and waiting for available worker rootId=nmzf5nbbccodhpx, id=nmzf5nbbccodhpx
+2024-02-19T16:37:29.770Z - info: Starting rendering request 30 rootId=nmzf5nbbccodhpx, id=nmzf5nbbccodhpx
+2024-02-19T16:37:29.770Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=nmzf5nbbccodhpx, id=nmzf5nbbccodhpx
+2024-02-19T16:37:29.908Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:46:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=nmzf5nbbccodhpx, id=nmzf5nbbccodhpx
+2024-02-19T16:37:35.485Z - info: Render request 31 queued for execution and waiting for available worker rootId=sssz9iksj0840bk, id=sssz9iksj0840bk
+2024-02-19T16:37:35.508Z - info: Starting rendering request 31 rootId=sssz9iksj0840bk, id=sssz9iksj0840bk
+2024-02-19T16:37:35.508Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=sssz9iksj0840bk, id=sssz9iksj0840bk
+2024-02-19T16:37:35.610Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=sssz9iksj0840bk, id=sssz9iksj0840bk
+2024-02-19T16:38:14.835Z - info: Render request 32 queued for execution and waiting for available worker rootId=3of5wfmazsohupr, id=3of5wfmazsohupr
+2024-02-19T16:38:14.866Z - info: Starting rendering request 32 rootId=3of5wfmazsohupr, id=3of5wfmazsohupr
+2024-02-19T16:38:14.866Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=3of5wfmazsohupr, id=3of5wfmazsohupr
+2024-02-19T16:38:15.023Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:52:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=3of5wfmazsohupr, id=3of5wfmazsohupr
+2024-02-19T16:38:46.659Z - info: Render request 33 queued for execution and waiting for available worker rootId=vbjo64wro3g9bch, id=vbjo64wro3g9bch
+2024-02-19T16:38:46.684Z - info: Starting rendering request 33 rootId=vbjo64wro3g9bch, id=vbjo64wro3g9bch
+2024-02-19T16:38:46.685Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=vbjo64wro3g9bch, id=vbjo64wro3g9bch
+2024-02-19T16:38:46.847Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:51:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=vbjo64wro3g9bch, id=vbjo64wro3g9bch
+2024-02-19T16:40:06.188Z - info: Render request 34 queued for execution and waiting for available worker rootId=mpsj8ozwnj4n1iu, id=mpsj8ozwnj4n1iu
+2024-02-19T16:40:06.209Z - info: Starting rendering request 34 rootId=mpsj8ozwnj4n1iu, id=mpsj8ozwnj4n1iu
+2024-02-19T16:40:06.210Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=mpsj8ozwnj4n1iu, id=mpsj8ozwnj4n1iu
+2024-02-19T16:40:06.448Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=mpsj8ozwnj4n1iu, id=mpsj8ozwnj4n1iu
+2024-02-19T16:40:22.382Z - info: Render request 35 queued for execution and waiting for available worker rootId=l9rvralhzghdegi, id=l9rvralhzghdegi
+2024-02-19T16:40:22.398Z - info: Starting rendering request 35 rootId=l9rvralhzghdegi, id=l9rvralhzghdegi
+2024-02-19T16:40:22.398Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=l9rvralhzghdegi, id=l9rvralhzghdegi
+2024-02-19T16:40:22.579Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=l9rvralhzghdegi, id=l9rvralhzghdegi
+2024-02-19T16:40:35.501Z - info: Render request 36 queued for execution and waiting for available worker rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:40:35.526Z - info: Starting rendering request 36 rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:40:35.526Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:40:37.418Z - info: pdf-utils is starting pdf processing rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:40:37.420Z - info: Starting rendering (child) request rootId=xrewtdct8964uew, id=ygwrbjmqjzl4tli
+2024-02-19T16:40:37.420Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=xrewtdct8964uew, id=ygwrbjmqjzl4tli
+2024-02-19T16:40:37.546Z - info: Rendering (child) request finished in 2021 ms rootId=xrewtdct8964uew, id=ygwrbjmqjzl4tli
+2024-02-19T16:40:37.546Z - info: pdf-utils pdf processing was finished rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:40:37.546Z - info: Rendering request 36 finished in 2045 ms rootId=xrewtdct8964uew, id=xrewtdct8964uew
+2024-02-19T16:41:35.643Z - info: Render request 37 queued for execution and waiting for available worker rootId=bg0em72hy4j8n6o, id=bg0em72hy4j8n6o
+2024-02-19T16:41:35.662Z - info: Starting rendering request 37 rootId=bg0em72hy4j8n6o, id=bg0em72hy4j8n6o
+2024-02-19T16:41:35.662Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=bg0em72hy4j8n6o, id=bg0em72hy4j8n6o
+2024-02-19T16:41:35.715Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=bg0em72hy4j8n6o, id=bg0em72hy4j8n6o
+2024-02-19T16:41:36.609Z - info: Render request 38 queued for execution and waiting for available worker rootId=ptc2vj3vbzojrcz, id=ptc2vj3vbzojrcz
+2024-02-19T16:41:36.622Z - info: Starting rendering request 38 rootId=ptc2vj3vbzojrcz, id=ptc2vj3vbzojrcz
+2024-02-19T16:41:36.623Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ptc2vj3vbzojrcz, id=ptc2vj3vbzojrcz
+2024-02-19T16:41:36.795Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ptc2vj3vbzojrcz, id=ptc2vj3vbzojrcz
+2024-02-19T16:41:38.891Z - info: Render request 39 queued for execution and waiting for available worker rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:41:38.916Z - info: Starting rendering request 39 rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:41:38.917Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:41:40.637Z - info: pdf-utils is starting pdf processing rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:41:40.640Z - info: Starting rendering (child) request rootId=2a1ulkes9y3oftq, id=d9vjnori3m8qkig
+2024-02-19T16:41:40.641Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=2a1ulkes9y3oftq, id=d9vjnori3m8qkig
+2024-02-19T16:41:40.794Z - info: Rendering (child) request finished in 1855 ms rootId=2a1ulkes9y3oftq, id=d9vjnori3m8qkig
+2024-02-19T16:41:40.794Z - info: pdf-utils pdf processing was finished rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:41:40.794Z - info: Rendering request 39 finished in 1903 ms rootId=2a1ulkes9y3oftq, id=2a1ulkes9y3oftq
+2024-02-19T16:43:50.361Z - info: Render request 40 queued for execution and waiting for available worker rootId=huc6u2dew4nll9m, id=huc6u2dew4nll9m
+2024-02-19T16:43:50.377Z - info: Starting rendering request 40 rootId=huc6u2dew4nll9m, id=huc6u2dew4nll9m
+2024-02-19T16:43:50.377Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=huc6u2dew4nll9m, id=huc6u2dew4nll9m
+2024-02-19T16:43:51.394Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=huc6u2dew4nll9m, id=huc6u2dew4nll9m
+2024-02-19T16:44:15.182Z - info: Render request 41 queued for execution and waiting for available worker rootId=fn1na7u3ldhuqhf, id=fn1na7u3ldhuqhf
+2024-02-19T16:44:15.203Z - info: Starting rendering request 41 rootId=fn1na7u3ldhuqhf, id=fn1na7u3ldhuqhf
+2024-02-19T16:44:15.203Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=fn1na7u3ldhuqhf, id=fn1na7u3ldhuqhf
+2024-02-19T16:44:15.414Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=fn1na7u3ldhuqhf, id=fn1na7u3ldhuqhf
+2024-02-19T16:44:16.699Z - info: Render request 42 queued for execution and waiting for available worker rootId=8w7682wqsmz7g2u, id=8w7682wqsmz7g2u
+2024-02-19T16:44:16.721Z - info: Starting rendering request 42 rootId=8w7682wqsmz7g2u, id=8w7682wqsmz7g2u
+2024-02-19T16:44:16.721Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=8w7682wqsmz7g2u, id=8w7682wqsmz7g2u
+2024-02-19T16:44:16.831Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=8w7682wqsmz7g2u, id=8w7682wqsmz7g2u
+2024-02-19T16:46:08.229Z - info: Render request 43 queued for execution and waiting for available worker rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:08.276Z - info: Starting rendering request 43 rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:08.276Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:10.043Z - warn: Page error: "undefined" is not valid JSON
+JSON.parse (<anonymous>) , stack: SyntaxError: "undefined" is not valid JSON
+JSON.parse (<anonymous>)
+    at <anonymous> (file:///var/folders/tp/6hccbwhd41s4hkmxw_2wkz640000gn/T/jsreport/autocleanup/d675aa4c-4d77-4729-8a0a-6f9510cb567f-chrome-pdf.html:45:29) rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:10.287Z - info: pdf-utils is starting pdf processing rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:10.288Z - info: Starting rendering (child) request rootId=pvbafjeqxf05y4z, id=tb98k759emx2e0t
+2024-02-19T16:46:10.289Z - info: Rendering template { name: orders-header, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=pvbafjeqxf05y4z, id=tb98k759emx2e0t
+2024-02-19T16:46:10.474Z - info: Rendering (child) request finished in 2208 ms rootId=pvbafjeqxf05y4z, id=tb98k759emx2e0t
+2024-02-19T16:46:10.474Z - info: pdf-utils pdf processing was finished rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:10.474Z - info: Rendering request 43 finished in 2245 ms rootId=pvbafjeqxf05y4z, id=pvbafjeqxf05y4z
+2024-02-19T16:46:14.434Z - info: Render request 44 queued for execution and waiting for available worker rootId=ce6g9i3z1cvkf8a, id=ce6g9i3z1cvkf8a
+2024-02-19T16:46:14.454Z - info: Starting rendering request 44 rootId=ce6g9i3z1cvkf8a, id=ce6g9i3z1cvkf8a
+2024-02-19T16:46:14.454Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=ce6g9i3z1cvkf8a, id=ce6g9i3z1cvkf8a
+2024-02-19T16:46:14.507Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ce6g9i3z1cvkf8a, id=ce6g9i3z1cvkf8a
+2024-02-19T16:46:28.429Z - info: Render request 45 queued for execution and waiting for available worker rootId=nle8zj9ssca7zh5, id=nle8zj9ssca7zh5
+2024-02-19T16:46:28.452Z - info: Starting rendering request 45 rootId=nle8zj9ssca7zh5, id=nle8zj9ssca7zh5
+2024-02-19T16:46:28.452Z - info: Rendering template { name: orders-main, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=nle8zj9ssca7zh5, id=nle8zj9ssca7zh5
+2024-02-19T16:46:28.601Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:45:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=nle8zj9ssca7zh5, id=nle8zj9ssca7zh5
+2024-02-19T17:07:04.705Z - info: fs store is loading data
+2024-02-19T17:23:34.487Z - info: fs store is loading data
+2024-02-19T17:35:09.107Z - info: fs store is loading data
+2024-02-19T17:51:28.401Z - info: fs store is loading data
+2024-02-19T18:08:13.038Z - info: fs store is loading data
+2024-02-19T18:25:59.779Z - info: fs store is loading data
+2024-02-19T18:41:53.548Z - info: fs store is loading data
+2024-02-19T18:50:58.282Z - info: fs store is loading data
+2024-02-19T18:56:34.746Z - info: fs store is loading data

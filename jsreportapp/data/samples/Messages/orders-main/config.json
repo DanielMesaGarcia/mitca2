@@ -6,10 +6,9 @@
     "engine": "handlebars",
     "scripts": [
         {
-            "shortid": "BJX1Jw82ce"
+            "shortid": "SCNwG8m"
         }
     ],
-    "shortid": "HJH11D83ce",
     "name": "orders-main",
     "chrome": {
         "printBackground": true,
@@ -22,7 +21,7 @@
     "pdfOperations": [
         {
             "type": "merge",
-            "templateShortid": "SJVbqZr9f",
+            "templateShortid": "dDjk-NB",
             "renderForEveryPage": false,
             "mergeWholeDocument": true
         }
@@ -30,11 +29,12 @@
     "inheritedReadPermissions": [],
     "inheritedEditPermissions": [],
     "creationDate": {
-        "$$date": 1704830477644
+        "$$date": 1708357453542
     },
     "modificationDate": {
-        "$$date": 1708360298060
+        "$$date": 1708360882205
     },
-    "_id": "T5fNpAsEOKUaD6Dw",
+    "shortid": "JI6naMe",
+    "_id": "oSE2FgG5Vs4xehzR",
     "$entitySet": "templates"
 }

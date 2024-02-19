@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metro/4.1.5/css/metro.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    </script> {{#each orders.info}}
+    <div>
+        <p>Total Messages: {{this.messageCount}}</p>
+    </div>
+    {{{pdfCreatePagesGroup this.country}}}
+    <table class='table striped'>
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Message</th>
+                <th>TimeStamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{this.sender}}</td>
+                <td>{{this.message}}</td>
+                <td>{{this.timestamp}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div style='page-break-after: always;'></div>
+    {{/each}}
+</body>
+</html>

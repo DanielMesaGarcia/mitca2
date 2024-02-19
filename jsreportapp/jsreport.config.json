@@ -35,9 +35,6 @@
         "password": "password"
       },
       "enabled": false
-    },
-    "sample-template": {
-      "createSamples": true
     }
   }
 }
