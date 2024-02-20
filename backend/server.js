@@ -14,8 +14,8 @@ require('dotenv').config();
 
 const app = express();
 const server = https.createServer({
-  key: fs.readFileSync(path.join(__dirname, '.cert/cert.key')),
-  cert: fs.readFileSync(path.join(__dirname, '.cert/cert.crt')),
+  key: fs.readFileSync(path.join(__dirname, 'cert/cert.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'cert/cert.crt')),
 }, app);
 
 const wss = new WebSocket.Server({ server });

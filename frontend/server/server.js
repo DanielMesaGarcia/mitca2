@@ -31,8 +31,8 @@ if (USING_HTTPS) {
   const CERTS = () => {
     try {
       return {
-        key: fs.readFileSync(path.join(__dirname, ".cert/cert.key")),
-        cert: fs.readFileSync(path.join(__dirname, ".cert/cert.crt")),
+        key: fs.readFileSync(path.join(__dirname, "cert/cert.key")),
+        cert: fs.readFileSync(path.join(__dirname, "cert/cert.crt")),
       };
     } catch (err) {
       console.log("No certificates found: " + err);
