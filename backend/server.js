@@ -1,23 +1,60 @@
-// server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const multer = require('multer');
 const cors = require('cors');
 
-const HTTPS = require("https");
-const fs = require("fs");
+const https = require('https');
+const fs = require('fs');
 
-const http = require('http');
-const WebSocket = require('ws'); // Importa el módulo ws
+const WebSocket = require('ws');
 const path = require('path');
 
 require('dotenv').config();
 
-// Importa tus modelos
-const User = require('./models/User'); // Asegúrate de tener la ruta correcta
+const app = express();
+const server = https.createServer({
+  key: fs.readFileSync(path.join(__dirname, '.cert/cert.key')),
+  cert: fs.readFileSync(path.join(__dirname, '.cert/cert.crt')),
+}, app);
+
+const wss = new WebSocket.Server({ server });
+
+const PORT = process.env.PORT || 3001;
+const DATABASE_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/mitca';
+
+mongoose.connect(DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  user: process.env.DB_USER || '',
+  pass: process.env.DB_PASSWORD || '',
+});
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (origin && origin.startsWith('https://')) {
+      // Permitir solicitudes desde cualquier origen con HTTPS
+      callback(null, true);
+    } else if (origin && origin.startsWith('http://')) {
+      // Permitir solicitudes desde cualquier origen con HTTP
+      callback(null, true);
+    } else {
+      // Restringir otros orígenes
+      callback(null, false);
+    }
+  },
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Importa routers
+const User = require('./models/User');
 const raceRouter = require('./routes/RaceRouter');
 const runnerRouter = require('./routes/RunnerRouter');
 const sponsorRouter = require('./routes/SponsorRouter');
@@ -27,27 +64,6 @@ const routeRouter = require('./routes/RouteRouter');
 const demoRouter = require('./routes/DemoRouter');
 const subscriptionRouter = require('./routes/SubscriptionRouter');
 const MessageRouter = require('./routes/MessageRouter');
-
-const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server }); // Crea una instancia de WebSocket
-
-const PORT = process.env.PORT || 3001;
-const DATABASE_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/mitca';
-
-// Conecta a MongoDB
-mongoose.connect(DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  user: process.env.DB_USER || '',
-  pass: process.env.DB_PASSWORD || '',
-});
-
-// Middleware
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Rutas
 app.use('/races', raceRouter);
@@ -91,29 +107,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('¡Algo salió mal!');
 });
 
-
-
-const USING_HTTPS = process.env.USING_HTTPS === "true" ? true : false;
-const APP = app;
-
-let SERVER = null;
-
-if (USING_HTTPS) {
-  const CERTS = () => {
-    try {
-      return {
-        key: fs.readFileSync(path.join(__dirname, ".cert/cert.key")),
-        cert: fs.readFileSync(path.join(__dirname, ".cert/cert.crt")),
-      };
-    } catch (err) {
-      console.log("No certificates found: " + err);
-    }
-  };
-  SERVER = HTTPS.createServer(CERTS(), APP);
-}
-
-(USING_HTTPS ? SERVER : APP).listen(PORT, () =>
-  console.log("App is running on port: " + PORT)
-);
+server.listen(PORT, () => console.log(`App is running on port: ${PORT}`));
 
 module.exports = app;

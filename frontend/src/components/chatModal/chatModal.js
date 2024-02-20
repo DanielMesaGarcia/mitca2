@@ -22,9 +22,11 @@ const Chat = () => {
 
     const setupWebSocket = () => {
       try {
-        newSocket = new WebSocket('ws://localhost:3001');
+        newSocket = new WebSocket('wss://localhost:3001/');
         newSocket.onopen = () => {
+          
           setRunning(true);
+          console.log("func");
         };
         newSocket.onclose = () => {
           setRunning(false);
@@ -49,7 +51,7 @@ const Chat = () => {
   useEffect(() => {
     const setupWebSocket = () => {
       try {
-        const newSocket = new WebSocket('ws://localhost:3001');
+        const newSocket = new WebSocket('wss://localhost:3001/');
         newSocket.onopen = () => {
           setRunning(true);
         };

@@ -12,7 +12,7 @@ var HTTP = Express();
 
 if (USING_HTTPS && PORT != 443) {
   HTTP.get("*", (req, res) =>
-    res.redirect("https://" + process.env.HOST + ":" + process.env.PORT)
+    res.redirect("http://" + process.env.HOST + ":" + process.env.PORT)
   );
 
   HTTP.listen(PORT);
@@ -24,7 +24,6 @@ const APP_PATH = path.join(__dirname, "..", "build");
 APP.use(Express.static(APP_PATH));
 
 APP.get("*", (_, res) => res.sendFile(path.join(APP_PATH, "index.html")));
-
 
 let SERVER = null;
 
