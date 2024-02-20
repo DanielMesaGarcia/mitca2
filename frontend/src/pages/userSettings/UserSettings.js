@@ -126,7 +126,7 @@ const UserSettings = () => {
 
   const handleFormSubmit = async () => {
     const values = form.getFieldsValue();
-    UserService.updateUser(values._id, values);
+    UserService.updateUser(userData._id, values);
     setFormDisabled(true);
   };
 

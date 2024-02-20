@@ -26,7 +26,6 @@ const Chat = () => {
         newSocket.onopen = () => {
           
           setRunning(true);
-          console.log("func");
         };
         newSocket.onclose = () => {
           setRunning(false);
@@ -279,7 +278,6 @@ const Chat = () => {
       sendUpdateMessages();
       sendDeleteMessages();
       sendPendingMessages();
-      console.log("CACACACACACAs")
     }
   }, [running]);
 

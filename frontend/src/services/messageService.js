@@ -17,7 +17,6 @@ const messageService = {
   sendMessage: async (messageData) => {
     try {
       const response = await axios.post(`${API_URL}/messages`, messageData);
-      console.log(`${API_URL}/messages`)
       return response.data;
     } catch (error) {
       console.error('Error sending message:', error);
