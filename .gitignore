@@ -10,8 +10,11 @@
 /backend/.env
 /frontend/.env
 /frontend/.pnp.js
-/backend/.cert
-/frontend/.cert
+/backend/.cert/cert.crt
+/backend/.cert/cert.key
+/frontend/server/.cert/cert.crt
+/frontend/server/.cert/cert.key
+
 
 # frontend testing
 /frontend/coverage
