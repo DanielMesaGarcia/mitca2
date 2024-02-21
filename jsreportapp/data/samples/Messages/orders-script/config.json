@@ -3,14 +3,14 @@
     "inheritedReadPermissions": [],
     "inheritedEditPermissions": [],
     "creationDate": {
-        "$$date": 1705005426573
+        "$$date": 1708539700979
     },
     "modificationDate": {
-        "$$date": 1705005426573
+        "$$date": 1708540402513
     },
     "scope": "template",
     "isGlobal": false,
-    "shortid": "bOHTOdn",
-    "_id": "ZKIzwdQIutqRk0RP",
+    "shortid": "MaFAv_l",
+    "_id": "WwLOSsVxgCNNw8Vp",
     "$entitySet": "scripts"
 }

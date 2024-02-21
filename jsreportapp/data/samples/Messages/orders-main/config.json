@@ -6,7 +6,7 @@
     "engine": "handlebars",
     "scripts": [
         {
-            "shortid": "bOHTOdn"
+            "shortid": "MaFAv_l"
         }
     ],
     "name": "orders-main",
@@ -21,7 +21,7 @@
     "pdfOperations": [
         {
             "type": "merge",
-            "templateShortid": "8CbapDS",
+            "templateShortid": "r5L0MoH",
             "renderForEveryPage": false,
             "mergeWholeDocument": true
         }
@@ -29,12 +29,12 @@
     "inheritedReadPermissions": [],
     "inheritedEditPermissions": [],
     "creationDate": {
-        "$$date": 1705005426569
+        "$$date": 1708539700975
     },
     "modificationDate": {
-        "$$date": 1705005426574
+        "$$date": 1708540416327
     },
-    "shortid": "I9ei3Ec",
-    "_id": "s4kmfkEQoUvxuEU9",
+    "shortid": "me0AYIO",
+    "_id": "3elKUXJWoRm1WV8E",
     "$entitySet": "templates"
 }

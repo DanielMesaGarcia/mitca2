@@ -1,18 +1,38 @@
 import React, { useState } from 'react';
 import './Header.css'; // Archivo de estilos CSS personalizado
 import { useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
+import { Button, Modal } from 'antd'; // Importar el componente Modal de antd
 import DemoService from '../../services/demoService';
 
 const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false); // Estado para controlar la visibilidad del modal
+  const [selectedOption, setSelectedOption] = useState(null); // Estado para almacenar la opción seleccionada
   const navigate = useNavigate();
+
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
   };
 
   const handleRedirect = (path) => {
     navigate(path);
+  };
+
+  const openModal = () => {
+    setModalVisible(true); // Mostrar el modal al hacer clic en el botón "Report"
+  };
+
+  const handleModalOk = () => {
+    if (selectedOption === "races") {
+      window.open('http://localhost:5488/templates/HJH11D83ce', '_blank');
+    } else if (selectedOption === "messages") {
+      window.open('http://localhost:5488/templates/me0AYIO', '_blank');
+    }
+    setModalVisible(false); 
+  };
+
+  const handleModalCancel = () => {
+    setModalVisible(false); // Ocultar el modal si se cancela
   };
 
   const demoData = async () => {
@@ -30,7 +50,9 @@ const Header = () => {
     // Redirigir a la página de inicio de sesión
     navigate('/login');
   };
+
   const role = localStorage.getItem('role');
+
   return (
     <div className="header-container">
 
@@ -66,14 +88,12 @@ const Header = () => {
             </Button>
           </li>
           <li>
-          <a href="http://localhost:5488/templates/HJH11D83ce" >
             <Button
               type="primary"
               className="demo-button"
-            >
+              onClick={openModal} >
               Report
             </Button>
-            </a>
           </li>
           <li>
             <Button
@@ -99,8 +119,18 @@ const Header = () => {
       <div className="menu-icon" onClick={toggleMenu}>
         &#9776;
       </div>
+      <Modal
+        title="Reports"
+        visible={modalVisible}
+        onOk={handleModalOk}
+        onCancel={handleModalCancel}
+        okText="Open"
+        cancelText="Cancel" >
+        <p>Which report would you like to open?</p>
+        <Button onClick={() => setSelectedOption("races")}>Races</Button>
+        <Button onClick={() => setSelectedOption("messages")}>Messages</Button>
+      </Modal>
     </div>
-
   );
 };
 
