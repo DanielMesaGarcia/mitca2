@@ -70,10 +70,6 @@ describe('RunnerController', () => {
       expect(response.statusCode).toBe(500);
       expect(response.body.success).toBe(false);
     });
-  });
-
-  describe('RunnerController', () => {
-    
 
     // Test para obtener todos los runners
     it('should get all runners', async () => {
@@ -85,5 +81,84 @@ describe('RunnerController', () => {
       expect(response.body.data).toBeInstanceOf(Array);
     });
   });
+
+  describe('Update Runner', () => {
+    // Test for updating a runner with valid data
+    it('should update a runner with valid data', async () => {
+      // First, create a runner to update
+      const createResponse = await request(app)
+        .post('/runners')
+        .send({
+          _id: '12345698A',
+          name: 'Test Runner',
+          phone: '123456999',
+          details: 'Some details',
+        });
+
+      // Update the runner created above
+      const updateResponse = await request(app)
+        .put(`/runners/12345698A`)
+        .send({
+          name: 'Updated Runner Name',
+          phone: '987654321',
+          details: 'Updated details',
+        });
+
+      expect(updateResponse.statusCode).toBe(200);
+      expect(updateResponse.body.success).toBe(true);
+      expect(updateResponse.body.data).toHaveProperty('_id');
+      expect(updateResponse.body.data.name).toBe('Updated Runner Name');
+      expect(updateResponse.body.data.phone).toBe('987654321');
+      expect(updateResponse.body.data.details).toBe('Updated details');
+    });
+
+    // Test for updating a runner with invalid data
+    it('should give error 404 when updating a non-existent runner', async () => {
+      const updateResponse = await request(app)
+        .put('/runners/nonexistent_id')
+        .send({
+          name: 'Updated Runner Name',
+          phone: '987654321',
+          details: 'Updated details',
+        });
+
+      expect(updateResponse.statusCode).toBe(404);
+      expect(updateResponse.body.success).toBe(false);
+    });
+  });
+
+  describe('Delete Runner', () => {
+    // Test for deleting a runner
+    it('should delete a runner', async () => {
+      // First, create a runner to delete
+      const createResponse = await request(app)
+        .post('/runners')
+        .send({
+          _id: '12345698A',
+          name: 'Test Runner',
+          phone: '123456999',
+          details: 'Some details',
+        });
+
+      // Delete the runner created above
+      const deleteResponse = await request(app)
+        .delete(`/runners/12345698A`);
+
+      expect(deleteResponse.statusCode).toBe(200);
+      expect(deleteResponse.body.success).toBe(true);
+    });
+
+    // Test for deleting a non-existent runner
+    it('should give error 404 when deleting a non-existent runner', async () => {
+      const deleteResponse = await request(app)
+        .delete('/runners/nonexistent_id');
+
+      expect(deleteResponse.statusCode).toBe(404);
+      expect(deleteResponse.body.success).toBe(false);
+    });
+  });
+
+
+  
 
 })
