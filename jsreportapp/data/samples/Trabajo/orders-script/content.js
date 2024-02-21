@@ -1,9 +1,12 @@
 const axios = require('axios');
+const https = require('https');
 
 function fetchData() {
-  const apiUrl = 'http://localhost:3001/races';
+  const apiUrl = 'https://localhost:3001/races';
+// Configuración del agente HTTPS para deshabilitar la verificación SSL
+  const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 
-  return axios.get(apiUrl)
+  return axios.get(apiUrl, { httpsAgent })
     .then(response => response.data)
     .catch(error => {
       console.error('Error fetching data:', error);
@@ -43,7 +46,6 @@ function transformData(data) {
     info: transformedData,
   };
 }
-
 
 function beforeRender(req, res, done) {
   fetchData()
