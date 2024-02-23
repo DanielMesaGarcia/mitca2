@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/header/Header';
 import RaceListService from '../../services/raceListService';
 import Footer from '../../components/footer/Footer';
+import Chat from '../../components/chatModal/chatModal';
 const Home = () => {
   const [races, setRaces] = useState([]);
   const navigate = useNavigate();
@@ -46,19 +47,30 @@ const Home = () => {
             <List.Item key={race._id} onClick={() => handleCardClick(race._id)}>
               <Link>
               <Card title={race._id} className='cardP'>
-                <img
-                  className='racePicture'
-                  src={`http://localhost:3001/images/${race.filename}`}
-                  alt={race.filename}
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </Card>
+            {race.filename && (
+                race.filename.endsWith('.jpg') || race.filename.endsWith('.jpeg') || race.filename.endsWith('.png') || race.filename.endsWith('.gif') ? (
+                    <img
+                        className='racePicture'
+                        src={`//localhost:3001/images/${race.filename}`}
+                        alt={race.filename}
+                    />
+                ) : (
+                    race.filename.endsWith('.mp4') && (
+                        <video className='racePicture' loop autoPlay muted>
+                            <source src={`//localhost:3001/images/${race.filename}`} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )
+                )
+            )}
+        </Card>
               </Link>
             </List.Item>
           )}
         />
       </div>
       </div>
+      <Chat></Chat>
       <Footer></Footer>
     </div>
   );

@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
           <img
-            src="http://localhost:3001/images/mitca.jpg" // Replace with the URL of your image
+            src="//localhost:3001/images/mitca.jpg" // Replace with the URL of your image
             alt="Footer Logo"
             className="footer-logo"
           />

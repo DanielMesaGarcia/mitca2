@@ -83,3 +83,206 @@ TypeError: res.end is not a function
 TypeError: res.end is not a function
     at sandbox.js:72:11
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=vyhnk32jiboyvqk, id=vyhnk32jiboyvqk
+2024-02-21T16:34:13.352Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=zb8v6867jo2vcnl, id=zb8v6867jo2vcnl
+2024-02-21T16:34:52.350Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=zguobj68eo4duxw, id=zguobj68eo4duxw
+2024-02-21T16:35:07.234Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=xbavyqmlltgq1n7, id=xbavyqmlltgq1n7
+2024-02-21T16:35:31.797Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=j05np0sm0zuxuga, id=j05np0sm0zuxuga
+2024-02-21T16:37:36.649Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=030jprc5cm95okx, id=030jprc5cm95okx
+2024-02-21T16:38:09.442Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=q7h99nk8givykrw, id=q7h99nk8givykrw
+2024-02-21T16:39:01.395Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=udgbxz43th8s15f, id=udgbxz43th8s15f
+2024-02-21T16:39:43.853Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5556ax5mpbjehr8, id=5556ax5mpbjehr8
+2024-02-21T16:39:43.968Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:39:50.854Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=59n2smt16yxx9ip, id=59n2smt16yxx9ip
+2024-02-21T16:39:50.954Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:40:30.229Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ki8wwme4d85owvt, id=ki8wwme4d85owvt
+2024-02-21T16:40:39.928Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=jpg3xcsxj9fwgzc, id=jpg3xcsxj9fwgzc
+2024-02-21T16:40:55.497Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=5ocg3yzbknaq9ft, id=5ocg3yzbknaq9ft
+2024-02-21T16:40:55.607Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:41:16.717Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=jlu3ekt8tnz186f, id=jlu3ekt8tnz186f
+2024-02-21T16:41:21.039Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=vn4xrer3nna3ozi, id=vn4xrer3nna3ozi
+2024-02-21T16:41:43.241Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=0yy1jhxjf9sbecy, id=0yy1jhxjf9sbecy
+2024-02-21T16:41:54.169Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=zcfonf58is2bqh9, id=zcfonf58is2bqh9
+2024-02-21T16:42:09.489Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=8w27timt1wm9wuz, id=8w27timt1wm9wuz
+2024-02-21T16:43:19.156Z - error: Report render failed
+(because) res.status is not a function
+TypeError: res.status is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=907ixscsfa6brb4, id=907ixscsfa6brb4
+2024-02-21T16:43:51.805Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=gu07r4j48h6wawk, id=gu07r4j48h6wawk
+2024-02-21T16:43:55.667Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=nm3rkcsaivfulrs, id=nm3rkcsaivfulrs
+2024-02-21T16:43:59.452Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=y4f9sxyqvxvob2f, id=y4f9sxyqvxvob2f
+2024-02-21T16:44:05.957Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=xjnu3bpeetxe98a, id=xjnu3bpeetxe98a
+2024-02-21T16:44:10.368Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=mbzmsjxxh0jou0g, id=mbzmsjxxh0jou0g
+2024-02-21T16:48:02.912Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:62:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=pplexbhacn96d6v, id=pplexbhacn96d6v
+2024-02-21T16:48:33.094Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=q6a4ccrqow054nu, id=q6a4ccrqow054nu
+2024-02-21T16:48:33.204Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:48:37.517Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ogwrbsgnu0oyquz, id=ogwrbsgnu0oyquz
+2024-02-21T16:48:37.590Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:49:15.999Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=dct81tm67vpwe1p, id=dct81tm67vpwe1p
+2024-02-21T16:49:16.116Z - error: Error during processing request at http://localhost:5488/templates/HJH11D83ce, details: TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2024-02-21T16:50:06.445Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=t150sh78ji2kwo5, id=t150sh78ji2kwo5
+2024-02-21T16:50:17.637Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=ophl3u7ccst8n2t, id=ophl3u7ccst8n2t
+2024-02-21T16:50:20.752Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:40:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=sxmjlroh1mnuwhu, id=sxmjlroh1mnuwhu
+2024-02-21T16:54:55.020Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:61:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=jt3pxt5upzjz74w, id=jt3pxt5upzjz74w
+2024-02-21T16:56:29.270Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:65:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=zim6jrx9vvfw827, id=zim6jrx9vvfw827
+2024-02-21T18:27:48.237Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:60:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=iclc22kpbyw23sb, id=iclc22kpbyw23sb
+2024-02-21T18:27:55.656Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:60:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=9c4tqszrrl4s4ws, id=9c4tqszrrl4s4ws
+2024-02-21T18:29:00.686Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:60:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=eugwqlfcuvvfqnh, id=eugwqlfcuvvfqnh
+2024-02-21T18:29:10.493Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:60:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=aem9vgaw429zgxf, id=aem9vgaw429zgxf
+2024-02-21T18:29:34.550Z - error: Report render failed
+(because) res.end is not a function
+TypeError: res.end is not a function
+    at sandbox.js:60:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) rootId=lsc97upgtnwfxeg, id=lsc97upgtnwfxeg

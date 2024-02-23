@@ -1,0 +1,63 @@
+/* chat.css */
+
+/* Estilo del botón de mensaje */
+.ant-btn-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+  }
+  
+  /* Estilo de la burbuja del chat */
+  .layout-chat {
+  position: fixed;
+  bottom: 0;
+  right: -300px;
+  transition: right 0.3s ease-in-out;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 1000; /* Asegúrate de que tenga un z-index mayor que otros elementos en la página */
+}
+
+.layout-content {
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded {
+  right: 0;
+}
+  
+  /* Estilo del botón de expandir/cerrar */
+  .ant-btn-circle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Estilo del dropdown y del input */
+  .ant-dropdown-trigger,
+  .ant-input {
+    margin-bottom: 16px;
+  }
+  
+  /* Estilo de la lista de mensajes */
+  .ant-list {
+    margin-top: 16px;
+  }
+  
+  /* Estilo de cada elemento de la lista de mensajes */
+  .ant-list-item-meta {
+    margin-bottom: 0;
+  }
+  
+  /* Estilo de la burbuja del chat cuando está expandida */
+  .layout-chat.expanded {
+    right: 0;
+  }
+  
+  
+  

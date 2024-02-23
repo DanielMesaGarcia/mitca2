@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL; // Replace with your API base URL
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
 const UserService = {
   login: async (userData) => {

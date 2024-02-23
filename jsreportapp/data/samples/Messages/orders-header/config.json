@@ -1,0 +1,22 @@
+{
+    "name": "orders-header",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true,
+        "marginTop": "1.5cm",
+        "marginRight": "1.5cm",
+        "marginLeft": "1.cm"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1708539700975
+    },
+    "modificationDate": {
+        "$$date": 1708539700975
+    },
+    "shortid": "r5L0MoH",
+    "_id": "rKfHvq7T314eShG4",
+    "$entitySet": "templates"
+}
