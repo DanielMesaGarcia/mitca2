@@ -11,6 +11,7 @@ import Chat from '../../components/chatModal/chatModal';
 
 const HomeAdmin = () => {
   const [races, setRaces] = useState([]);
+  const [pic, setPic] = useState([]);
   const [createFormVisible, setCreateFormVisible] = useState(false);
   const [file, setFile] = useState(null);
   const [createForm] = Form.useForm();
@@ -47,7 +48,6 @@ const HomeAdmin = () => {
         carrera: values.name,
       };
 
-      console.log(file)
       const response = await RaceListService.createRace(file, raceData);
       const response2 = await RaceListService.createRoute(routeData);
       const responseStatus = await RaceListService.createStatus(statusData);
@@ -77,6 +77,23 @@ const HomeAdmin = () => {
       console.error("Error creating race:", error);
     }
   };
+
+  const handleBeforeUpload = (file) => {
+    const acceptedFormats = ['image/png', 'image/jpeg', 'image/gif', 'video/mp4'];
+    const isFormatAccepted = acceptedFormats.includes(file.type);
+
+    if (!isFormatAccepted) {
+      document.getElementById("custom-error-message").style.display = "block";
+
+      return Upload.LIST_IGNORE; // Ignorar la carga del archivo
+    }
+    document.getElementById("custom-error-message").style.display = "none";
+    // Aquí puedes hacer lo que necesites con el archivo, como establecerlo en el estado
+    setFile(file);
+
+    return false; // Permitir la carga del archivo
+  };
+
 
   useEffect(() => {
     const fetchRaces = async () => {
@@ -114,12 +131,23 @@ const HomeAdmin = () => {
               <List.Item key={race._id} onClick={() => handleCardClick(race._id)}>
                 <Link>
                 <Card title={race._id} className='cardP'>
-                  <img
-                    className='racePicture'
-                    src={`//localhost:3001/images/${race.filename}`}
-                    alt={race.filename}
-                  />
-                </Card>
+            {race.filename && (
+                race.filename.endsWith('.jpg') || race.filename.endsWith('.jpeg') || race.filename.endsWith('.png') || race.filename.endsWith('.gif') ? (
+                    <img
+                        className='racePicture'
+                        src={`//localhost:3001/images/${race.filename}`}
+                        alt={race.filename}
+                    />
+                ) : (
+                    race.filename.endsWith('.mp4') && (
+                        <video className='racePicture' loop autoPlay muted>
+                            <source src={`//localhost:3001/images/${race.filename}`} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )
+                )
+            )}
+        </Card>
                 </Link>
               </List.Item>
             )}
@@ -189,14 +217,11 @@ const HomeAdmin = () => {
             <Upload
               listType="picture"
               maxCount={1}
-              beforeUpload={(file) => {
-                setFile(file);
-
-                return false;
-              }}
+              beforeUpload={handleBeforeUpload}
             >
               <Button icon={<UploadOutlined />}>Foto</Button>
             </Upload>
+            <p id="custom-error-message" className="custom-error-message">Solo se permiten archivos PNG, JPG o GIF.</p>
           </Form>
 
         </Modal>

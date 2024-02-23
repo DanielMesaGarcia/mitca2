@@ -5,6 +5,10 @@
   width: 25vw;
   justify-content: center;
 }
+.custom-error-message {
+  display: none;
+  color: red;
+}
 
 .race-list {
   display: flex;

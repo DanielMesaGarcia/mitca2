@@ -16,6 +16,9 @@ var storage = multer.diskStorage({
       if(file.mimetype === 'image/png') {
         filetype = 'png';
       }
+      if (file.mimetype === 'video/mp4') {
+        filetype = 'mp4';
+      }
       if(file.mimetype === 'image/jpeg') {
         filetype = 'jpg';
       }
