@@ -11,6 +11,7 @@ import Chat from '../../components/chatModal/chatModal';
 
 const HomeAdmin = () => {
   const [races, setRaces] = useState([]);
+  const [pic, setPic] = useState([]);
   const [createFormVisible, setCreateFormVisible] = useState(false);
   const [file, setFile] = useState(null);
   const [createForm] = Form.useForm();
@@ -47,7 +48,6 @@ const HomeAdmin = () => {
         carrera: values.name,
       };
 
-      console.log(file)
       const response = await RaceListService.createRace(file, raceData);
       const response2 = await RaceListService.createRoute(routeData);
       const responseStatus = await RaceListService.createStatus(statusData);
@@ -77,6 +77,23 @@ const HomeAdmin = () => {
       console.error("Error creating race:", error);
     }
   };
+
+  const handleBeforeUpload = (file) => {
+    const acceptedFormats = ['image/png', 'image/jpeg', 'image/gif'];
+    const isFormatAccepted = acceptedFormats.includes(file.type);
+    
+    if (!isFormatAccepted) {
+      document.getElementById("custom-error-message").style.display = "block";
+
+      return Upload.LIST_IGNORE; // Ignorar la carga del archivo
+    }
+    document.getElementById("custom-error-message").style.display = "none";
+    // Aquí puedes hacer lo que necesites con el archivo, como establecerlo en el estado
+    setFile(file);
+
+    return false; // Permitir la carga del archivo
+  };
+
 
   useEffect(() => {
     const fetchRaces = async () => {
@@ -189,14 +206,11 @@ const HomeAdmin = () => {
             <Upload
               listType="picture"
               maxCount={1}
-              beforeUpload={(file) => {
-                setFile(file);
-
-                return false;
-              }}
+              beforeUpload={handleBeforeUpload}
             >
               <Button icon={<UploadOutlined />}>Foto</Button>
             </Upload>
+            <p id="custom-error-message" className="custom-error-message">Solo se permiten archivos PNG, JPG o GIF.</p>
           </Form>
 
         </Modal>
