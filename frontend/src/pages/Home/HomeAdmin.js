@@ -79,9 +79,9 @@ const HomeAdmin = () => {
   };
 
   const handleBeforeUpload = (file) => {
-    const acceptedFormats = ['image/png', 'image/jpeg', 'image/gif'];
+    const acceptedFormats = ['image/png', 'image/jpeg', 'image/gif', 'video/mp4'];
     const isFormatAccepted = acceptedFormats.includes(file.type);
-    
+
     if (!isFormatAccepted) {
       document.getElementById("custom-error-message").style.display = "block";
 
@@ -131,12 +131,23 @@ const HomeAdmin = () => {
               <List.Item key={race._id} onClick={() => handleCardClick(race._id)}>
                 <Link>
                 <Card title={race._id} className='cardP'>
-                  <img
-                    className='racePicture'
-                    src={`//localhost:3001/images/${race.filename}`}
-                    alt={race.filename}
-                  />
-                </Card>
+            {race.filename && (
+                race.filename.endsWith('.jpg') || race.filename.endsWith('.jpeg') || race.filename.endsWith('.png') || race.filename.endsWith('.gif') ? (
+                    <img
+                        className='racePicture'
+                        src={`//localhost:3001/images/${race.filename}`}
+                        alt={race.filename}
+                    />
+                ) : (
+                    race.filename.endsWith('.mp4') && (
+                        <video className='racePicture' loop autoPlay muted>
+                            <source src={`//localhost:3001/images/${race.filename}`} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )
+                )
+            )}
+        </Card>
                 </Link>
               </List.Item>
             )}
