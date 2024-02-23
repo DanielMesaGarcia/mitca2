@@ -6,6 +6,9 @@ const app = require('../server'); // Asegúrate de tener la ruta correcta
 const Runner = require('../models/Runner');
 const Message = require('../models/Message');
 const Race = require('../models/Race');
+const Status = require('../models/Status');
+const Route = require('../models/Route');
+const Subscription = require('../models/Subscription');
 
 
 
@@ -399,21 +402,412 @@ describe('Pruebas de los controladores de usuarios', () => {
 describe('POST /race', () => {
   it('should create a new race', async () => {
     const raceData = {
-      _id: '6097a0a7b5e9e532ec4a4c6a', // ID único inventado manualmente
-      creationDate: new Date('2023-12-01'), // Fecha de creación inventada manualmente
+      _id: 'Carreratest', // ID único inventado manualmente
       eventDate: new Date('2024-06-15'), // Fecha del evento inventada manualmente
       city: 'New York', // Ciudad inventada manualmente
-      length: '10 kilometers', // Longitud inventada manualmente
+      length: '10', // Longitud inventada manualmente
     };
 
     const response = await request(app)
-      .post('/race')
+      .post('/races')
       .send(raceData)
-      .expect(404);
+      .expect(201);
 
     expect(response.body.success).toBe(true);
     expect(response.body.data).toHaveProperty('_id');
     expect(response.body.data.city).toBe('New York');
   });
+
+  
+
+  it('should create a new race', async () => {
+    const raceData = {
+      _id: 'Carreratester', // ID único inventado manualmente
+      eventDate: new Date('2024-06-15'), // Fecha del evento inventada manualmente
+      city: 'New York', // Ciudad inventada manualmente
+      length: '10', // Longitud inventada manualmente
+    };
+
+    const response = await request(app)
+      .post('/races')
+      .send(raceData)
+      .expect(201);
+
+    expect(response.body.success).toBe(true);
+    expect(response.body.data).toHaveProperty('_id');
+    expect(response.body.data.city).toBe('New York');
+  });
+  
+  it('should create a new race', async () => {
+    const raceData = {
+      eventDate: new Date('2024-07-15'), // Fecha del evento inventada manualmente
+      city: 'New Yorky', // Ciudad inventada manualmente
+      length: '11', // Longitud inventada manualmente
+    };
+
+    const response = await request(app)
+      .put('/races/Carreratester')
+      .send(raceData)
+      .expect(200);
+
+    expect(response.body.success).toBe(true);
+    expect(response.body.data).toHaveProperty('_id');
+    expect(response.body.data.city).toBe('New Yorky');
+  });
+
+  it('should create a new race', async () => {
+    const raceData = {
+      eventDate: new Date('2024-0715'), // Fecha del evento inventada manualmente
+      city: 'New Yorky', // Ciudad inventada manualmente
+      length: 'e', // Longitud inventada manualmente
+    };
+
+    const response = await request(app)
+      .put('/races/Carreratester')
+      .send(raceData)
+      .expect(500);
+  });
+
+  it('should create a new race', async () => {
+    const raceData = {
+    };
+
+    const response = await request(app)
+      .post('/races')
+      .send(raceData)
+      .expect(500);
+
+    expect(response.body.success).toBe(false);
+  });
+
+  it('should delete a new race', async () => {
+    
+
+    const response = await request(app)
+      .delete('/races/Carreratest')
+      .expect(200);
+  });
+
+  it('should delete a new race', async () => {
+    
+
+    const response = await request(app)
+      .delete('/races')
+      .send('Carreratest')
+      .expect(404);
+  });
+
+  it('should update race data successfully', async () => {
+    const raceData = {
+      eventDate: new Date('2024-08-20'), // Fecha del evento inventada manualmente
+      city: 'Los Angeles', // Ciudad inventada manualmente
+      length: '15', // Longitud inventada manualmente
+    };
+  
+    const response = await request(app)
+      .put('/races/Carreratest')
+      .send(raceData)
+      .expect(200);
+  
+    expect(response.body.success).toBe(true);
+    expect(response.body.data.city).toBe('Los Angeles');
+  });
+  
+  it('should return 400 when providing invalid data for race update', async () => {
+    const raceData = {
+      eventDate: 'Invalid Date', // Fecha inválida
+      city: 12345, // Ciudad inválida
+      length: -5, // Longitud inválida
+    };
+  
+    const response = await request(app)
+      .put('/races/Carreratest')
+      .send(raceData)
+      .expect(400);
+  });
+  
+  
 });
 
+
+describe('Status API', () => {
+  
+
+  beforeEach(async () => {
+    // Borra todos los datos de las colecciones antes de cada test
+    await Race.deleteMany();
+    await Status.deleteMany();
+  });
+
+  describe('POST /status', () => {
+    it('should create a new status', async () => {
+      const raceData = {
+        _id: 'Carreratest', // ID único inventado manualmente
+        eventDate: new Date('2024-06-15'), // Fecha del evento inventada manualmente
+        city: 'New York', // Ciudad inventada manualmente
+        length: '10', // Longitud inventada manualmente
+      };
+
+      // Crea una carrera para asociarla al nuevo estado
+      const race = await Race.create(raceData);
+
+      const statusData = {
+        carrera: race._id, // Asocia el estado con la carrera creada anteriormente
+        statusAtTheMoment: 'No empezada',
+        winner: '',
+        duration: ''
+      };
+
+      const response = await request(app)
+        .post('/status')
+        .send(statusData)
+        .expect(201);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data).toHaveProperty('_id');
+    });
+  });
+
+  describe('GET /status', () => {
+    it('should get all statuses', async () => {
+      // Inserta algunos estados en la base de datos
+      await Status.create([
+        { carrera: 'carrera1', statusAtTheMoment: 'No empezada', winner: '', duration: '' },
+        { carrera: 'carrera2', statusAtTheMoment: 'En progreso', winner: '', duration: '' }
+      ]);
+
+      const response = await request(app)
+        .get('/status')
+        .expect(200);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data.length).toBe(2); // Asumiendo que hay 2 estados en la base de datos
+    });
+  });
+
+  // Aquí puedes continuar con más tests para las otras rutas (GET /status/:_id, PUT /status/:_id, DELETE /status/:_id)
+});
+
+
+describe('Route API', () => {
+  
+
+  beforeEach(async () => {
+    // Borra todos los datos de las colecciones antes de cada test
+    await Race.deleteMany();
+    await Route.deleteMany();
+  });
+
+  describe('POST /route', () => {
+    it('should create a new route', async () => {
+      const raceData = {
+        _id: 'Carreratest', // ID único inventado manualmente
+        eventDate: new Date('2024-06-15'), // Fecha del evento inventada manualmente
+        city: 'New York', // Ciudad inventada manualmente
+        length: '10', // Longitud inventada manualmente
+      };
+
+      // Crea una carrera para asociarla a la nueva ruta
+      const race = await Race.create(raceData);
+
+      const routeData = {
+        race: race._id, // Asocia la ruta con la carrera creada anteriormente
+        checkpoint: 1,
+        startPoint: 'Start Point',
+        goal: 'Goal Point'
+      };
+
+      const response = await request(app)
+        .post('/route')
+        .send(routeData)
+        .expect(201);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data).toHaveProperty('_id');
+    });
+  });
+
+  describe('GET /route', () => {
+    it('should get all routes', async () => {
+      // Inserta algunas rutas en la base de datos
+      await Route.create([
+        { race: 'Carreratest', checkpoint: 1, startPoint: 'Start Point', goal: 'Goal Point' },
+        { race: 'AnotherRace', checkpoint: 2, startPoint: 'Start Point 2', goal: 'Goal Point 2' }
+      ]);
+
+      const response = await request(app)
+        .get('/route')
+        .expect(200);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data.length).toBe(2); // Asumiendo que hay 2 rutas en la base de datos
+    });
+  });
+  describe('GET /route/:_id', () => {
+    it('should get a route by its ID', async () => {
+      // Inserta una ruta en la base de datos
+      const route = await Route.create({ race: 'Carreratest', checkpoint: 1, startPoint: 'Start Point', goal: 'Goal Point' });
+  
+      const response = await request(app)
+        .get(`/route/${route._id}`)
+        .expect(200);
+  
+      expect(response.body.success).toBe(true);
+      expect(response.body.data._id).toBe(route._id.toString());
+    });
+  
+    it('should return 404 if route ID does not exist', async () => {
+      const nonExistentID = '2343j2i4n324'; // Crea un ID que no existe en la base de datos
+  
+      await request(app)
+        .get(`/route/${nonExistentID}`)
+        .expect(404);
+    });
+  });
+  
+  describe('PUT /route/:_id', () => {
+    it('should update a route by its ID', async () => {
+      // Inserta una ruta en la base de datos
+      const route = await Route.create({ race: 'Carreratest', checkpoint: 1, startPoint: 'Start Point', goal: 'Goal Point' });
+  
+      const updatedData = {
+        checkpoint: 2,
+        startPoint: 'Updated Start Point',
+        goal: 'Updated Goal Point'
+      };
+  
+      const response = await request(app)
+        .put(`/route/${route._id}`)
+        .send(updatedData)
+        .expect(200);
+  
+      expect(response.body.success).toBe(true);
+      expect(response.body.data.checkpoint).toBe(updatedData.checkpoint);
+      expect(response.body.data.startPoint).toBe(updatedData.startPoint);
+      expect(response.body.data.goal).toBe(updatedData.goal);
+    });
+  
+    it('should return 404 if route ID does not exist', async () => {
+      const nonExistentID = 'afeefefca'; // Crea un ID que no existe en la base de datos
+  
+      await request(app)
+        .put(`/route/${nonExistentID}`)
+        .send({ checkpoint: 2, startPoint: 'Updated Start Point', goal: 'Updated Goal Point' })
+        .expect(404);
+    });
+  });
+  
+  describe('DELETE /route/:_id', () => {
+    it('should delete a route by its ID', async () => {
+      // Inserta una ruta en la base de datos
+      const route = await Route.create({ race: 'Carreratest', checkpoint: 1, startPoint: 'Start Point', goal: 'Goal Point' });
+  
+      await request(app)
+        .delete(`/route/${route._id}`)
+        .expect(200);
+  
+      // Verifica que la ruta se haya eliminado correctamente
+      const deletedRoute = await Route.findById(route._id);
+      expect(deletedRoute).toBeNull();
+    });
+  
+    it('should return 404 if route ID does not exist', async () => {
+      const nonExistentID = 'ertgrrg'; // Crea un ID que no existe en la base de datos
+  
+      await request(app)
+        .delete(`/route/${nonExistentID}`)
+        .expect(404);
+    });
+  });
+  describe('Error Handling - Internal Server Error (500)', () => {
+    it('should return 500 if an unexpected error occurs during route creation', async () => {
+      // Forzar un error al intentar crear una ruta (por ejemplo, proporcionando un campo requerido faltante)
+      await request(app)
+        .post('/route')
+        .send({ checkpoint: 'wefew', startPoint: 'Start Point', goal: 'Goal Point' })
+        .expect(500);
+    });
+  });
+
+  // Aquí puedes continuar con más tests para las otras rutas (GET /route/:_id, PUT /route/:_id, DELETE /route/:_id)
+});
+
+describe('Subscription API', () => {
+  
+
+  beforeEach(async () => {
+    // Limpiar la colección de suscripciones antes de cada test
+    await Subscription.deleteMany();
+  });
+
+  describe('POST /subscribe', () => {
+    it('should create a new subscription', async () => {
+      const subscriptionData = {
+        endpoint: 'https://example.com/endpoint',
+        expirationTime: Date.now() + 3600, // Expira en 1 hora
+        keys: {
+          p256dh: 'p256dhKey',
+          auth: 'authKey',
+        },
+        subscriptionName: 'Test Subscription'
+      };
+
+      const response = await request(app)
+        .post('/subscriptions/subscribe')
+        .send({ subscription: subscriptionData })
+        .expect(201);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data).toHaveProperty('_id');
+    });
+  });
+
+  describe('GET /subscriptions', () => {
+    it('should get all subscriptions', async () => {
+      // Insertar algunas suscripciones en la base de datos
+      await Subscription.create([
+        {
+          endpoint: 'https://example.com/endpoint1',
+          expirationTime: Date.now() + 3600,
+          keys: { p256dh: 'p256dhKey1', auth: 'authKey1' },
+          subscriptionName: 'Subscription 1'
+        },
+        {
+          endpoint: 'https://example.com/endpoint2',
+          expirationTime: Date.now() + 7200,
+          keys: { p256dh: 'p256dhKey2', auth: 'authKey2' },
+          subscriptionName: 'Subscription 2'
+        }
+      ]);
+
+      const response = await request(app)
+        .get('/subscriptions')
+        .expect(200);
+
+      expect(response.body.success).toBe(true);
+      expect(response.body.data.length).toBe(2);
+    });
+  });
+
+  describe('POST /sendNotificationToSubscriptionName', () => {
+    it('should send notification to subscriptions with matching name', async () => {
+      // Insertar una suscripción en la base de datos
+      await Subscription.create({
+        endpoint: 'https://example.com/endpoint',
+        expirationTime: Date.now() + 3600,
+        keys: { p256dh: 'p256dhKey', auth: 'authKey' },
+        subscriptionName: 'Carreras'
+      });
+
+      const response = await request(app)
+        .post('/subscriptions/sendNotificationToSubscriptionName')
+        .send({ notificationMessage: 'Test notification message' })
+        .expect(200);
+
+      expect(response.text).toBe('notification sent');
+      // Aquí podrías verificar si la notificación se envió correctamente
+    });
+  });
+
+  // Puedes continuar con más tests para las otras rutas y funcionalidades del controlador de suscripciones
+});
